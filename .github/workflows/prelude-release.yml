@@ -1,0 +1,181 @@
+name: Soriono Prelude release gates
+
+on:
+  pull_request:
+  push:
+    branches: ["main"]
+    tags: ["soriono-prelude-v*"]
+  workflow_dispatch:
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
+        python: ["3.12", "3.13"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: ${{ matrix.python }}
+          enable-cache: true
+      - shell: pwsh
+        run: ./scripts/fetch_catalog.ps1
+      - run: uv run --frozen --extra dev pytest -q
+      - run: uv run --frozen --extra dev ruff check .
+
+  release-gates:
+    if: startsWith(github.ref, 'refs/tags/soriono-prelude-v') || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.13"
+      - shell: pwsh
+        run: ./scripts/fetch_catalog.ps1
+      - run: python scripts/validate_catalog_release.py
+      - run: uv run --frozen python scripts/validate_retrieval_goldset.py
+      - run: uv run --frozen python scripts/benchmark_retrieval.py --enforce
+      - run: >
+          uv run --frozen python scripts/validate_geodata_release.py
+          --report docs/geodata-audit-0.3.json
+
+  bundle:
+    if: startsWith(github.ref, 'refs/tags/soriono-prelude-v') || github.event_name == 'workflow_dispatch'
+    needs: [test, release-gates]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.13"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - shell: pwsh
+        run: ./scripts/fetch_catalog.ps1
+      - shell: pwsh
+        run: ./scripts/build_mcpb.ps1
+      - uses: actions/upload-artifact@v4
+        with:
+          name: unsigned-soriono-prelude
+          path: dist/*.mcpb
+          if-no-files-found: error
+
+  mcpb-smoke:
+    needs: bundle
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
+        python: ["3.12", "3.13"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: ${{ matrix.python }}
+          enable-cache: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: unsigned-soriono-prelude
+          path: artifacts
+      - shell: pwsh
+        run: |
+          $artifact = Get-ChildItem artifacts -Filter *.mcpb | Select-Object -First 1
+          ./scripts/test_mcpb_startup.ps1 -Artifact $artifact.FullName
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/soriono-prelude-v')
+    needs: mcpb-smoke
+    runs-on: ubuntu-latest
+    environment: production-signing
+    permissions:
+      contents: write
+    env:
+      SM_HOST: ${{ secrets.DIGICERT_SM_HOST }}
+      SM_API_KEY: ${{ secrets.DIGICERT_SM_API_KEY }}
+      SM_CLIENT_CERT_PASSWORD: ${{ secrets.DIGICERT_SM_CLIENT_CERT_PASSWORD }}
+      SM_KEYPAIR_ALIAS: ${{ secrets.DIGICERT_SM_KEYPAIR_ALIAS }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.13"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - uses: actions/download-artifact@v4
+        with:
+          name: unsigned-soriono-prelude
+          path: downloaded
+      - name: Verify signed release tag
+        shell: bash
+        env:
+          RELEASE_GPG_PUBLIC_KEY: ${{ secrets.RELEASE_GPG_PUBLIC_KEY }}
+        run: |
+          test -n "$RELEASE_GPG_PUBLIC_KEY"
+          printf '%s' "$RELEASE_GPG_PUBLIC_KEY" | gpg --batch --import
+          git verify-tag "${GITHUB_REF_NAME}"
+      - name: Configure DigiCert KeyLocker PKCS11
+        shell: bash
+        env:
+          DIGICERT_CLIENT_TOOLS_URL: ${{ secrets.DIGICERT_CLIENT_TOOLS_URL }}
+          DIGICERT_SM_CLIENT_CERT_B64: ${{ secrets.DIGICERT_SM_CLIENT_CERT_B64 }}
+          MCPB_SIGNING_CERT_PEM: ${{ secrets.MCPB_SIGNING_CERT_PEM }}
+          MCPB_CERT_CHAIN_PEM: ${{ secrets.MCPB_CERT_CHAIN_PEM }}
+        run: |
+          set -euo pipefail
+          test -n "$DIGICERT_CLIENT_TOOLS_URL"
+          sudo apt-get update
+          sudo apt-get install -y libengine-pkcs11-openssl openssl unzip
+          curl --fail --location "$DIGICERT_CLIENT_TOOLS_URL" -o "$RUNNER_TEMP/keylocker.zip"
+          unzip -q "$RUNNER_TEMP/keylocker.zip" -d "$RUNNER_TEMP/keylocker"
+          PKCS11_MODULE="$(find "$RUNNER_TEMP/keylocker" -name smpkcs11.so -print -quit)"
+          PKCS11_ENGINE="$(dpkg -L libengine-pkcs11-openssl | grep -E '/(lib)?pkcs11\.so$' | head -1)"
+          test -n "$PKCS11_MODULE"
+          test -n "$PKCS11_ENGINE"
+          printf '%s' "$DIGICERT_SM_CLIENT_CERT_B64" | base64 --decode > "$RUNNER_TEMP/sm-client.p12"
+          printf '%s' "$MCPB_SIGNING_CERT_PEM" > "$RUNNER_TEMP/signing-cert.pem"
+          printf '%s' "$MCPB_CERT_CHAIN_PEM" > "$RUNNER_TEMP/cert-chain.pem"
+          chmod 600 "$RUNNER_TEMP/sm-client.p12"
+          echo "SM_CLIENT_CERT_FILE=$RUNNER_TEMP/sm-client.p12" >> "$GITHUB_ENV"
+          echo "PKCS11_MODULE=$PKCS11_MODULE" >> "$GITHUB_ENV"
+          cat > "$RUNNER_TEMP/openssl-pkcs11.cnf" <<EOF
+          openssl_conf = openssl_init
+          [openssl_init]
+          engines = engine_section
+          [engine_section]
+          pkcs11 = pkcs11_section
+          [pkcs11_section]
+          dynamic_path = $PKCS11_ENGINE
+          MODULE_PATH = $PKCS11_MODULE
+          init = 0
+          EOF
+      - name: Place exact tested MCPB
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Path dist -Force | Out-Null
+          $artifact = Get-ChildItem downloaded -Filter *.mcpb | Select-Object -First 1
+          Copy-Item $artifact.FullName (Join-Path dist $artifact.Name) -Force
+      - name: HSM-sign, verify, checksum and create SBOM
+        shell: pwsh
+        run: |
+          ./scripts/release_product.ps1 `
+            -CertificatePath "$env:RUNNER_TEMP/signing-cert.pem" `
+            -CertificateChainPath "$env:RUNNER_TEMP/cert-chain.pem" `
+            -Pkcs11KeyUri "pkcs11:object=$env:SM_KEYPAIR_ALIAS;type=private" `
+            -OpenSslConfigPath "$env:RUNNER_TEMP/openssl-pkcs11.cnf" `
+            -SkipBuild
+      - uses: softprops/action-gh-release@v2
+        with:
+          prerelease: ${{ contains(github.ref_name, '-rc.') }}
+          files: |
+            dist/*.mcpb
+            dist/*.sha256
+            dist/*.cdx.json

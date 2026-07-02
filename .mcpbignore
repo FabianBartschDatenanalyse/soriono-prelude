@@ -1,4 +1,5 @@
 .venv/
+.github/
 .pytest_cache/
 .ruff_cache/
 __pycache__/
@@ -12,3 +13,4 @@ state/*
 tests/
 scripts/
 docs/
+RELEASING.md
