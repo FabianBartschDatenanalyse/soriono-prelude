@@ -1,0 +1,68 @@
+[
+  {
+    "id": "q01_fahrzeugbestand_tg",
+    "question": "Wie viele Fahrzeuge gibt es in den Gemeinden des Kantons Thurgau?",
+    "expected": [
+      "fahrzeugbestand-kanton-thurgau-am-01-01-2024",
+      "fahrzeugbestand-kanton-thurgau-am-01-01-2023"
+    ]
+  },
+  {
+    "id": "q02_bevoelkerungsbilanz",
+    "question": "Wie hat sich die Wohnbevölkerung nach Gemeinde seit 1980 entwickelt?",
+    "expected": ["bevolkerungsbilanz-nach-gemeinde-und-jahr-ab-1980"]
+  },
+  {
+    "id": "q03_anteil_80plus",
+    "question": "Wie hoch ist der Anteil der über 80-Jährigen an der Bevölkerung?",
+    "expected": ["bevolkerung-anteil-80-u-m-jahrige"]
+  },
+  {
+    "id": "q04_immobilienpreise_zh",
+    "question": "Wie haben sich die Immobilienpreise im Kanton Zürich entwickelt?",
+    "expected": ["immobilienpreise-im-kanton-zurich"]
+  },
+  {
+    "id": "q05_volksschule_tg",
+    "question": "Wie viele Schülerinnen und Schüler besuchen die Volksschule in den Thurgauer Schulgemeinden?",
+    "expected": ["lernende-der-offentlichen-volksschule-nach-schulgemeinden-im-kanton-thurgau"]
+  },
+  {
+    "id": "q06_volksschule_erstsprache",
+    "question": "Wie viele Volksschüler haben Deutsch als Erstsprache im Kanton Thurgau?",
+    "expected": ["lernende-der-offentlichen-volksschule-nach-schulgemeinde-und-erstsprache-im-kanton-thurgau"]
+  },
+  {
+    "id": "q07_strassenlaenge",
+    "question": "Wie lang ist das Strassennetz pro Gemeinde ohne Nationalstrassen?",
+    "expected": ["strassenlange-ohne-nationalstrassen-nach-gemeinde1-3"]
+  },
+  {
+    "id": "q08_bevoelkerungsszenarien_lu",
+    "question": "Welche Szenarien gibt es zur Bevölkerungsentwicklung der Luzerner Gemeinden?",
+    "expected": ["szenarien-zur-bevolkerungsentwicklung-der-luzerner-gemeinden"]
+  },
+  {
+    "id": "q09_nachnamen",
+    "question": "Was sind die häufigsten Nachnamen der ständigen Wohnbevölkerung pro Kanton?",
+    "expected": [
+      "nachnamen-der-standigen-wohnbevolkerung-nach-kanton",
+      "nachnamen-der-standigen-wohnbevolkerung-nach-kanton-1"
+    ]
+  },
+  {
+    "id": "q10_schutzsuchende_bs",
+    "question": "Wie viele Schutzsuchende leben im Kanton Basel-Stadt nach Staatsangehörigkeit?",
+    "expected": [
+      "schutzsuchende-im-kanton-basel-stadt-nach-geschlecht-altersklasse-staatsangehorigkeit-zuzugs-un"
+    ]
+  },
+  {
+    "id": "q11_elektrofahrzeuge_tg",
+    "question": "Wie hat sich die Zahl der rein elektrischen Fahrzeuge im Kanton Thurgau zwischen 2020 und 2026 entwickelt?",
+    "expected": [
+      "fahrzeugbestand-kanton-thurgau-am-01-01-2024",
+      "fahrzeugbestand-kanton-thurgau-am-01-01-2020"
+    ]
+  }
+]

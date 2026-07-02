@@ -1,0 +1,1097 @@
+{
+  "engine": "sqlite_fts5_parallel_query_variants_rrf",
+  "translation_contract": "host_llm_supplies_search_queries",
+  "benchmark_supplied_languages": [
+    "de",
+    "fr",
+    "it",
+    "en"
+  ],
+  "translation_assisted_cases": 150,
+  "questions": 150,
+  "language_distribution": {
+    "de": 90,
+    "fr": 25,
+    "it": 15,
+    "en": 20
+  },
+  "language_metrics": {
+    "de": {
+      "recall_at_5": 0.8,
+      "recall_at_20": 0.971429
+    },
+    "fr": {
+      "recall_at_5": 0.72,
+      "recall_at_20": 0.96
+    },
+    "it": {
+      "recall_at_5": 0.8,
+      "recall_at_20": 1.0
+    },
+    "en": {
+      "recall_at_5": 0.75,
+      "recall_at_20": 0.85
+    }
+  },
+  "case_distribution": {
+    "multi_source": 15,
+    "direct": 105,
+    "synonym_typo": 30
+  },
+  "recall_at_5": 0.781818,
+  "recall_at_20": 0.957576,
+  "warm_p95_ms": 1425.37,
+  "parallel_8_p95_ms": 9042.85,
+  "cases": [
+    {
+      "id": "q001_de_multi_source",
+      "expected": 2,
+      "found_at_5": 2,
+      "found_at_20": 2,
+      "duration_ms": 1204.82
+    },
+    {
+      "id": "q002_de_multi_source",
+      "expected": 2,
+      "found_at_5": 2,
+      "found_at_20": 2,
+      "duration_ms": 950.75
+    },
+    {
+      "id": "q003_de_multi_source",
+      "expected": 2,
+      "found_at_5": 1,
+      "found_at_20": 2,
+      "duration_ms": 1343.99
+    },
+    {
+      "id": "q004_de_multi_source",
+      "expected": 2,
+      "found_at_5": 2,
+      "found_at_20": 2,
+      "duration_ms": 920.31
+    },
+    {
+      "id": "q005_de_multi_source",
+      "expected": 2,
+      "found_at_5": 1,
+      "found_at_20": 2,
+      "duration_ms": 681.19
+    },
+    {
+      "id": "q006_de_multi_source",
+      "expected": 2,
+      "found_at_5": 1,
+      "found_at_20": 2,
+      "duration_ms": 812.18
+    },
+    {
+      "id": "q007_de_multi_source",
+      "expected": 2,
+      "found_at_5": 0,
+      "found_at_20": 1,
+      "duration_ms": 451.95
+    },
+    {
+      "id": "q008_de_multi_source",
+      "expected": 2,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 572.7
+    },
+    {
+      "id": "q009_de_multi_source",
+      "expected": 2,
+      "found_at_5": 2,
+      "found_at_20": 2,
+      "duration_ms": 823.28
+    },
+    {
+      "id": "q010_de_multi_source",
+      "expected": 2,
+      "found_at_5": 0,
+      "found_at_20": 1,
+      "duration_ms": 752.95
+    },
+    {
+      "id": "q011_de_multi_source",
+      "expected": 2,
+      "found_at_5": 1,
+      "found_at_20": 2,
+      "duration_ms": 943.2
+    },
+    {
+      "id": "q012_de_multi_source",
+      "expected": 2,
+      "found_at_5": 1,
+      "found_at_20": 2,
+      "duration_ms": 528.6
+    },
+    {
+      "id": "q013_de_multi_source",
+      "expected": 2,
+      "found_at_5": 1,
+      "found_at_20": 2,
+      "duration_ms": 1297.12
+    },
+    {
+      "id": "q014_de_multi_source",
+      "expected": 2,
+      "found_at_5": 1,
+      "found_at_20": 2,
+      "duration_ms": 678.82
+    },
+    {
+      "id": "q015_de_multi_source",
+      "expected": 2,
+      "found_at_5": 2,
+      "found_at_20": 2,
+      "duration_ms": 590.48
+    },
+    {
+      "id": "q016_de_direct",
+      "expected": 1,
+      "found_at_5": 0,
+      "found_at_20": 1,
+      "duration_ms": 788.0
+    },
+    {
+      "id": "q017_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 783.72
+    },
+    {
+      "id": "q018_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 710.6
+    },
+    {
+      "id": "q019_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 666.9
+    },
+    {
+      "id": "q020_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 617.37
+    },
+    {
+      "id": "q021_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 560.54
+    },
+    {
+      "id": "q022_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 292.31
+    },
+    {
+      "id": "q023_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 615.78
+    },
+    {
+      "id": "q024_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 584.1
+    },
+    {
+      "id": "q025_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 344.3
+    },
+    {
+      "id": "q026_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 431.46
+    },
+    {
+      "id": "q027_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 893.2
+    },
+    {
+      "id": "q028_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 655.55
+    },
+    {
+      "id": "q029_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 640.36
+    },
+    {
+      "id": "q030_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 738.95
+    },
+    {
+      "id": "q031_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 546.26
+    },
+    {
+      "id": "q032_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 864.73
+    },
+    {
+      "id": "q033_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 504.3
+    },
+    {
+      "id": "q034_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 5941.07
+    },
+    {
+      "id": "q035_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 602.35
+    },
+    {
+      "id": "q036_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 619.82
+    },
+    {
+      "id": "q037_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 722.8
+    },
+    {
+      "id": "q038_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 734.46
+    },
+    {
+      "id": "q039_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 1304.07
+    },
+    {
+      "id": "q040_de_direct",
+      "expected": 1,
+      "found_at_5": 0,
+      "found_at_20": 1,
+      "duration_ms": 326.53
+    },
+    {
+      "id": "q041_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 275.08
+    },
+    {
+      "id": "q042_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 402.36
+    },
+    {
+      "id": "q043_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 1491.96
+    },
+    {
+      "id": "q044_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 734.18
+    },
+    {
+      "id": "q045_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 1102.17
+    },
+    {
+      "id": "q046_de_direct",
+      "expected": 1,
+      "found_at_5": 0,
+      "found_at_20": 1,
+      "duration_ms": 982.73
+    },
+    {
+      "id": "q047_de_direct",
+      "expected": 1,
+      "found_at_5": 0,
+      "found_at_20": 1,
+      "duration_ms": 694.56
+    },
+    {
+      "id": "q048_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 506.74
+    },
+    {
+      "id": "q049_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 420.29
+    },
+    {
+      "id": "q050_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 732.04
+    },
+    {
+      "id": "q051_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 173.6
+    },
+    {
+      "id": "q052_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 11482.05
+    },
+    {
+      "id": "q053_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 2071.46
+    },
+    {
+      "id": "q054_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 913.3
+    },
+    {
+      "id": "q055_de_direct",
+      "expected": 1,
+      "found_at_5": 0,
+      "found_at_20": 1,
+      "duration_ms": 521.74
+    },
+    {
+      "id": "q056_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 251.88
+    },
+    {
+      "id": "q057_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 294.72
+    },
+    {
+      "id": "q058_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 535.18
+    },
+    {
+      "id": "q059_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 404.82
+    },
+    {
+      "id": "q060_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 372.74
+    },
+    {
+      "id": "q061_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 418.37
+    },
+    {
+      "id": "q062_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 113.93
+    },
+    {
+      "id": "q063_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 460.99
+    },
+    {
+      "id": "q064_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 391.66
+    },
+    {
+      "id": "q065_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 162.42
+    },
+    {
+      "id": "q066_de_direct",
+      "expected": 1,
+      "found_at_5": 0,
+      "found_at_20": 1,
+      "duration_ms": 450.75
+    },
+    {
+      "id": "q067_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 452.61
+    },
+    {
+      "id": "q068_de_direct",
+      "expected": 1,
+      "found_at_5": 0,
+      "found_at_20": 1,
+      "duration_ms": 646.16
+    },
+    {
+      "id": "q069_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 709.82
+    },
+    {
+      "id": "q070_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 412.35
+    },
+    {
+      "id": "q071_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 509.61
+    },
+    {
+      "id": "q072_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 440.46
+    },
+    {
+      "id": "q073_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 425.26
+    },
+    {
+      "id": "q074_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 1147.73
+    },
+    {
+      "id": "q075_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 767.49
+    },
+    {
+      "id": "q076_de_direct",
+      "expected": 1,
+      "found_at_5": 0,
+      "found_at_20": 1,
+      "duration_ms": 627.27
+    },
+    {
+      "id": "q077_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 1209.64
+    },
+    {
+      "id": "q078_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 1092.22
+    },
+    {
+      "id": "q079_de_direct",
+      "expected": 1,
+      "found_at_5": 0,
+      "found_at_20": 1,
+      "duration_ms": 656.14
+    },
+    {
+      "id": "q080_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 705.29
+    },
+    {
+      "id": "q081_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 781.0
+    },
+    {
+      "id": "q082_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 508.76
+    },
+    {
+      "id": "q083_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 4075.98
+    },
+    {
+      "id": "q084_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 4554.23
+    },
+    {
+      "id": "q085_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 537.14
+    },
+    {
+      "id": "q086_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 1233.82
+    },
+    {
+      "id": "q087_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 1009.44
+    },
+    {
+      "id": "q088_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 1267.25
+    },
+    {
+      "id": "q089_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 944.88
+    },
+    {
+      "id": "q090_de_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 1214.54
+    },
+    {
+      "id": "q091_fr_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 834.69
+    },
+    {
+      "id": "q092_fr_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 653.76
+    },
+    {
+      "id": "q093_fr_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 177.84
+    },
+    {
+      "id": "q094_fr_direct",
+      "expected": 1,
+      "found_at_5": 0,
+      "found_at_20": 1,
+      "duration_ms": 391.48
+    },
+    {
+      "id": "q095_fr_direct",
+      "expected": 1,
+      "found_at_5": 0,
+      "found_at_20": 1,
+      "duration_ms": 422.57
+    },
+    {
+      "id": "q096_fr_direct",
+      "expected": 1,
+      "found_at_5": 0,
+      "found_at_20": 0,
+      "duration_ms": 554.69
+    },
+    {
+      "id": "q097_fr_direct",
+      "expected": 1,
+      "found_at_5": 0,
+      "found_at_20": 1,
+      "duration_ms": 472.37
+    },
+    {
+      "id": "q098_fr_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 290.07
+    },
+    {
+      "id": "q099_fr_direct",
+      "expected": 1,
+      "found_at_5": 0,
+      "found_at_20": 1,
+      "duration_ms": 517.83
+    },
+    {
+      "id": "q100_fr_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 566.65
+    },
+    {
+      "id": "q101_fr_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 441.04
+    },
+    {
+      "id": "q102_fr_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 438.3
+    },
+    {
+      "id": "q103_fr_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 468.58
+    },
+    {
+      "id": "q104_fr_direct",
+      "expected": 1,
+      "found_at_5": 0,
+      "found_at_20": 1,
+      "duration_ms": 903.57
+    },
+    {
+      "id": "q105_fr_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 642.54
+    },
+    {
+      "id": "q106_fr_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 1149.93
+    },
+    {
+      "id": "q107_fr_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 1721.12
+    },
+    {
+      "id": "q108_fr_direct",
+      "expected": 1,
+      "found_at_5": 0,
+      "found_at_20": 1,
+      "duration_ms": 467.51
+    },
+    {
+      "id": "q109_fr_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 391.37
+    },
+    {
+      "id": "q110_fr_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 548.5
+    },
+    {
+      "id": "q111_fr_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 638.97
+    },
+    {
+      "id": "q112_fr_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 1097.0
+    },
+    {
+      "id": "q113_fr_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 408.49
+    },
+    {
+      "id": "q114_fr_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 822.71
+    },
+    {
+      "id": "q115_fr_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 971.03
+    },
+    {
+      "id": "q116_it_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 257.59
+    },
+    {
+      "id": "q117_it_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 928.23
+    },
+    {
+      "id": "q118_it_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 254.21
+    },
+    {
+      "id": "q119_it_direct",
+      "expected": 1,
+      "found_at_5": 0,
+      "found_at_20": 1,
+      "duration_ms": 299.97
+    },
+    {
+      "id": "q120_it_direct",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 337.69
+    },
+    {
+      "id": "q121_it_synonym_typo",
+      "expected": 1,
+      "found_at_5": 0,
+      "found_at_20": 1,
+      "duration_ms": 574.97
+    },
+    {
+      "id": "q122_it_synonym_typo",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 463.52
+    },
+    {
+      "id": "q123_it_synonym_typo",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 848.85
+    },
+    {
+      "id": "q124_it_synonym_typo",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 466.77
+    },
+    {
+      "id": "q125_it_synonym_typo",
+      "expected": 1,
+      "found_at_5": 0,
+      "found_at_20": 1,
+      "duration_ms": 329.58
+    },
+    {
+      "id": "q126_it_synonym_typo",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 923.79
+    },
+    {
+      "id": "q127_it_synonym_typo",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 277.81
+    },
+    {
+      "id": "q128_it_synonym_typo",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 398.49
+    },
+    {
+      "id": "q129_it_synonym_typo",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 297.51
+    },
+    {
+      "id": "q130_it_synonym_typo",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 486.49
+    },
+    {
+      "id": "q131_en_synonym_typo",
+      "expected": 1,
+      "found_at_5": 0,
+      "found_at_20": 0,
+      "duration_ms": 4862.61
+    },
+    {
+      "id": "q132_en_synonym_typo",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 613.75
+    },
+    {
+      "id": "q133_en_synonym_typo",
+      "expected": 1,
+      "found_at_5": 0,
+      "found_at_20": 0,
+      "duration_ms": 405.36
+    },
+    {
+      "id": "q134_en_synonym_typo",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 513.56
+    },
+    {
+      "id": "q135_en_synonym_typo",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 748.27
+    },
+    {
+      "id": "q136_en_synonym_typo",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 1182.81
+    },
+    {
+      "id": "q137_en_synonym_typo",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 445.46
+    },
+    {
+      "id": "q138_en_synonym_typo",
+      "expected": 1,
+      "found_at_5": 0,
+      "found_at_20": 1,
+      "duration_ms": 884.87
+    },
+    {
+      "id": "q139_en_synonym_typo",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 585.89
+    },
+    {
+      "id": "q140_en_synonym_typo",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 453.07
+    },
+    {
+      "id": "q141_en_synonym_typo",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 1131.6
+    },
+    {
+      "id": "q142_en_synonym_typo",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 1097.28
+    },
+    {
+      "id": "q143_en_synonym_typo",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 570.14
+    },
+    {
+      "id": "q144_en_synonym_typo",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 868.17
+    },
+    {
+      "id": "q145_en_synonym_typo",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 718.91
+    },
+    {
+      "id": "q146_en_synonym_typo",
+      "expected": 1,
+      "found_at_5": 0,
+      "found_at_20": 0,
+      "duration_ms": 212.89
+    },
+    {
+      "id": "q147_en_synonym_typo",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 443.19
+    },
+    {
+      "id": "q148_en_synonym_typo",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 385.76
+    },
+    {
+      "id": "q149_en_synonym_typo",
+      "expected": 1,
+      "found_at_5": 0,
+      "found_at_20": 1,
+      "duration_ms": 322.26
+    },
+    {
+      "id": "q150_en_synonym_typo",
+      "expected": 1,
+      "found_at_5": 1,
+      "found_at_20": 1,
+      "duration_ms": 399.01
+    }
+  ]
+}

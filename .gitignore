@@ -1,0 +1,14 @@
+.venv/
+.pytest_cache/
+.ruff_cache/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+release/
+state/*
+!state/.gitkeep
+catalog/*.sqlite
+catalog/*.sqlite.previous
+catalog/*.sqlite.new

@@ -1,0 +1,1967 @@
+[
+  {
+    "id": "q001_de_multi_source",
+    "language": "de",
+    "case_type": "multi_source",
+    "question": "Finde den Schweizer Datensatz: Demografische Bilanz nach Kanton; Geoparquet-Datei - Kommunale Wald-Baulinien",
+    "expected": [
+      "bfs_pxweb:px-x-0102020000_101",
+      "ckan:kommunale-nutzungsplanung:43c9ff9e-8b1c-4799-9262-58b54a3d0d90"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q002_de_multi_source",
+    "language": "de",
+    "case_type": "multi_source",
+    "question": "Finde den Schweizer Datensatz: Alter des Strassenfahrzeugbestands nach Fahrzeuggruppe; Landwirtschaftliche Direktzahlungen des Kantons Thurgau",
+    "expected": [
+      "ckan:alter-des-strassenfahrzeugbestands-nach-fahrzeuggruppe:33c658c0-ae99-467e-b47e-d2941a902098",
+      "ckan:landwirtschaftliche-direktzahlungen-des-kantons-thurgau:b0eb3a2a-af0d-421b-bf5d-8c674d7696b9"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q003_de_multi_source",
+    "language": "de",
+    "case_type": "multi_source",
+    "question": "Finde den Schweizer Datensatz: Geoparquet-Datei - Artenhotspots; Lotteriefonds Kanton Thurgau: Zugesprochene Beiträge",
+    "expected": [
+      "ckan:artenhotspots:c004d548-c4c9-4cf9-8905-e8c8b4cdc49f",
+      "ckan:lotteriefonds-kanton-thurgau-zugesprochene-beitrage:9bedaf81-22fe-461d-9498-a31b2a663d2b"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q004_de_multi_source",
+    "language": "de",
+    "case_type": "multi_source",
+    "question": "Finde den Schweizer Datensatz: Begegnungszonen Stadt St.Gallen; Daten RSD-Messkampagne 2005",
+    "expected": [
+      "ckan:begegnungszonen2:5778b432-043f-4b01-a56f-c7ad26e36846",
+      "ckan:messdaten-langjahriger-abgasmessungen-im-realen-fahrbetrieb-mittels-remote-sensing-rsd:dc1255fa-312c-4b5c-b4f3-99518943c1de"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q005_de_multi_source",
+    "language": "de",
+    "case_type": "multi_source",
+    "question": "Finde den Schweizer Datensatz: Bildungsabschlüsse höherer Berufsbildung; Précipitations mensuelles, dès 1959",
+    "expected": [
+      "ckan:bildungsabschlusse-hoherer-berufsbildung:d5f06140-bf67-4fec-8de7-471f5228430a",
+      "ckan:niederschlagsmenge-ab-1959:87c0e890-cec0-466c-829e-9ce6803ba636"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q006_de_multi_source",
+    "language": "de",
+    "case_type": "multi_source",
+    "question": "Finde den Schweizer Datensatz: Produktegruppen Budget und Rechnung 2016; Ein- und Aussteigende an Bahnhöfen",
+    "expected": [
+      "ckan:de-produktegruppen-budget-und-rechnung-2016:ba4d0e17-001a-47c7-9a20-63c8de13c0fe",
+      "ckan:passagierfrequenz1:fa502e9f-c6a8-4b33-82f8-4b0fe87ba683"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q007_de_multi_source",
+    "language": "de",
+    "case_type": "multi_source",
+    "question": "Finde den Schweizer Datensatz: Volksabstimmung vom 30.11.2025– Eidgenössische Vorlagen; Gemeinderesultate der Regierungsratswahl 2014",
+    "expected": [
+      "ckan:echtzeitdaten-am-abstimmungstag-zu-eidgenoessischen-abstimmungsvorlagen:ad164682-9a99-478b-b3d8-4a2a2a8da8cb",
+      "ckan:regierungsratswahlen-im-kanton-bern:38a60c76-abb8-4b29-bf95-06650129bf12"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q008_de_multi_source",
+    "language": "de",
+    "case_type": "multi_source",
+    "question": "Finde den Schweizer Datensatz: Volksabstimmung vom 27.02.1983– Eidgenössische Vorlagen; Geoparquet-Datei - Umsetzungsperimeter Auengebiete (Mitwirkung)",
+    "expected": [
+      "ckan:echtzeitdaten-zu-den-eidgenossischen-abstimmungen-gemeindestand-am-datum-der-abstimmung:e95e1ed2-2b15-4950-a5cf-a92c7b939684",
+      "ckan:sachplan-biodiversitat-mitwirkungsverfahren:b84929f0-c240-4a58-b1b0-1f4457fd3710"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q009_de_multi_source",
+    "language": "de",
+    "case_type": "multi_source",
+    "question": "Finde den Schweizer Datensatz: Geoparquet-Datei - Entwicklungsschwerpunkte, Perimeter; Geoparquet-Datei - Hauptnutzniessende des Schutzwaldes",
+    "expected": [
+      "ckan:entwicklungsschwerpunkte:b02cf8a5-91e0-4cc4-aa02-c06682a1b3e9",
+      "ckan:schutzwaldhinweiskarte:48bdb346-9527-4a96-814d-6ad0efda8b5b"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q010_de_multi_source",
+    "language": "de",
+    "case_type": "multi_source",
+    "question": "Finde den Schweizer Datensatz: Fahrzeugbestand Kanton Thurgau am 01.01.2024; Sport- und Bewegungsanlagen",
+    "expected": [
+      "ckan:fahrzeugbestand-kanton-thurgau-am-01-01-2024:1804f2b1-3274-4a70-9c17-e2edd6a6a4ed",
+      "ckan:sport-und-bewegungsanlagen:251c2a7b-e930-48ed-8f2e-7799012d0722"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q011_de_multi_source",
+    "language": "de",
+    "case_type": "multi_source",
+    "question": "Finde den Schweizer Datensatz: Füllstandsensoren Glassammelstellen (Weissglas) Stadt St.Gallen; Bevölkerungsbilanz 2019",
+    "expected": [
+      "ckan:fullstandsensoren-glassammelstellen-weissglas:fd4c7cda-968b-406c-906c-e6a7cd893e53",
+      "ckan:statistik-der-schweizer-staedte-2021:bf00caed-0145-4665-b035-c773c622996b"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q012_de_multi_source",
+    "language": "de",
+    "case_type": "multi_source",
+    "question": "Finde den Schweizer Datensatz: Gesammelte PET-Einwegflaschen im Kanton Basel-Stadt; bisherige Entwicklung Grundbildung",
+    "expected": [
+      "ckan:gesammelte-pet-einwegflaschen-im-kanton-basel-stadt:230d509d-dd4b-43df-b9e6-4ae207122321",
+      "ckan:szenarien-fur-die-entwicklung-der-anzahl-schulerinnen-und-schuler-in-beruflicher-grundbildung:f03909f4-5b0a-490b-a549-e9dc0c6a5a22"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q013_de_multi_source",
+    "language": "de",
+    "case_type": "multi_source",
+    "question": "Finde den Schweizer Datensatz: Geoparquet-Datei - Dienststellen der Grundbuchämter; Unterflurbehälter Stadt St.Gallen",
+    "expected": [
+      "ckan:grundbuchamter:97d9ee73-155e-49c2-af20-497e7cf5a79b",
+      "ckan:unterflurbehalter:8d9ea168-af70-44a9-a919-1e6f5e405dd4"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q014_de_multi_source",
+    "language": "de",
+    "case_type": "multi_source",
+    "question": "Finde den Schweizer Datensatz: Hydrometrie Thurgau - Wassertemperatur (°C); Gemeindeinformationen Erneuerungswahl Kantonsrat 2007",
+    "expected": [
+      "ckan:hydrometrie-thurgau-wassertemperatur-c:78158dd4-3429-4244-b954-3b2eb61e65f3",
+      "ckan:wahlarchiv-kantonsratswahlen:be58757f-495e-49fb-b634-43b16cc504e0"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q015_de_multi_source",
+    "language": "de",
+    "case_type": "multi_source",
+    "question": "Finde den Schweizer Datensatz: Kanton Wallis: Haushalte und Familien; Wind crust formation: SnowMicroPen data",
+    "expected": [
+      "ckan:kanton-wallis-haushalte-und-familien:581d2930-3d8d-45c3-9017-827d16713d25",
+      "ckan:wind-crust-formation-snowmicropen-data:bf2d76b2-5cf1-4e6c-be97-91f6edf4be0b"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q016_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Ständige und nichtständige Wohnbevölkerung nach Jahr, Kanton, Bevölkerungstyp, Geschlecht, Zivilstand und Alter",
+    "expected": [
+      "bfs_pxweb:px-x-0102010000_102"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q017_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Wohnungen nach Kanton, Anzahl Zimmer, Bauperiode, Renovationsperiode und Jahr",
+    "expected": [
+      "bfs_pxweb:px-x-0902020100_141"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q018_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Studierende an den Fachhochschulen und pädagogischen Hochschulen nach Jahr, Wohnkanton vor Studienbeginn und Hochschule",
+    "expected": [
+      "bfs_pxweb:px-x-1502040400_140"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q019_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Grenzüberschreitender City Statistics: Mobilität, Tourismus (Agglomerationen 2012)",
+    "expected": [
+      "bfs_pxweb:px-x-2105000000_216"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q020_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Abstimmungen Details",
+    "expected": [
+      "ckan:abstimmungen-details:a83616a3-1535-42cc-b9bb-9db2a1dafa0e"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q021_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Agrarumweltindikatoren und -kennzahlen auf nationaler Ebene 1990-2015",
+    "expected": [
+      "ckan:agrarumweltindikatoren-und-kennzahlen-auf-nationaler-ebene-1990-2015:f750dbf4-f317-4e1d-b64e-582171901e47"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q022_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Allmendbewilligungen",
+    "expected": [
+      "ckan:allmendbewilligungen:90de1b88-15b4-46a5-9746-bf0c51468f26"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q023_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: anderung-der-kantonsverfassung-anpassung-an-das-erwachsenenschutzrecht.json",
+    "expected": [
+      "ckan:anderung-der-kantonsverfassung-anpassung-an-das-erwachsenenschutzrecht:52aa1147-e8de-403e-949f-7bddd2a149a2"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q024_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: anderung-vom-18-dezember-2020-des-schweizerischen-zivilgesetzbuches-ehe-fuer-alle.json",
+    "expected": [
+      "ckan:anderung-vom-18-dezember-2020-des-schweizerischen-zivilgesetzbuches-ehe-fur-alle1:0f9a780d-0870-44de-94cb-14a29453ba74"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q025_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Anstaltstopografie 1965: Anstaltsverzeichnis",
+    "expected": [
+      "ckan:anstaltstopografie:63612f5b-c805-468c-b051-5868258b7c54"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q026_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Anzahl registrierter Hundebesitzer seit 2018",
+    "expected": [
+      "ckan:anzahl-registrierte-hundebesitzer-seit-2018:a5da5408-c3b9-4a19-a4d1-93cc96cdbaf8"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q027_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Produttività del lavoro per rami di attività a prezzi correnti (64 rami)",
+    "expected": [
+      "ckan:arbeitsproduktivitat-nach-branchen-zu-laufenden-preisen-64-branchen:9851a5a8-ffc9-4ca2-994f-3361c4dbddc7"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q028_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Tabelle delle risorse e degli impieghi legati ai flussi di energia",
+    "expected": [
+      "ckan:aufkommens-und-verwendungstabellen-fur-energieflusse6-1:79afd837-9e89-4b26-be25-bf6079643030"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q029_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Ausländische Wohnbevölkerung seit 1836",
+    "expected": [
+      "ckan:auslandische-wohnbevolkerung-seit-1836:34ee83c3-cf66-470d-91ec-73cd2d913a04"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q030_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Investissements et réserves de travail dans la construction, par genre d'ouvrage, selon les cantons; aux prix courants",
+    "expected": [
+      "ckan:bauinvestitionen-und-arbeitsvorrat-nach-art-der-bauwerke-und-nach-kantonen-zu-laufenden-preisen4:70031ae2-f990-400f-8f3c-e09c0835baac"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q031_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Densité d'occupation selon la nationalité des membres du ménage privé et leur nombre, par canton",
+    "expected": [
+      "ckan:belegungsdichte-nach-anzahl-und-nationalitat-der-haushaltsmitglieder-nach-kanton4:1dbc98bb-339d-46c5-b4db-33592a0ee35c"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q032_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Parc des cyclomoteurs selon le canton (y compris les vélos électriques rapides)",
+    "expected": [
+      "ckan:bestand-der-motorfahrrader-nach-kanton-inkl-schnelle-e-bikes1:f889d37f-ba95-4061-be35-a0a10a5cba3e"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q033_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Bevölkerung: Frauenanteil [%]",
+    "expected": [
+      "ckan:bevolkerung-frauenanteil:84752f1c-f15c-4d33-9cab-b419feb8f155"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q034_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Bewilligte Tagesbetreuungseinrichtungen für Kinder nach Standort",
+    "expected": [
+      "ckan:bewilligte-tagesbetreuungseinrichtungen-fur-kinder-nach-standort-dezember-2022:550a7315-0f40-4f08-8465-7a4226b71051"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q035_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Bilan de la population résidante permanente, par canton et ville, de 1999 à 2022",
+    "expected": [
+      "ckan:bilanz-der-standigen-wohnbevolkerung-nach-kanton-und-stadt-1999-2022:9ea79a69-46ba-44ea-a82a-570c8e27ccaf"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q036_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Geoparquet-Datei - Bojen",
+    "expected": [
+      "ckan:bojen-und-konzessionsobjekte-seeverkehr:b5d7d930-2e33-46ff-979c-e5ec67a3a4ee"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q037_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: bundesbeschluss-ueber-die-beschaffung-neuer-kampfflugzeuge.json",
+    "expected": [
+      "ckan:bundesbeschluss-uber-die-beschaffung-neuer-kampfflugzeuge:56b31693-4f76-4322-93a9-0be91d83474e"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q038_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: bundesgesetz-vom-17-maerz-2017-ueber-die-reform-der-altersvorsorge-2020.csv",
+    "expected": [
+      "ckan:bundesgesetz-vom-17-marz-2017-uber-die-reform-der-altersvorsorge-2020:64739b73-c14a-4eb2-b3ba-8c4eb9c783e9"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q039_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Comptes régionaux de l'agriculture, production totale, dès 1999",
+    "expected": [
+      "ckan:comptes-regionaux-de-lagriculture-production-totale-des-1999:9d250054-85f2-413a-823c-73108bb7a248"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q040_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: (DEPRECATED)COVID19Hosp_reason_AKL10_w",
+    "expected": [
+      "ckan:covid-19-schweiz:261e00e7-c275-40ad-b7e4-b72676a20045"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q041_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: (DEPRECATED)COVID19Cases_extraGeoRegions_d",
+    "expected": [
+      "ckan:covid-19-schweiz:f0ba55fb-4d4e-4cac-ae29-e1e3d9805890"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q042_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: codeliste_2025.csv",
+    "expected": [
+      "ckan:daten-der-firmenbefragung-2025-der-stadt-zurich:da1d7de0-a541-4df6-9ad5-4a8c50e151a7"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q043_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Spese dettagliate (tutte le tabelle degli anni 2015-2017)",
+    "expected": [
+      "ckan:detaillierte-haushaltsausgaben-samtliche-tabellen-der-jahre-2015-20171:0f40496e-6d64-485f-9193-cb6b569e3101"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q044_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Durchschnittliche Armutsgrenzen ausgewählter Haushaltstypen",
+    "expected": [
+      "ckan:durchschnittliche-armutsgrenzen-ausgewahlter-haushaltstypen4:5f1d25bc-1b85-4ad5-a9cb-2b731bf39006"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q045_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Durchschnittlicher Mietpreis in Franken nach Zimmerzahl und Kanton",
+    "expected": [
+      "ckan:durchschnittlicher-mietpreis-in-franken-nach-zimmerzahl-und-kanton2:8da6bcf0-2f26-4b36-8604-604664d3ad0f"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q046_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Urnengang vom 26.11.2023 – Abstimmungen und Majorzwahlen",
+    "expected": [
+      "ckan:echtzeitdaten-am-abstimmungstag-des-kantons-zurich-kommunale-und-regionale-vorlagen:c664a760-d49f-4cc6-b429-5a578e339ca5"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q047_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Volksabstimmung vom 09.06.2024– Eidgenössische Vorlagen",
+    "expected": [
+      "ckan:echtzeitdaten-am-abstimmungstag-zu-eidgenoessischen-abstimmungsvorlagen:b71301e8-4939-45e8-b895-b67dcdf50bc9"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q048_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Volksabstimmung vom 08.03.2015– Eidgenössische Vorlagen",
+    "expected": [
+      "ckan:echtzeitdaten-zu-den-eidgenossischen-abstimmungen-gemeindestand-am-datum-der-abstimmung:3466842c-d1fc-432e-9569-6f1ac6191a16"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q049_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Effektiver und erwarteter täglicher Gasverbrauch",
+    "expected": [
+      "ckan:effektiver-und-erwarteter-taglicher-gasverbrauch:f246752e-6374-496a-8d44-93469e2f977e"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q050_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Type de propriétaire des logements de locataires pour les six plus grandes villes, 2021-2023 cumulé",
+    "expected": [
+      "ckan:eigentumertyp-der-mietwohnungen-der-sechs-grossten-stadte-2021-2023-kumiliert:bd338606-405b-48e3-918c-5d79ab0c5f44"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q051_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Résultats du Conseil d'Etat",
+    "expected": [
+      "ckan:elections-cantonales-2018-resultats-detailles-du-canton-de-geneve:8bd877b2-1732-4afe-b9d1-effdff1a6f5e"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q052_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Unmet need for health care of children, for financial reasons, by various socio-demographic characteristics",
+    "expected": [
+      "ckan:entbehrungen-von-pflegeleistungen-der-kinder-nach-verschiedenen-soziodemografischen-merkmalen1:966cb2ee-73b3-4a6c-863e-b007fb321194"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q053_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Entwicklung des Rundholzeinschnittes in den Sägewerken der Schweiz nach Grössenklassen",
+    "expected": [
+      "ckan:entwicklung-des-rundholzeinschnittes-in-den-sagewerken-der-schweiz-nach-grossenklassen5-1:ac9f43a5-920a-4ea7-8117-f4a259f217b8"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q054_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Externe Effekte des Verkehrs 2023: Sensitivitätsanalysen",
+    "expected": [
+      "ckan:ergebnistabellen-externe-effekte-des-verkehrs:fc85e5d4-3a95-45e6-b223-d07db118a108"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q055_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Adults: Convictions for a misdemeanour or felony under the articles of the Swiss Military Criminal Code (SMCC), by year",
+    "expected": [
+      "ckan:erwachsene-verurteilungen-fur-ein-verbrechen-oder-vergehen-nach-artikeln-des-militarstrafgesetz4:0b824e3b-4fcb-47c8-88d0-e8bac7683486"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q056_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Erwerbslosenquote gemäss ILO nach Geschlecht, Nationalität und anderen Merkmalen",
+    "expected": [
+      "ckan:erwerbslosenquote-gemass-ilo-nach-geschlecht-nationalitat-und-anderen-merkmalen12:5f75e77e-932b-4513-b04c-6e054e5be5bd"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q057_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: European Snow Booklet – an Inventory of Snow Measurements in Europe",
+    "expected": [
+      "ckan:european-snow-booklet-an-inventory-of-snow-measurements-in-europe:77b39d69-13dd-49a8-9bb5-8776acab4d45"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q058_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Fahrzeiten_SOLL_IST_20170917_20170923.csv",
+    "expected": [
+      "ckan:fahrzeiten-2017-der-vbz-im-soll-ist-vergleich-nachfuhrung-eingestellt1:280590dd-afaf-4e15-a449-f071def752a9"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q059_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Fahrzeiten_SOLL_IST_20190120_20190126.csv",
+    "expected": [
+      "ckan:fahrzeiten-2019-der-vbz-im-soll-ist-vergleich-nachfuhrung-eingestellt1:553ee74e-0d9c-4b61-b24f-fe1fa53bb8ac"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q060_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Fahrzeiten_SOLL_IST_20211024_20211030.csv",
+    "expected": [
+      "ckan:fahrzeiten-2021-der-vbz-im-soll-ist-vergleich-nachfuhrung-eingestellt:6389ed6c-5281-43e1-9a58-86ad06e68139"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q061_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Fahrzeiten_SOLL_IST_20230430_20230506.csv",
+    "expected": [
+      "ckan:fahrzeiten-2023-der-vbz-im-soll-ist-vergleich-nachfuhrung-eingestellt1:da5369b2-483e-4e8e-b25c-b12baa17e08e"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q062_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Fetzer_Khibiny_Treeline_NPcycling",
+    "expected": [
+      "ckan:fetzer_khibiny_treeline_npcycling:79b0302a-7d2f-4367-980a-7cab92c985e0"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q063_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Fiscal Data Package 2017 Budget und Rechnung CSV",
+    "expected": [
+      "ckan:fiscal-data-package-kanton-basel-stadt:76c5c078-2d6d-4035-bf58-e391fbaea479"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q064_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Votations cantonales fribourgeoises par commune, dès 2015",
+    "expected": [
+      "ckan:freiburger-kantonale-abstimmungen-nach-gemeinden-ab-2015:8e41cc50-3280-45ef-ab69-ee1de68944e5"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q065_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Fuss__und_Velowegnetz.json",
+    "expected": [
+      "ckan:fuss-und-velowegnetz:67861b9c-edf6-4bb2-af77-593f20aa5f91"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q066_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Bâtiments selon le type de propriétaire, la branche d'activité économique (NOGA) et le type de communauté, par canton",
+    "expected": [
+      "ckan:gebaude-nach-eigentumertyp-wirtschaftszweige-noga-und-gemeinschaftstyp-nach-kanton-2:3db139e0-5385-4dbb-b0ad-78665adbfc47"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q067_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Gemeindefinanzstatistik Kanton Luzern: Budgets",
+    "expected": [
+      "ckan:gemeindefinanzstatistik-kanton-luzern-budgets:7c2dcfaa-08eb-4fee-bb3d-55ad77e459a3"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q068_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde Resultate der Genfer Wahlen vom 7. März 2021.",
+    "expected": [
+      "ckan:geneva-elections-results-for-march-7th-2021:1215f32e-913b-4d5c-9ac4-4bbb4aa70fa8"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q069_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: gesetz-ueber-die-gebietsreform-im-kanton-graubuenden-mantelgesetz-ueber-die-gebietsreform.csv",
+    "expected": [
+      "ckan:gesetz-uber-die-gebietsreform-im-kanton-graubunden-mantelgesetz-uber-die-gebietsreform:53d313f9-c320-4cec-aac1-a2412b49ac46"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q070_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Gender equality in a European comparison",
+    "expected": [
+      "ckan:gleichstellung-von-frau-und-mann-im-europaischen-vergleich4:a0c136fb-3e56-46eb-9ade-8d9e5cea91ab"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q071_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Grossratswahlen 2008: Kandidatenstimmen nach Herkunft der Stimmen (Panaschierstatistik) Bezirk Münchwilen",
+    "expected": [
+      "ckan:grossratswahlen-2008-kandidatenstimmen-nach-herkunft-der-stimmen-panaschierstatistik-bezirk-mun:d5deee73-bc97-4418-a22b-ad2aef7b8952"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q072_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Grossratswahlen Kanton Thurgau: Mandatsverteilung nach Parteien und Geschlecht auf Ebene Kanton",
+    "expected": [
+      "ckan:grossratswahlen-kanton-thurgau-mandatsverteilung-nach-parteien-und-geschlecht-auf-ebene-kanton:8a1d716a-6cd5-475e-b13b-47d79f31932d"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q073_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Taux de création de nouvelles entreprises, dès 2013",
+    "expected": [
+      "ckan:grundungsrate-neuer-unternehmen-ab-2013:cb0faf42-b441-4867-b137-535dc5930a8a"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q074_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Hauptarbeitsort nach Geschlecht, Nationalität, Altersgruppen, Familientyp",
+    "expected": [
+      "ckan:hauptarbeitsort-nach-geschlecht-nationalitat-altersgruppen-familientyp4:bdbb3e25-f051-4760-8f27-a43043eec7c5"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q075_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Violenza domestica: Reati violenti registrati dalla polizia secondo la relazione",
+    "expected": [
+      "ckan:hausliche-gewalt-polizeilich-registrierte-gewaltstraftaten-nach-beziehung2:bf5993f7-108a-4a15-8382-ef2c47fd77aa"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q076_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Holzernte nach Kantonen",
+    "expected": [
+      "ckan:holzernte-nach-kantonen5-1:abd2d9c4-9d8e-4f03-aa94-b73b28180328"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q077_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Abfrageberechtigte Stellen im kantonalen Personenregister arbo",
+    "expected": [
+      "ckan:im-kantonalen-personenregister-abfrageberechtigte-stellen-anmeldungs-und-registerverord-07-2024:f829fffa-0e42-4f7b-9f62-3042a7971426"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q078_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Commerce international, dès 2016",
+    "expected": [
+      "ckan:internationaler-handel-ab-2016:5f872901-27b0-4e86-9af4-50453e0a9a53"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q079_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: 2026-05-30_IstDaten.csv",
+    "expected": [
+      "ckan:ist-daten-v2:44291c45-6bfd-4769-b359-e2c455d7a50d"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q080_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Jugendsanktionsvollzug: Strafrechtlich platzierte Jugendliche am Stichtag nach Platzierungsart [ab 2010]",
+    "expected": [
+      "ckan:jugendsanktionsvollzug-strafrechtlich-platzierte-jugendliche-am-stichtag-nach-platzierungs-20101:510c0832-512b-4d52-be7d-9eb1f5065e56"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q081_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Canton de Appenzell Rh.-Ext: Vie active et formation",
+    "expected": [
+      "ckan:kanton-appenzell-a-rh-erwerbsleben-und-ausbildung:3fbcc934-f8ba-43e4-b344-33248cfc4739"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q082_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Kanton Graubünden: Haushalte und Familien",
+    "expected": [
+      "ckan:kanton-graubunden-haushalte-und-familien:e860c24b-4510-4750-9205-d6c47f7637e8"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q083_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Kanton Solothurn: Wohnbevölkerung nach Hauptsprache, Religion, Nationalität und weiteren Merkmalen",
+    "expected": [
+      "ckan:kanton-solothurn-wohnbevolkerung-nach-hauptsprache-religion-nationalitat-und-weiteren-merkmalen:fdfe476b-5e17-44a0-ad3b-a51bd797a690"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q084_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Canton de Zurich: Population selon la langue principale, la religion, la nationalité et autres caractères",
+    "expected": [
+      "ckan:kanton-zurich-wohnbevolkerung-nach-hauptsprache-religion-nationalitat-und-weiteren-merkmalen:32aedec8-c942-4ee8-bdd7-e73cf847ad11"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q085_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Kantonaler Stromverbrauch",
+    "expected": [
+      "ckan:kantonaler-stromverbrauch-netzlast:b1cd7c2c-2d3c-44b7-8d87-639d76ad0bdf"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q086_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: kantonsratswahl-2018-gde-steinhausen.json",
+    "expected": [
+      "ckan:kantonsratswahl-2018-gde-steinhausen:067846b5-6f73-4ca6-a669-e70c7d8405b5"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q087_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Zugehörigkeit zur kantonalen Spitalliste ab 2008",
+    "expected": [
+      "ckan:kennzahlen-der-schweizer-spitaler-2023:1565d4f3-6aea-46ce-bb44-85d1c79a62ab"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q088_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Geoparquet-Datei - Lärmempfindlichkeitsstufen",
+    "expected": [
+      "ckan:kommunale-nutzungsplanung:e97414be-c8cd-4287-9bfa-5ea72812f1f7"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q089_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: Kosten und Finanzierung des motorisierten Verkehrs - Übersicht",
+    "expected": [
+      "ckan:kosten-und-finanzierung-des-motorisierten-verkehrs-ubersicht4:d8e61f66-819f-4f8e-8763-0aa57b81252d"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q090_de_direct",
+    "language": "de",
+    "case_type": "direct",
+    "question": "Finde den Schweizer Datensatz: landratswahlen-2003-wahlkreis-binningen-parteien.csv",
+    "expected": [
+      "ckan:landratswahlen-2003-wahlkreis-binningen:034af2a5-fbea-4811-9c44-017f60a311ab"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q091_fr_direct",
+    "language": "fr",
+    "case_type": "direct",
+    "question": "Trouve les résultats des élections au Landrat de 2011 dans la circonscription de Gelterkinden.",
+    "expected": [
+      "ckan:landratswahlen-2011-wahlkreis-gelterkinden:72cba397-98bc-4a67-8507-9239a19ef1ef"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q092_fr_direct",
+    "language": "fr",
+    "case_type": "direct",
+    "question": "Trouve les résultats par parti des élections au Landrat de 2019 dans la circonscription de Liestal.",
+    "expected": [
+      "ckan:landratswahlen-2019-wahlkreis-liestal:01c217e3-c449-41c3-a27f-69236bd393c6"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q093_fr_direct",
+    "language": "fr",
+    "case_type": "direct",
+    "question": "Trouve les données de la Landsgemeinde du 1er mai 1966.",
+    "expected": [
+      "ckan:landsgemeinde-vom-01-mai-1966:947c53fd-a3f9-4292-9f87-1687a1fbc79d"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q094_fr_direct",
+    "language": "fr",
+    "case_type": "direct",
+    "question": "Trouve la surface agricole utile sans les pâturages d’estivage.",
+    "expected": [
+      "ckan:landwirtschaftliche-nutzflache-ohne-sommerungsweiden7:0538995b-9219-4be1-935e-c9abdfc02a05"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q095_fr_direct",
+    "language": "fr",
+    "case_type": "direct",
+    "question": "Trouve les logements vacants selon leur mise sur le marché et le nombre de pièces depuis 1995.",
+    "expected": [
+      "ckan:leerstehende-wohnungen-nach-art-der-transaktion-und-anzahl-zimmer-ab-1995:c83504f9-6b24-4e67-994c-ab38c463df62"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q096_fr_direct",
+    "language": "fr",
+    "case_type": "direct",
+    "question": "Trouve les résultats détaillés de l’indice suisse des prix à la consommation, base décembre 2020, depuis 1982.",
+    "expected": [
+      "ckan:lik-dezember-2020100-detailresultate-seit-1982-warenkorbstruktur-2020-inkl-sondergliederungen-l1:4d2d00ef-f4ae-4ab0-960d-eecbee1498ac"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q097_fr_direct",
+    "language": "fr",
+    "case_type": "direct",
+    "question": "Trouve les mesures semi-horaires de la qualité de l’air du réseau Ostluft en Thurgovie.",
+    "expected": [
+      "ckan:luftqualitatsmessungen-ostluft-thurgau-halbstundenwerte:7911415a-2c82-4cb9-8f2c-2986ede9c927"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q098_fr_direct",
+    "language": "fr",
+    "case_type": "direct",
+    "question": "Trouve les mesures des capteurs LoRa de mai 2019.",
+    "expected": [
+      "ckan:lufttemperatur-und-luftfeuchte-lora-sensor-messwerte:e647c485-d551-4c2f-83e5-38eef3970002"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q099_fr_direct",
+    "language": "fr",
+    "case_type": "direct",
+    "question": "Trouve la vue d’ensemble des traitements et résultats de la procréation médicalement assistée.",
+    "expected": [
+      "ckan:medizinisch-unterstutzte-fortpflanzung-behandlungen-und-resultate-gesamtansicht3:8c38def7-f188-42fb-8ca7-4d5cb7137630"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q100_fr_direct",
+    "language": "fr",
+    "case_type": "direct",
+    "question": "Trouve les précipitations journalières de la station manuelle MétéoSuisse d’Eschlikon.",
+    "expected": [
+      "ckan:meteoschweiz-manuelle-niederschlagsstationen-tageswerte-eschlikon-eko:f490f27d-ec83-46f4-a54d-ff30a15808d8"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q101_fr_direct",
+    "language": "fr",
+    "case_type": "direct",
+    "question": "Trouve le salaire brut mensuel selon la position professionnelle.",
+    "expected": [
+      "ckan:monatlicher-bruttolohn-nach-beruflicher-stellung-und-geschlecht:bc8f71fb-3473-4691-b62a-ad4af8726aa1"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q102_fr_direct",
+    "language": "fr",
+    "case_type": "direct",
+    "question": "Trouve le taux de motorisation par canton.",
+    "expected": [
+      "ckan:motorisierungsgrad-nach-kanton3:11e188a9-74e9-4178-8dfb-e59352841fc8"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q103_fr_direct",
+    "language": "fr",
+    "case_type": "direct",
+    "question": "Trouve les données de l’élection au Conseil national dans le canton de Zoug en 2019.",
+    "expected": [
+      "ckan:nationalratswahl-zug-2019:e3ff069e-e498-49db-92b2-b2471b4ff655"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q104_fr_direct",
+    "language": "fr",
+    "case_type": "direct",
+    "question": "Trouve les interactions entre plantes indigènes et non indigènes dans les prairies australiennes.",
+    "expected": [
+      "ckan:native-and-no-native-plant-interactions-in-australian-grasslands:89ace5e4-6194-4498-8a9f-dd04c4ac07c6"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q105_fr_direct",
+    "language": "fr",
+    "case_type": "direct",
+    "question": "Trouve les logements nouvellement construits par commune depuis 2012.",
+    "expected": [
+      "ckan:neu-erstellte-wohnungen-nach-gemeinde:0269e7ce-31de-4244-93f6-581de32b83e7"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q106_fr_direct",
+    "language": "fr",
+    "case_type": "direct",
+    "question": "Trouve le plan d’affectation communal et le règlement des constructions et des zones de Zurich au format GeoJSON.",
+    "expected": [
+      "ckan:nutzungsplanung-kommunale-bau-und-zonenordnung-bzo:9a30eccf-9b8f-4d0e-9add-9f860b2e7c51"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q107_fr_direct",
+    "language": "fr",
+    "case_type": "direct",
+    "question": "Trouve le fichier GeoParquet sur l’écomorphologie des zones d’eau peu profonde.",
+    "expected": [
+      "ckan:okomorphologie-der-seeufer:97118db3-c678-4c81-96da-90f0c7f6b12d"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q108_fr_direct",
+    "language": "fr",
+    "case_type": "direct",
+    "question": "Trouve le parc de logements selon le nombre de pièces depuis 1990.",
+    "expected": [
+      "ckan:parc-de-logements-selon-le-nombre-de-pieces-des-1990:dbc01822-11fa-4dd3-bebd-ce6c7bc5ab88"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q109_fr_direct",
+    "language": "fr",
+    "case_type": "direct",
+    "question": "Trouve les voitures de tourisme selon le type de boîte de vitesses depuis 2022.",
+    "expected": [
+      "ckan:personenwagen-nach-getriebe-ab-2022:7b08aef0-eaed-4ffb-a5bf-aff003e4eece"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q110_fr_direct",
+    "language": "fr",
+    "case_type": "direct",
+    "question": "Trouve la limite cantonale généralisée sous forme de lignes, niveau GS 3, au format GeoParquet.",
+    "expected": [
+      "ckan:politische-grenzen-generalisiert:543c31c1-52a8-45c9-9abd-2d2796b37af0"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q111_fr_direct",
+    "language": "fr",
+    "case_type": "direct",
+    "question": "Trouve les élèves du degré primaire 1-2 selon la grande région et le canton de l’école.",
+    "expected": [
+      "ckan:primarstufe-1-2-lernende-nach-grossregion-und-schulkanton1:c6275555-670b-43da-a0a8-79df71aef548"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q112_fr_direct",
+    "language": "fr",
+    "case_type": "direct",
+    "question": "Trouve le fichier de spécifications SQL de l’indicateur de qualité hospitalier QIP21 numéro 54.",
+    "expected": [
+      "ckan:qualitatsindikatoren-der-schweizer-akutspitaler-2021:20969a00-c4c7-4f5b-8feb-841eaaa1fbcf"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q113_fr_direct",
+    "language": "fr",
+    "case_type": "direct",
+    "question": "Trouve les données de l’élection complémentaire au Conseil d’État de 2013.",
+    "expected": [
+      "ckan:regierungsratsersatzwahl-2013:fc69fa3d-2915-41ea-b146-c149eab06a68"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q114_fr_direct",
+    "language": "fr",
+    "case_type": "direct",
+    "question": "Trouve le fichier GeoParquet des conférences régionales des transports.",
+    "expected": [
+      "ckan:regionale-verkehrskonferenzen:21573544-5cec-4926-90da-eac9337c1795"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q115_fr_direct",
+    "language": "fr",
+    "case_type": "direct",
+    "question": "Trouve les résultats du second tour de l’élection complémentaire à la présidence du gouvernement du 7 avril 2024.",
+    "expected": [
+      "ckan:resultate-der-ersatzwahl-regierungsprasidium-7-april-2024-2-wahlgang:f31040bb-bdd7-4254-b280-f31333383f6f"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q116_it_direct",
+    "language": "it",
+    "case_type": "direct",
+    "question": "Trova le nascite di bovini suddivise per tipo di utilizzazione.",
+    "expected": [
+      "ckan:rinder-geburten-nach-nutzungsarten:8eb823bd-666b-4dbe-8add-b6b9958cef48"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q117_it_direct",
+    "language": "it",
+    "case_type": "direct",
+    "question": "Trova il file GeoParquet dei percorsi escursionistici in fase preliminare con il tipo di pavimentazione.",
+    "expected": [
+      "ckan:sachplankarte-wanderroutennetz:5e62ae89-783b-4dee-8583-9777660b45b2"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q118_it_direct",
+    "language": "it",
+    "case_type": "direct",
+    "question": "Trova la distribuzione delle nascite di ovini.",
+    "expected": [
+      "ckan:schafe-verteilung-der-geburten:75c335c3-820c-4ffc-ab48-9b0ea102a4d1"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q119_it_direct",
+    "language": "it",
+    "case_type": "direct",
+    "question": "Trova le sedi scolastiche nei comuni di Riehen e Bettingen.",
+    "expected": [
+      "ckan:schulstandorte-gemeinden-riehen-und-bettingen:190be427-83bc-423c-8008-b20cf1da83a8"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q120_it_direct",
+    "language": "it",
+    "case_type": "direct",
+    "question": "Trova i beneficiari maggiorenni dell’assistenza sociale nel settore dell’asilo a Sciaffusa, per stato civile.",
+    "expected": [
+      "ckan:sh-asylstat-sozialhilfebeziehende-im-asylbereich-ab-18-jahren-nach-zivilstand3:5fc968ef-e7db-4912-bbce-4d76a0119bc6"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q121_it_synonym_typo",
+    "language": "it",
+    "case_type": "synonym_typo",
+    "question": "Cerco i dati sul rumore del trafico rilevato dal progetto Strada intelligente di Basilea.",
+    "expected": [
+      "ckan:smarte-strasse-verkehrslarm:1d076053-1c55-4f98-b609-6a38deee9b5c"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q122_it_synonym_typo",
+    "language": "it",
+    "case_type": "synonym_typo",
+    "question": "Cerco il personale degli ospedali svizzeri a partire dal 2010.",
+    "expected": [
+      "ckan:spitaler-personal-seit-2010:081c7142-859b-40f3-879f-0e4dcf2764eb"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q123_it_synonym_typo",
+    "language": "it",
+    "case_type": "synonym_typo",
+    "question": "Cerco il bilancio del consuntivo cantonale della Turgovia per il 2022.",
+    "expected": [
+      "ckan:staatsrechnung-thurgau-2022-bilanz:23a6b84f-2d83-4f5a-ba04-65f69fa56dfc"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q124_it_synonym_typo",
+    "language": "it",
+    "case_type": "synonym_typo",
+    "question": "Cerco i risultati in JSON dell’elezione al Consiglio degli Stati nel canton Zugo nel 2015.",
+    "expected": [
+      "ckan:standeratswahl-2015:45274a90-0992-444e-96c0-9767b4f7aa80"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q125_it_synonym_typo",
+    "language": "it",
+    "case_type": "synonym_typo",
+    "question": "Cerco la popolazione residente permanente per età, sesso e nazionalità dal 2010 al 2024.",
+    "expected": [
+      "ckan:standige-wohnbevolkerung-nach-alter-geschlecht-und-staatsangehorigkeitskategorie-2010-2024:e685080a-2202-41c4-b3a2-0a7a9e8649e5"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q126_it_synonym_typo",
+    "language": "it",
+    "case_type": "synonym_typo",
+    "question": "Cerco gli edifici dell’edilizia abitativa senza scopo di lucro per categoria nel 2018.",
+    "expected": [
+      "ckan:statistik-der-schweizer-staedte-2021:24be82c0-c391-4679-b6a3-3fcb366849e6"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q127_it_synonym_typo",
+    "language": "it",
+    "case_type": "synonym_typo",
+    "question": "Cerco il tasso di assistenza sociale delle persone con statuto di protezione S per cantone.",
+    "expected": [
+      "ckan:status-s-sozialhilfequote-der-personen-mit-schutzstatus-s-nach-kanton:92059a50-d165-4e6f-8f67-09c17a41105e"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q128_it_synonym_typo",
+    "language": "it",
+    "case_type": "synonym_typo",
+    "question": "Cerco importi e beneficiari delle borse di studio per categoria di stranieri e cantone.",
+    "expected": [
+      "ckan:stipendien-betrag-bezugerinnen-und-bezuger-nach-auslanderkategorie-und-kanton4:654d9e09-cbac-46d1-8cdc-c74eadd89c41"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q129_it_synonym_typo",
+    "language": "it",
+    "case_type": "synonym_typo",
+    "question": "Cerco il consumo trimestrale di elettricità in migliaia di kWh dal 1993.",
+    "expected": [
+      "ckan:stromverbrauch-in-tausend-kwh-pro-quartal-ab-1993:2ad29980-3ea5-41e5-805b-00c86c060947"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q130_it_synonym_typo",
+    "language": "it",
+    "case_type": "synonym_typo",
+    "question": "Cerco le misure meteo orarie della città di Zurigo per il 2023.",
+    "expected": [
+      "ckan:stundlich-aktualisierte-meteodaten-seit-1992:1d431dcd-5be7-4eda-8ad6-4248dbf263ce"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q131_en_synonym_typo",
+    "language": "en",
+    "case_type": "synonym_typo",
+    "question": "Find the 2026 Swiss public-transport journey-ID timetable listing.",
+    "expected": [
+      "ckan:swiss-journey-id-sjyid-2026-v2:dfdfb28b-314c-496e-a7be-0aa4b039ff5a"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q132_en_synonym_typo",
+    "language": "en",
+    "case_type": "synonym_typo",
+    "question": "Find average daily travel distance broken down by mode of transport.",
+    "expected": [
+      "ckan:tagesdistanz-nach-verkehrsmittel:e94ca160-a820-4b01-8006-604df19c5abb"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q133_en_synonym_typo",
+    "language": "en",
+    "case_type": "synonym_typo",
+    "question": "Find Swiss federal-vote turnout rates from 1910 onward.",
+    "expected": [
+      "ckan:taux-de-participation-aux-votations-federales-des-1910:2b0fd824-1327-43d9-81cb-f004064e86fb"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q134_en_synonym_typo",
+    "language": "en",
+    "case_type": "synonym_typo",
+    "question": "Find the Asian tiger mosquito control zone in Basel.",
+    "expected": [
+      "ckan:tigermuckenbekampfung-bekampfungszone:56804159-ffc3-4547-a074-7fcfafbc0aa9"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q135_en_synonym_typo",
+    "language": "en",
+    "case_type": "synonym_typo",
+    "question": "Find the 2012 financial overview of school municipalities in Thurgau.",
+    "expected": [
+      "ckan:ubersicht-finanzlage-schulgemeinden-kanton-thurgau-2012:138deebc-bbc6-4cd6-a5d4-e774d76e48ba"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q136_en_synonym_typo",
+    "language": "en",
+    "case_type": "synonym_typo",
+    "question": "Find people who moved, grouped by the floor-space size of their old and new dwelling.",
+    "expected": [
+      "ckan:umgezogene-personen-nach-flachenklasse-und-differenz-der-wohnungsflachen1:40b7d3eb-a8b7-41e8-ae69-b68218b35a7b"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q137_en_synonym_typo",
+    "language": "en",
+    "case_type": "synonym_typo",
+    "question": "Find the relocation rate of permanent residents by Swiss canton.",
+    "expected": [
+      "ckan:umzugsquote-der-standigen-wohnbevolkerung-nach-kanton-2:f3af529d-6fa9-4ea8-b4b7-7e5fef85cf60"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q138_en_synonym_typo",
+    "language": "en",
+    "case_type": "synonym_typo",
+    "question": "Find modified ballots from the 20 October 2024 cantonal parliament election.",
+    "expected": [
+      "ckan:veranderte-wahlzettel-der-grossratswahlen-2024:b3bda650-a203-4b52-9b2b-d26a80671868"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q139_en_synonym_typo",
+    "language": "en",
+    "case_type": "synonym_typo",
+    "question": "Find freight-transport result tables for Switzerland’s Transport Outlook 2040.",
+    "expected": [
+      "ckan:verkehrsperspektiven-2040:36c4049f-9c27-4020-a10b-aa916d38237a"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q140_en_synonym_typo",
+    "language": "en",
+    "case_type": "synonym_typo",
+    "question": "Find adult convictions for selected felonies and misdemeanours.",
+    "expected": [
+      "ckan:verurteilungen-von-erwachsenen-fur-ein-verbrechen-oder-vergehen-nach-ausgewahlten-straftaten3:48864771-049f-4185-809b-20c964aca04e"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q141_en_synonym_typo",
+    "language": "en",
+    "case_type": "synonym_typo",
+    "question": "Find JSON voting data for the initiative on socially fair financing of climate policy.",
+    "expected": [
+      "ckan:volksinitiative-fur-eine-soziale-klimapolitik-steuerlich-gerecht-finanziert-initiative-fur-eine2:da142bbe-4ae7-4b2e-abbc-03703d792f59"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q142_en_synonym_typo",
+    "language": "en",
+    "case_type": "synonym_typo",
+    "question": "Find JSON voting data for the Swiss face-covering ban initiative of 15 September 2017.",
+    "expected": [
+      "ckan:volksinitiative-vom-15-september-2017-ja-zum-verhullungsverbot:93364f0f-46f3-4726-964e-d0314a4c38f6"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q143_en_synonym_typo",
+    "language": "en",
+    "case_type": "synonym_typo",
+    "question": "Find CSV voting data for the initiative against fighter-jet noise in tourist areas.",
+    "expected": [
+      "ckan:volksinitiative-vom-3-november-2005-gegen-kampfjetlarm-in-tourismusgebieten:3c88eacd-ad94-42f6-9daa-fda4d9b0d5ed"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q144_en_synonym_typo",
+    "language": "en",
+    "case_type": "synonym_typo",
+    "question": "Find the members who submit motions in the Grand Council of Thurgau.",
+    "expected": [
+      "ckan:vorstosserinnen-und-vorstosser-im-grossen-rat-des-kantons-thurgau:54d1986a-c8a5-468b-9b2b-f0b97c0ae898"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q145_en_synonym_typo",
+    "language": "en",
+    "case_type": "synonym_typo",
+    "question": "Find candidates for the first round of the 2015 Zurich government election.",
+    "expected": [
+      "ckan:wahlarchiv-regierungsratswahlen:afd8c7f5-3f7b-4db2-8323-dc1a3811b11b"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q146_en_synonym_typo",
+    "language": "en",
+    "case_type": "synonym_typo",
+    "question": "Find the JSON schema for seasonally adjusted Swiss imports by partner country.",
+    "expected": [
+      "ckan:waren-aussenhandel-saisonbereinigte-daten-nach-landern:2624e2df-46b8-4073-828a-6e5c128e2f3f"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q147_en_synonym_typo",
+    "language": "en",
+    "case_type": "synonym_typo",
+    "question": "Find female first names by birth cohort in Switzerland in 2022.",
+    "expected": [
+      "ckan:weibliche-vornamen-der-bevolkerung-nach-jahrgang-schweiz-2022:42eb732e-c8b3-4c43-a864-9a1a88342236"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q148_en_synonym_typo",
+    "language": "en",
+    "case_type": "synonym_typo",
+    "question": "Find weekly deaths in Switzerland from 2010 to 2026.",
+    "expected": [
+      "ckan:wochentliche-todesfalle-in-der-schweiz-2010-20261:5efc4097-17a6-4ea9-8fd7-166f314d4252"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q149_en_synonym_typo",
+    "language": "en",
+    "case_type": "synonym_typo",
+    "question": "Find dwellings by building category and Swiss canton.",
+    "expected": [
+      "ckan:wohnungen-nach-gebaudekategorie-und-kantonen4:799a9122-145e-4d47-a100-4fdde94247b1"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  },
+  {
+    "id": "q150_en_synonym_typo",
+    "language": "en",
+    "case_type": "synonym_typo",
+    "question": "Find the statistical neighbourhoods of the city of St Gallen.",
+    "expected": [
+      "ckan:wohnviertel-der-stadt-st-gallen-statistische-quartiere:7dfe8802-a4d6-4682-b005-d7e5b556aa3e"
+    ],
+    "review_status": "approved",
+    "reviewer": "OpenAI Codex",
+    "reviewed_at": "2026-07-02T11:22:46.373503+00:00",
+    "review_comment": "Manuell gegen Titel, Publisher, Katalogprofil, Einsatzbereitschaft und Eindeutigkeit geprüft."
+  }
+]

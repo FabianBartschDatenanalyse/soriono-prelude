@@ -1,0 +1,58 @@
+{
+  "$schema": "https://raw.githubusercontent.com/modelcontextprotocol/mcpb/main/schemas/mcpb-manifest-v0.4.schema.json",
+  "manifest_version": "0.4",
+  "name": "soriono-prelude",
+  "display_name": "Soriono Prelude",
+  "version": "0.3.0-rc.1",
+  "description": "Alle Daten der Schweiz mit einem Klick.",
+  "long_description": "Durchsucht 22'635 profilierte Schweizer Open-Data-Ressourcen, stellt Datenquellen bereit und führt kontrollierte lokale SQL-Analysen aus. Literaturrecherche, statistische Tests und wissenschaftliche Berichte sind bewusst Soriono Maestro vorbehalten.",
+  "author": {
+    "name": "Soriono"
+  },
+  "server": {
+    "type": "uv",
+    "entry_point": "server.py",
+    "mcp_config": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--frozen",
+        "--no-dev",
+        "--project",
+        "${__dirname}",
+        "${__dirname}/server.py"
+      ],
+      "env": {
+        "SORIONO_PRELUDE_ROOT": "${__dirname}",
+        "SORIONO_PRELUDE_STATE_DIR": "${user_config.state_directory}"
+      }
+    }
+  },
+  "user_config": {
+    "state_directory": {
+      "type": "directory",
+      "title": "Lokaler Arbeitsordner",
+      "description": "Ordner für heruntergeladene Daten, Quellenregister und Reproduktionsinformationen.",
+      "required": true,
+      "default": "${DOCUMENTS}/Soriono Prelude"
+    }
+  },
+  "tools_generated": true,
+  "keywords": [
+    "switzerland",
+    "open-data",
+    "duckdb",
+    "pxweb"
+  ],
+  "license": "Apache-2.0",
+  "compatibility": {
+    "platforms": [
+      "darwin",
+      "win32",
+      "linux"
+    ],
+    "runtimes": {
+      "python": ">=3.12,<4.0"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "catalog_version": "2026-07-02",
+  "created_at": "2026-07-02T10:20:54.064108+00:00",
+  "source": "opendata.swiss and BFS PXWeb profiles exported from Vespa",
+  "resource_count": 22635,
+  "counts": {
+    "retrievable": 22635,
+    "hydrated": 22635,
+    "duckdb_readable": 21963,
+    "materializable": 22616,
+    "join_keys_detected": 21043,
+    "workflow_smoke_passed": 21002
+  },
+  "readiness_snapshot": "2026-07-02T10:20:54.064108+00:00",
+  "path": "catalog/resources.sqlite",
+  "size_bytes": 385384448,
+  "sha256": "c2651e94292bcd744d8b31bce124ecebf5b419cf53fb3c8f277a88323ef10fe3",
+  "download_url": "https://github.com/FabianBartschDatenanalyse/soriono-prelude/releases/download/catalog-2026-07-02/resources.sqlite.zip",
+  "archive_sha256": "f6020cea4c89d42028ec66a8c8ef5d52c8abfe6c60a40f90f759a4f508053a0f",
+  "archive_size_bytes": 80511451,
+  "sanitized_nonfinite_profiles": 0,
+  "geodata_profiles_audited": 768
+}

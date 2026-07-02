@@ -1,0 +1,27 @@
+{
+  "policy": "Profiles with unavailable or invalid provider data remain catalogued but are excluded from ready_only results.",
+  "excluded_resource_ids": [
+    "ckan:__86-1:8c39db22-46cb-413e-ac4b-b1eca006c9b4",
+    "ckan:haltestelle-perronkante-inkl-bls:c5b3aca6-adb0-40bf-96c3-3cdc51adc512",
+    "ckan:haltestelle-services1:9103862e-d7c5-4ce3-b1c2-1f71dc643068",
+    "ckan:lidar-2019-courbes-de-niveau:12ee525c-da83-46aa-9af8-4d3bbc892cce",
+    "ckan:lidar-2019-courbes-de-niveau:2c4ee040-136c-47af-bc23-27a21fa7cb32",
+    "ckan:lidar-2019-courbes-de-niveau:d5756cc7-7c6b-40fb-9237-0ce68f462dd3",
+    "ckan:lidar-2019-courbes-de-niveau:e18f511d-5f74-405b-8214-36602a6bb49b",
+    "ckan:masterplan-velo:668ef910-094b-4c89-b8aa-2c68950cd1af",
+    "ckan:masterplan-velo:b6294847-e4d1-4c47-9f11-8cbd4d05589a",
+    "ckan:offnungszeiten-shops1:c26705b0-1c47-4840-b9fb-4f4c63c49b7c",
+    "ckan:plan-lumiere-konzeptplan:b2484aa7-b86e-4612-b207-71956b55269d",
+    "ckan:publi-e-bike-availability-bern:d80c9605-795e-4067-a1ca-db8d867be7d2",
+    "ckan:publibike-availability-bern:fdf9a917-e7f1-4bb5-9704-53b76d8a2ca3",
+    "ckan:regionale-fahrplane:8d883dd6-1e84-4859-b0bb-429af7e1807b",
+    "ckan:signalisation-et-stationnement:5710157d-5a79-49bd-8d4e-c7d56d2c491b",
+    "ckan:stadtefahrplan1:cbbfbbd0-b363-4e04-ab65-89f6fb23e262",
+    "ckan:station-contact-adress1:11253a5f-9d79-4391-8d7e-7875f0506e2f",
+    "ckan:station-mobility1:d29e9eb8-5a97-4490-a3bf-c4dfa55f4a76",
+    "ckan:statistik-der-fruchtfolgeflachen-schweiz-2023:20533118-74dc-4909-b1bf-9f5f5d3fd06b",
+    "ckan:uberwachung-von-wildvogeln-auf-aviare-influenza-ai:3a702f1c-6219-4bca-a9c4-ccef1df59434",
+    "ckan:uberwachung-von-wildvogeln-auf-aviare-influenza-ai:48fdd408-a685-4784-bff0-e02034216b57",
+    "ckan:uberwachung-von-wildvogeln-auf-aviare-influenza-ai:6a24da52-d6be-4924-b29e-a160422ab627"
+  ]
+}

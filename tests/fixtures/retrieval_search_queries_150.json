@@ -1,0 +1,902 @@
+{
+  "q001_de_multi_source": {
+    "de": "Finde den Schweizer Datensatz: Demografische Bilanz nach Kanton; Geoparquet-Datei - Kommunale Wald-Baulinien",
+    "fr": "Retrouvez le jeu de données suisse : Bilan démographique par canton ; Fichier Geoparquet - Lignes de construction forestière municipale",
+    "it": "Trova il set di dati svizzero: saldo demografico per cantone; File Geoparquet - Linee di costruzione forestale municipale",
+    "en": "Find the Swiss data set: Demographic balance by canton; Geoparquet file - Municipal Forest Construction Lines"
+  },
+  "q002_de_multi_source": {
+    "de": "Finde den Schweizer Datensatz: Alter des Strassenfahrzeugbestands nach Fahrzeuggruppe; Landwirtschaftliche Direktzahlungen des Kantons Thurgau",
+    "fr": "Retrouvez l'ensemble de données suisses : âge du parc automobile par groupe de véhicules ; Paiements directs agricoles du canton de Thurgovie",
+    "it": "Trova il set di dati svizzero: età della popolazione di veicoli stradali per gruppo di veicoli; Pagamenti diretti agricoli del Canton Turgovia",
+    "en": "Find the Swiss data set: age of the road vehicle population by vehicle group; Agricultural direct payments from the canton of Thurgau"
+  },
+  "q003_de_multi_source": {
+    "de": "Finde den Schweizer Datensatz: Geoparquet-Datei - Artenhotspots; Lotteriefonds Kanton Thurgau: Zugesprochene Beiträge",
+    "fr": "Retrouvez le jeu de données suisse : fichier Geoparquet - Species hotspots ; Fonds de loterie du canton de Thurgovie: contributions attribuées",
+    "it": "Trova il set di dati svizzero: file Geoparquet - Hotspot delle specie; Fondo della lotteria Canton Turgovia: contributi assegnati",
+    "en": "Find the Swiss dataset: Geoparquet file - Species hotspots; Lottery fund Canton Thurgau: Contributions awarded"
+  },
+  "q004_de_multi_source": {
+    "de": "Finde den Schweizer Datensatz: Begegnungszonen Stadt St.Gallen; Daten RSD-Messkampagne 2005",
+    "fr": "Retrouvez l'ensemble de données suisses : zones de rencontre dans la ville de Saint-Gall ; Campagne de mesure des données RSD 2005",
+    "it": "Trova il set di dati svizzero: zone di incontro nella città di San Gallo; Campagna di misurazione dei dati RSD 2005",
+    "en": "Find the Swiss data set: meeting zones in the city of St.Gallen; Data RSD measurement campaign 2005"
+  },
+  "q005_de_multi_source": {
+    "de": "Finde den Schweizer Datensatz: Bildungsabschlüsse höherer Berufsbildung; Précipitations mensuelles, dès 1959",
+    "fr": "Retrouvez l'ensemble de données suisses : diplômes de la formation professionnelle supérieure ; Précipitations mensuelles, 1959",
+    "it": "Trova il set di dati svizzero: titoli di studio della formazione professionale superiore; Precipitazioni mensili, 1959",
+    "en": "Find the Swiss data set: educational qualifications of higher vocational training; Précipitations mensuelles, 1959"
+  },
+  "q006_de_multi_source": {
+    "de": "Finde den Schweizer Datensatz: Produktegruppen Budget und Rechnung 2016; Ein- und Aussteigende an Bahnhöfen",
+    "fr": "Retrouvez le jeu de données suisse : Groupes de produits budget et facture 2016 ; Les gens montent et descendent dans les gares",
+    "it": "Trova il set di dati svizzero: budget e fattura dei gruppi di prodotti 2016; Persone che salgono e scendono alle stazioni ferroviarie",
+    "en": "Find the Swiss data set: Product groups budget and invoice 2016; People getting on and off at train stations"
+  },
+  "q007_de_multi_source": {
+    "de": "Finde den Schweizer Datensatz: Volksabstimmung vom 30.11.2025– Eidgenössische Vorlagen; Gemeinderesultate der Regierungsratswahl 2014",
+    "fr": "Retrouvez l'ensemble de données suisse : Référendum du 30 novembre 2025 – Modèles fédéraux ; Résultats municipaux de l'élection du conseil gouvernemental de 2014",
+    "it": "Trova il set di dati svizzero: Referendum del 30 novembre 2025 – Modelli federali; Risultati comunali delle elezioni del consiglio di governo del 2014",
+    "en": "Find the Swiss data set: Referendum of November 30, 2025 – Federal templates; Municipal results of the 2014 government council election"
+  },
+  "q008_de_multi_source": {
+    "de": "Finde den Schweizer Datensatz: Volksabstimmung vom 27.02.1983– Eidgenössische Vorlagen; Geoparquet-Datei - Umsetzungsperimeter Auengebiete (Mitwirkung)",
+    "fr": "Retrouvez l'ensemble de données suisses : Référendum du 27 février 1983 – Modèles fédéraux ; Fichier Geoparquet - Implémentation du périmètre des zones inondables (participation)",
+    "it": "Trova il set di dati svizzero: Referendum del 27 febbraio 1983 – Modelli federali; File Geoparquet - Realizzazione aree perimetrali golenali (partecipazione)",
+    "en": "Find the Swiss data set: Referendum of February 27, 1983 – Federal templates; Geoparquet file - Implementation perimeter floodplain areas (participation)"
+  },
+  "q009_de_multi_source": {
+    "de": "Finde den Schweizer Datensatz: Geoparquet-Datei - Entwicklungsschwerpunkte, Perimeter; Geoparquet-Datei - Hauptnutzniessende des Schutzwaldes",
+    "fr": "Retrouvez le jeu de données suisse : fichier Geoparquet - priorités de développement, périmètre ; Fichier Geoparquet - Principal bénéficiaire de la forêt protectrice",
+    "it": "Trova il set di dati svizzero: file Geoparquet - priorità di sviluppo, perimetro; File Geoparquet - Principale beneficiario della foresta di protezione",
+    "en": "Find the Swiss data set: Geoparquet file - development priorities, perimeter; Geoparquet file - Main beneficiary of the protective forest"
+  },
+  "q010_de_multi_source": {
+    "de": "Finde den Schweizer Datensatz: Fahrzeugbestand Kanton Thurgau am 01.01.2024; Sport- und Bewegungsanlagen",
+    "fr": "Retrouvez l'ensemble de données suisses : inventaire des véhicules dans le canton de Thurgovie au 1er janvier 2024 ; Installations sportives et d'exercice",
+    "it": "Trova il set di dati svizzero: inventario dei veicoli nel cantone di Turgovia al 1° gennaio 2024; Impianti sportivi e per esercizi",
+    "en": "Find the Swiss data set: vehicle inventory in the canton of Thurgau on January 1st, 2024; Sports and exercise facilities"
+  },
+  "q011_de_multi_source": {
+    "de": "Finde den Schweizer Datensatz: Füllstandsensoren Glassammelstellen (Weissglas) Stadt St.Gallen; Bevölkerungsbilanz 2019",
+    "fr": "Retrouvez l'ensemble de données suisses : Capteurs de niveau Points de collecte du verre (verre blanc) Ville de Saint-Gall ; Bilan démographique 2019",
+    "it": "Trova il set di dati svizzero: Sensori di livello Punti di raccolta del vetro (vetro bianco) Città di San Gallo; Bilancio della popolazione 2019",
+    "en": "Find the Swiss data set: Level sensors Glass collection points (white glass) City of St.Gallen; Population balance 2019"
+  },
+  "q012_de_multi_source": {
+    "de": "Finde den Schweizer Datensatz: Gesammelte PET-Einwegflaschen im Kanton Basel-Stadt; bisherige Entwicklung Grundbildung",
+    "fr": "Retrouvez l'ensemble de données suisses : Bouteilles PET à usage unique collectées dans le canton de Bâle-Ville ; développement antérieur de l’éducation de base",
+    "it": "Trova il set di dati svizzero: bottiglie in PET monouso raccolte nel cantone di Basilea Città; sviluppo precedente dell’istruzione di base",
+    "en": "Find the Swiss data set: Single-use PET bottles collected in the canton of Basel-Stadt; previous development of basic education"
+  },
+  "q013_de_multi_source": {
+    "de": "Finde den Schweizer Datensatz: Geoparquet-Datei - Dienststellen der Grundbuchämter; Unterflurbehälter Stadt St.Gallen",
+    "fr": "Retrouvez le jeu de données suisse : fichier Geoparquet - Bureaux du Cadastre ; Ville souterraine de conteneurs de Saint-Gall",
+    "it": "Trova il set di dati svizzero: file Geoparquet - Uffici del catasto; Città container sotterranea di San Gallo",
+    "en": "Find the Swiss data set: Geoparquet file - Land registry offices; Underground container city of St.Gallen"
+  },
+  "q014_de_multi_source": {
+    "de": "Finde den Schweizer Datensatz: Hydrometrie Thurgau - Wassertemperatur (°C); Gemeindeinformationen Erneuerungswahl Kantonsrat 2007",
+    "fr": "Retrouvez le jeu de données suisse : Hydrométrie Thurgovie - température de l'eau (°C) ; Informations communales pour l'élection de renouvellement du Conseil cantonal en 2007",
+    "it": "Trova il set di dati svizzero: Idrometria Turgovia - temperatura dell'acqua (°C); Informazioni comunali per il rinnovo delle elezioni del Consiglio cantonale nel 2007",
+    "en": "Find the Swiss data set: Hydrometry Thurgau - water temperature (°C); Municipal information for the renewal election of the Cantonal Council in 2007"
+  },
+  "q015_de_multi_source": {
+    "de": "Finde den Schweizer Datensatz: Kanton Wallis: Haushalte und Familien; Wind crust formation: SnowMicroPen data",
+    "fr": "Retrouvez l'ensemble de données suisse : Canton du Valais : Ménages et familles ; Formation de croûte éolienne : données SnowMicroPen",
+    "it": "Trova il set di dati svizzero: Canton Vallese: nuclei familiari e nuclei familiari; Formazione della crosta da vento: dati SnowMicroPen",
+    "en": "Find the Swiss data set: Canton of Valais: Households and Families; Wind crust formation: SnowMicroPen data"
+  },
+  "q016_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Ständige und nichtständige Wohnbevölkerung nach Jahr, Kanton, Bevölkerungstyp, Geschlecht, Zivilstand und Alter",
+    "fr": "Retrouvez l'ensemble de données suisse : Population résidente permanente et non permanente par année, canton, type de population, sexe, état civil et âge",
+    "it": "Trova il set di dati svizzero: popolazione residente permanente e non permanente per anno, cantone, tipo di popolazione, sesso, stato civile ed età",
+    "en": "Find the Swiss data set: Permanent and non-permanent resident population by year, canton, population type, gender, marital status and age"
+  },
+  "q017_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Wohnungen nach Kanton, Anzahl Zimmer, Bauperiode, Renovationsperiode und Jahr",
+    "fr": "Retrouvez le jeu de données suisse : appartements par canton, nombre de pièces, période de construction, période de rénovation et année",
+    "it": "Trova il set di dati svizzero: appartamenti per cantone, numero di stanze, periodo di costruzione, periodo di ristrutturazione e anno",
+    "en": "Find the Swiss data set: apartments by canton, number of rooms, construction period, renovation period and year"
+  },
+  "q018_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Studierende an den Fachhochschulen und pädagogischen Hochschulen nach Jahr, Wohnkanton vor Studienbeginn und Hochschule",
+    "fr": "Retrouvez l'ensemble de données suisses: étudiants des écoles techniques et des hautes écoles pédagogiques par année, canton de résidence avant le début des études et université",
+    "it": "Trovate il set di dati svizzero: studenti delle scuole tecniche e delle alte scuole pedagogiche per anno, cantone di residenza prima dell'inizio degli studi e università",
+    "en": "Find the Swiss data set: students at technical colleges and universities of teacher education by year, canton of residence before starting their studies and university"
+  },
+  "q019_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Grenzüberschreitender City Statistics: Mobilität, Tourismus (Agglomerationen 2012)",
+    "fr": "Retrouvez le jeu de données suisse : Statistiques des villes transfrontalières : Mobilité, Tourisme (Agglomérations 2012)",
+    "it": "Trova il set di dati svizzero: Statistica delle città transfrontaliere: mobilità, turismo (agglomerati 2012)",
+    "en": "Find the Swiss dataset: Cross-border City Statistics: Mobility, Tourism (Agglomerations 2012)"
+  },
+  "q020_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Abstimmungen Details",
+    "fr": "Trouver l'ensemble de données suisses : détails du vote",
+    "it": "Trova il set di dati svizzero: dettagli di voto",
+    "en": "Find the Swiss data set: Voting details"
+  },
+  "q021_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Agrarumweltindikatoren und -kennzahlen auf nationaler Ebene 1990-2015",
+    "fr": "Retrouvez le jeu de données suisse : Indicateurs agro-environnementaux et chiffres clés au niveau national 1990-2015",
+    "it": "Trova il set di dati svizzero: indicatori agroambientali e cifre chiave a livello nazionale 1990-2015",
+    "en": "Find the Swiss dataset: Agri-environmental indicators and key figures at national level 1990-2015"
+  },
+  "q022_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Allmendbewilligungen",
+    "fr": "Retrouvez le jeu de données suisse : permis fonciers communs",
+    "it": "Trova il set di dati svizzero: permessi fondiari comuni",
+    "en": "Find the Swiss data set: common land permits"
+  },
+  "q023_de_direct": {
+    "de": "Finde den Schweizer Datensatz: anderung-der-kantonsverfassung-anpassung-an-das-erwachsenenschutzrecht.json",
+    "fr": "Retrouvez le jeu de données suisse : modification-de-la-constitution-cantonale-adaptation-à-la-loi-protection-des-adultes.json",
+    "it": "Trova il set di dati svizzero: modifica-della-costituzione-cantonale-adattamento-alla-legge-protezione-degli-adulti.json",
+    "en": "Find the Swiss data set: amendment-of-the-cantonal-constitution-adaptation-to-the-adult-protection-law.json"
+  },
+  "q024_de_direct": {
+    "de": "Finde den Schweizer Datensatz: anderung-vom-18-dezember-2020-des-schweizerischen-zivilgesetzbuches-ehe-fuer-alle.json",
+    "fr": "Retrouvez le jeu de données suisse : modification-du-18-décembre-2020-du-code-civil-suisse-ehe-fuer-alle.json",
+    "it": "Trova il set di dati svizzero: modifica-del-18-dicembre-2020-del-codice-civile-svizzero-ehe-fuer-alle.json",
+    "en": "Find the Swiss dataset: amendment-dated-18-december-2020-of-the-swiss-civil-code-ehe-fuer-alle.json"
+  },
+  "q025_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Anstaltstopografie 1965: Anstaltsverzeichnis",
+    "fr": "Retrouvez le jeu de données suisse : Topographie des établissements 1965 : Annuaire des établissements",
+    "it": "Trova il set di dati svizzero: topografia delle istituzioni 1965: elenco delle istituzioni",
+    "en": "Find the Swiss data set: Institution topography 1965: Institution directory"
+  },
+  "q026_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Anzahl registrierter Hundebesitzer seit 2018",
+    "fr": "Retrouvez l'ensemble de données suisses : nombre de propriétaires de chiens enregistrés depuis 2018",
+    "it": "Trova il set di dati svizzero: numero di proprietari di cani registrati dal 2018",
+    "en": "Find the Swiss data set: number of registered dog owners since 2018"
+  },
+  "q027_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Produttività del lavoro per rami di attività a prezzi correnti (64 rami)",
+    "fr": "Retrouvez l'ensemble de données suisses : Productivité du travail par rami di attività a prezzi correnti (64 rami)",
+    "it": "Trova il set di dati svizzero: Produttività del lavoro per rami di attività a prezzi correnti (64 rami)",
+    "en": "Find the Swiss data set: Productivity of the lavoro per rami di attività a prezzi correnti (64 rami)"
+  },
+  "q028_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Tabelle delle risorse e degli impieghi legati ai flussi di energia",
+    "fr": "Retrouvez l'ensemble de données suisses : Tableau des risques et des impieghi legati ai flussi di energia",
+    "it": "Trova il dataset svizzero: Tavola dei risors e degli impieghi legati ai flussi di energia",
+    "en": "Find the Swiss data set: Table of risors and degli impieghi legati ai flussi di energia"
+  },
+  "q029_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Ausländische Wohnbevölkerung seit 1836",
+    "fr": "Retrouvez le jeu de données suisse : Population résidante étrangère depuis 1836",
+    "it": "Trova il set di dati svizzero: popolazione residente straniera dal 1836",
+    "en": "Find the Swiss data set: Foreign resident population since 1836"
+  },
+  "q030_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Investissements et réserves de travail dans la construction, par genre d'ouvrage, selon les cantons; aux prix courants",
+    "fr": "Retrouvez le jeu de données suisse : Investissements et réserves de travail dans la construction, par genre d'ouvrage, selon les cantons ; aux prix courants",
+    "it": "Trova il set di dati svizzero: Investissements et réserves de travail dans la Construction, par kinder d'ouvrage, selon les cantons; aux prix courants",
+    "en": "Find the Swiss dataset: Investissements et réserves de travail dans la construction, par genre d'ouvrage, selon les cantons; aux prix courants"
+  },
+  "q031_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Densité d'occupation selon la nationalité des membres du ménage privé et leur nombre, par canton",
+    "fr": "Retrouvez le jeu de données suisse : Densité d'occupation selon la nationalité des membres du ménage privé et leur nombre, par canton",
+    "it": "Trova il set di dati svizzero: Densité d'occupation selon la nationalité des membres du ménage privé et leur nombre, par canton",
+    "en": "Find the Swiss dataset: Densité d'occupation selon la nationalité des membres du ménage privé et leur nombre, par canton"
+  },
+  "q032_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Parc des cyclomoteurs selon le canton (y compris les vélos électriques rapides)",
+    "fr": "Retrouvez le jeu de données suisse : Parc des cyclomoteurs selon le canton (y compris les vélos électriques rapides)",
+    "it": "Trova il set di dati svizzero: Parc des cyclomoteurs selon le canton (y compris les vélos électriques rapides)",
+    "en": "Find the Swiss data set: Parc des cyclomoteurs selon le canton (y compris les vélos électriques rapides)"
+  },
+  "q033_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Bevölkerung: Frauenanteil [%]",
+    "fr": "Retrouvez le jeu de données suisse : Population : Proportion de femmes [%]",
+    "it": "Trova il set di dati svizzero: Popolazione: percentuale di donne [%]",
+    "en": "Find the Swiss data set: Population: Proportion of women [%]"
+  },
+  "q034_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Bewilligte Tagesbetreuungseinrichtungen für Kinder nach Standort",
+    "fr": "Retrouvez l'ensemble de données suisses : crèches agréées pour enfants par localité",
+    "it": "Trovate il set di dati svizzero: asili nido riconosciuti per località",
+    "en": "Find the Swiss data set: Approved day care facilities for children by location"
+  },
+  "q035_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Bilan de la population résidante permanente, par canton et ville, de 1999 à 2022",
+    "fr": "Retrouvez le jeu de données suisse : Bilan de la population résidante permanente, par canton et ville, de 1999 à 2022",
+    "it": "Trova il set di dati svizzero: Bilan de la population résidante permanente, par canton et ville, de 1999 à 2022",
+    "en": "Find the Swiss dataset: Bilan de la population résidante permanente, par canton et ville, de 1999 à 2022"
+  },
+  "q036_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Geoparquet-Datei - Bojen",
+    "fr": "Retrouvez le record suisse : fichier Geoparquet - bouées",
+    "it": "Trova il record svizzero: file Geoparquet - boe",
+    "en": "Find the Swiss record: Geoparquet file - buoys"
+  },
+  "q037_de_direct": {
+    "de": "Finde den Schweizer Datensatz: bundesbeschluss-ueber-die-beschaffung-neuer-kampfflugzeuge.json",
+    "fr": "Retrouvez l'ensemble de données suisse : Arrêté fédéral relatif à l'acquisition de nouveaux avions de chasse.json",
+    "it": "Trova il set di dati svizzero: decreto federale sull'acquisto di nuovi aerei da caccia.json",
+    "en": "Find the Swiss data set: federal decree-on-the-procurement-of-new-fighter-aircraft.json"
+  },
+  "q038_de_direct": {
+    "de": "Finde den Schweizer Datensatz: bundesgesetz-vom-17-maerz-2017-ueber-die-reform-der-altersvorsorge-2020.csv",
+    "fr": "Retrouvez l'ensemble de données suisse : loi fédérale-du-17-mars-2017-sur-la-réforme-de-la-prévoyance-vieillesse-2020.csv",
+    "it": "Trova il set di dati svizzero: legge federale del 17-marzo-2017-sulla-riforma-della-previdenza-per-la-vecchiaia-2020.csv",
+    "en": "Find the Swiss data set: federal law-of-march-17-2017-on-the-reform-of-old-age-provision-2020.csv"
+  },
+  "q039_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Comptes régionaux de l'agriculture, production totale, dès 1999",
+    "fr": "Retrouvez le jeu de données suisse : Comptes régionaux de l'agriculture, production totale, dès 1999",
+    "it": "Trova il set di dati svizzero: Comptes régionaux de l'agriculture, production totale, dès 1999",
+    "en": "Find the Swiss dataset: Comptes régionaux de l'agriculture, production totale, dès 1999"
+  },
+  "q040_de_direct": {
+    "de": "Finde den Schweizer Datensatz: (DEPRECATED)COVID19Hosp_reason_AKL10_w",
+    "fr": "Trouver l'ensemble de données suisse : (PÉRIMÉ)COVID19Hosp_reason_AKL10_w",
+    "it": "Trova il set di dati svizzero: (DEPRECATED)COVID19Hosp_reason_AKL10_w",
+    "en": "Find the Swiss dataset: (DEPRECATED)COVID19Hosp_reason_AKL10_w"
+  },
+  "q041_de_direct": {
+    "de": "Finde den Schweizer Datensatz: (DEPRECATED)COVID19Cases_extraGeoRegions_d",
+    "fr": "Trouver l'ensemble de données suisse : (OBSERVÉ)COVID19Cases_extraGeoRegions_d",
+    "it": "Trova il set di dati svizzero: (DEPRECATED)COVID19Cases_extraGeoRegions_d",
+    "en": "Find the Swiss dataset: (DEPRECATED)COVID19Cases_extraGeoRegions_d"
+  },
+  "q042_de_direct": {
+    "de": "Finde den Schweizer Datensatz: codeliste_2025.csv",
+    "fr": "Retrouvez le jeu de données suisse : codeliste_2025.csv",
+    "it": "Trova il set di dati svizzero: codeliste_2025.csv",
+    "en": "Find the Swiss data set: codeliste_2025.csv"
+  },
+  "q043_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Spese dettagliate (tutte le tabelle degli anni 2015-2017)",
+    "fr": "Retrouvez l'ensemble de données suisse : Spese dettagliate (tutte le table degli anni 2015-2017)",
+    "it": "Trova il dataset svizzero: Spese dettagliate (tutte le table degli anni 2015-2017)",
+    "en": "Find the Swiss data set: Spese dettagliate (tutte le table degli anni 2015-2017)"
+  },
+  "q044_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Durchschnittliche Armutsgrenzen ausgewählter Haushaltstypen",
+    "fr": "Trouver l'ensemble de données suisses : Niveaux de pauvreté moyens de certains types de ménages",
+    "it": "Trova il set di dati svizzero: livelli medi di povertà di tipologie domestiche selezionate",
+    "en": "Find the Swiss data set: Average poverty levels of selected household types"
+  },
+  "q045_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Durchschnittlicher Mietpreis in Franken nach Zimmerzahl und Kanton",
+    "fr": "Retrouvez le jeu de données suisse : Prix moyen des loyers en francs par nombre de pièces et canton",
+    "it": "Trova il set di dati svizzero: prezzo medio di affitto in franchi per numero di stanze e cantone",
+    "en": "Find the Swiss data set: Average rental price in francs by number of rooms and canton"
+  },
+  "q046_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Urnengang vom 26.11.2023 – Abstimmungen und Majorzwahlen",
+    "fr": "Retrouvez le jeu de données suisse : Votes du 26 novembre 2023 – votes et grandes élections",
+    "it": "Trova il set di dati svizzero: Votazioni del 26 novembre 2023 – voti ed elezioni principali",
+    "en": "Find the Swiss data set: Voting on November 26th, 2023 – votes and major elections"
+  },
+  "q047_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Volksabstimmung vom 09.06.2024– Eidgenössische Vorlagen",
+    "fr": "Retrouvez le jeu de données suisse : Référendum du 9 juin 2024 – Modèles fédéraux",
+    "it": "Trova il set di dati svizzero: Referendum del 9 giugno 2024 – Modelli federali",
+    "en": "Find the Swiss data set: Referendum of June 9, 2024 – Federal templates"
+  },
+  "q048_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Volksabstimmung vom 08.03.2015– Eidgenössische Vorlagen",
+    "fr": "Retrouvez le jeu de données suisse : Référendum du 8 mars 2015 – Modèles fédéraux",
+    "it": "Trova il set di dati svizzero: Referendum dell'8 marzo 2015 – Modelli federali",
+    "en": "Find the Swiss data set: Referendum of March 8, 2015 – Federal templates"
+  },
+  "q049_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Effektiver und erwarteter täglicher Gasverbrauch",
+    "fr": "Retrouvez l'ensemble de données suisses : Consommation journalière de gaz effective et attendue",
+    "it": "Trova il set di dati svizzero: consumo giornaliero effettivo e previsto di gas",
+    "en": "Find the Swiss data set: Effective and expected daily gas consumption"
+  },
+  "q050_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Type de propriétaire des logements de locataires pour les six plus grandes villes, 2021-2023 cumulé",
+    "fr": "Retrouvez le jeu de données suisse : Type de propriétaire des logements de locataires pour les six plus grandes villes, 2021-2023 cumulé",
+    "it": "Trova il set di dati svizzero: Type de propriétaire des logements de locataires pour les six plus grandes villes, 2021-2023 cumulé",
+    "en": "Find the Swiss data set: Type de propriétaire des logements de locataires pour les six plus grandes villes, 2021-2023 cumulé"
+  },
+  "q051_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Résultats du Conseil d'Etat",
+    "fr": "Retrouvez le jeu de données suisse : Résultats du Conseil d'Etat",
+    "it": "Trova il set di dati svizzero: Résultats du Conseil d'Etat",
+    "en": "Find the Swiss data set: Résultats du Conseil d'Etat"
+  },
+  "q052_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Unmet need for health care of children, for financial reasons, by various socio-demographic characteristics",
+    "fr": "Retrouvez l'ensemble de données suisses : Besoins non satisfaits en matière de soins de santé des enfants, pour des raisons financières, selon diverses caractéristiques sociodémographiques",
+    "it": "Trova il set di dati svizzero: bisogno insoddisfatto di assistenza sanitaria dei bambini, per motivi finanziari, per varie caratteristiche socio-demografiche",
+    "en": "Find the Swiss data set: Unmet need for health care of children, for financial reasons, by various socio-demographic characteristics"
+  },
+  "q053_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Entwicklung des Rundholzeinschnittes in den Sägewerken der Schweiz nach Grössenklassen",
+    "fr": "Retrouvez l'ensemble de données suisses : Evolution de la coupe de grumes dans les scieries suisses par classe de taille",
+    "it": "Trova il set di dati svizzero: sviluppo del taglio dei tronchi nelle segherie svizzere per classe di dimensione",
+    "en": "Find the Swiss data set: Development of log cutting in Swiss sawmills by size class"
+  },
+  "q054_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Externe Effekte des Verkehrs 2023: Sensitivitätsanalysen",
+    "fr": "Retrouvez l'ensemble de données suisse : Effets externes du trafic 2023 : Analyses de sensibilité",
+    "it": "Trova il set di dati svizzero: Effetti esterni del traffico 2023: Analisi di sensibilità",
+    "en": "Find the Swiss data set: External effects of traffic 2023: Sensitivity analyses"
+  },
+  "q055_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Adults: Convictions for a misdemeanour or felony under the articles of the Swiss Military Criminal Code (SMCC), by year",
+    "fr": "Retrouvez le jeu de données suisse : Adultes : Condamnations pour un délit ou un crime criminel au sens des articles du Code militaire suisse (SMCC), par année",
+    "it": "Trovate il set di dati svizzero: Adulti: Condanne per un delitto o un crimine secondo gli articoli del Codice militare svizzero (SMCC), per anno",
+    "en": "Find the Swiss dataset: Adults: Convictions for a misdemeanor or felony criminal under the articles of the Swiss Military Code (SMCC), by year"
+  },
+  "q056_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Erwerbslosenquote gemäss ILO nach Geschlecht, Nationalität und anderen Merkmalen",
+    "fr": "Retrouvez l'ensemble de données suisse : Taux de chômage selon le BIT par sexe, nationalité et autres caractéristiques",
+    "it": "Trova il set di dati svizzero: tasso di disoccupazione secondo l'ILO per genere, nazionalità e altre caratteristiche",
+    "en": "Find the Swiss data set: Unemployment rate according to ILO by gender, nationality and other characteristics"
+  },
+  "q057_de_direct": {
+    "de": "Finde den Schweizer Datensatz: European Snow Booklet – an Inventory of Snow Measurements in Europe",
+    "fr": "Retrouvez l'ensemble de données suisses : European Snow Booklet – un inventaire des mesures de neige en Europe",
+    "it": "Trova il set di dati svizzero: European Snow Booklet – an Inventory of Snow Measurements in Europe",
+    "en": "Find the Swiss data set: European Snow Booklet – an Inventory of Snow Measurements in Europe"
+  },
+  "q058_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Fahrzeiten_SOLL_IST_20170917_20170923.csv",
+    "fr": "Recherchez l'ensemble de données suisse : Travel Times_SOLL_IST_20170917_20170923.csv",
+    "it": "Trova il set di dati svizzero: Travel Times_SOLL_IST_20170917_20170923.csv",
+    "en": "Find the Swiss data set: Travel Times_SOLL_IST_20170917_20170923.csv"
+  },
+  "q059_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Fahrzeiten_SOLL_IST_20190120_20190126.csv",
+    "fr": "Recherchez l'ensemble de données suisse : Travel Times_SOLL_IST_20190120_20190126.csv",
+    "it": "Trova il set di dati svizzero: Travel Times_SOLL_IST_20190120_20190126.csv",
+    "en": "Find the Swiss data set: Travel Times_SOLL_IST_20190120_20190126.csv"
+  },
+  "q060_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Fahrzeiten_SOLL_IST_20211024_20211030.csv",
+    "fr": "Recherchez l'ensemble de données suisse : Travel Times_SOLL_IST_20211024_20211030.csv",
+    "it": "Trova il set di dati svizzero: Travel Times_SOLL_IST_20211024_20211030.csv",
+    "en": "Find the Swiss data set: Travel Times_SOLL_IST_20211024_20211030.csv"
+  },
+  "q061_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Fahrzeiten_SOLL_IST_20230430_20230506.csv",
+    "fr": "Recherchez l'ensemble de données suisse : Travel Times_SOLL_IST_20230430_20230506.csv",
+    "it": "Trova il set di dati svizzero: Travel Times_SOLL_IST_20230430_20230506.csv",
+    "en": "Find the Swiss data set: Travel Times_SOLL_IST_20230430_20230506.csv"
+  },
+  "q062_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Fetzer_Khibiny_Treeline_NPcycling",
+    "fr": "Retrouvez le jeu de données suisse : Fetzer_Khibiny_Treeline_NPcycling",
+    "it": "Trova il set di dati svizzero: Fetzer_Khibiny_Treeline_NPcycling",
+    "en": "Find the Swiss dataset: Fetzer_Khibiny_Treeline_NPcycling"
+  },
+  "q063_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Fiscal Data Package 2017 Budget und Rechnung CSV",
+    "fr": "Trouver l'ensemble de données suisse : Paquet de données fiscales Budget et facture 2017 CSV",
+    "it": "Trova il set di dati svizzero: Pacchetto dati fiscali 2017 Bilancio e fattura CSV",
+    "en": "Find the Swiss dataset: Fiscal Data Package 2017 Budget and Invoice CSV"
+  },
+  "q064_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Votations cantonales fribourgeoises par commune, dès 2015",
+    "fr": "Retrouvez le jeu de données suisse : Votations cantonales fribourgeoises par commune, dès 2015",
+    "it": "Trova il set di dati svizzero: Votations cantonales fribourgeoises par commune, dès 2015",
+    "en": "Find the Swiss dataset: Votations cantonales fribourgeoises par commune, dès 2015"
+  },
+  "q065_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Fuss__und_Velowegnetz.json",
+    "fr": "Retrouvez l'ensemble de données suisse : Fuss__und_Velowegnetz.json",
+    "it": "Trova il set di dati svizzero: Fuss__und_Velowegnetz.json",
+    "en": "Find the Swiss data set: Fuss__und_Velowegnetz.json"
+  },
+  "q066_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Bâtiments selon le type de propriétaire, la branche d'activité économique (NOGA) et le type de communauté, par canton",
+    "fr": "Retrouvez le jeu de données suisse : Bâtiments selon le type de propriétaire, la branche d'activité économique (NOGA) et le type de communauté, par canton",
+    "it": "Trova il set di dati svizzero: Bâtiments selon le type de propriétaire, la branch d'activité économique (NOGA) et le type de communauté, par canton",
+    "en": "Find the Swiss data set: Bâtiments selon le type de propriétaire, la branch d'activité économique (NOGA) et le type de communauté, par canton"
+  },
+  "q067_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Gemeindefinanzstatistik Kanton Luzern: Budgets",
+    "fr": "Retrouvez l'ensemble de données suisse : Statistiques des finances communales Canton de Lucerne : Budgets",
+    "it": "Trova il set di dati svizzero: Statistica delle finanze comunali Cantone di Lucerna: Budget",
+    "en": "Find the Swiss data set: Municipal finance statistics Canton of Lucerne: Budgets"
+  },
+  "q068_de_direct": {
+    "de": "Finde Resultate der Genfer Wahlen vom 7. März 2021.",
+    "fr": "Retrouvez les résultats des élections genevoises du 7 mars 2021.",
+    "it": "Scopri i risultati delle elezioni di Ginevra del 7 marzo 2021.",
+    "en": "Find results of the Geneva elections on March 7, 2021."
+  },
+  "q069_de_direct": {
+    "de": "Finde den Schweizer Datensatz: gesetz-ueber-die-gebietsreform-im-kanton-graubuenden-mantelgesetz-ueber-die-gebietsreform.csv",
+    "fr": "Retrouvez l'ensemble de données suisse : loi-sur-la-réforme-régionale-dans-le-canton-des-gris-mante-loi-sur-la-réforme-régionale.csv",
+    "it": "Trova il set di dati svizzero: legge-sulla-riforma-regionale-nel-cantone-dei-grigioni-legge-sulla-riforma-regionale.csv",
+    "en": "Find the Swiss data set: law-about-the-regional-reform-in-the-canton-of-graubuenden-mantle-law-about-the-regional-reform.csv"
+  },
+  "q070_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Gender equality in a European comparison",
+    "fr": "Retrouvez l'ensemble de données suisses : L'égalité entre femmes et hommes dans une comparaison européenne",
+    "it": "Trova il set di dati svizzero: l’uguaglianza di genere nel confronto europeo",
+    "en": "Find the Swiss data set: Gender equality in a European comparison"
+  },
+  "q071_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Grossratswahlen 2008: Kandidatenstimmen nach Herkunft der Stimmen (Panaschierstatistik) Bezirk Münchwilen",
+    "fr": "Retrouvez l'ensemble de données suisses : Élections du Grand Conseil 2008 : Votes des candidats selon l'origine des votes (statistiques de variation) Arrondissement de Münchwilen",
+    "it": "Trovate il set di dati svizzero: Elezioni del Gran Consiglio 2008: Voti dei candidati secondo la provenienza dei voti (statistica delle variazioni) Distretto di Münchwilen",
+    "en": "Find the Swiss data set: Grand Council elections 2008: Candidate votes according to the origin of the votes (variation statistics) Münchwilen district"
+  },
+  "q072_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Grossratswahlen Kanton Thurgau: Mandatsverteilung nach Parteien und Geschlecht auf Ebene Kanton",
+    "fr": "Retrouvez l'ensemble de données suisses : Élections des grands conseils du canton de Thurgovie : répartition des mandats par parti et par sexe au niveau cantonal",
+    "it": "Trovate il set di dati svizzero: Elezioni del Gran Consiglio nel Canton Turgovia: distribuzione dei mandati per partito e genere a livello cantonale",
+    "en": "Find the Swiss data set: Grand council elections in the canton of Thurgau: distribution of mandates by party and gender at canton level"
+  },
+  "q073_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Taux de création de nouvelles entreprises, dès 2013",
+    "fr": "Retrouvez le jeu de données suisse : Taux de création de nouvelles entreprises, dès 2013",
+    "it": "Trova il set di dati svizzero: Taux de Creation de new entreprises, dès 2013",
+    "en": "Find the Swiss dataset: Taux de creation de new entreprises, dès 2013"
+  },
+  "q074_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Hauptarbeitsort nach Geschlecht, Nationalität, Altersgruppen, Familientyp",
+    "fr": "Retrouvez l'ensemble de données suisses : Lieu de travail principal par sexe, nationalité, tranche d'âge, type de famille",
+    "it": "Trova il set di dati svizzero: Luogo di lavoro principale per sesso, nazionalità, fasce d'età, tipologia familiare",
+    "en": "Find the Swiss data set: Main place of work by gender, nationality, age groups, family type"
+  },
+  "q075_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Violenza domestica: Reati violenti registrati dalla polizia secondo la relazione",
+    "fr": "Retrouvez le record suisse : Violenza domestique : Reati violenti registrati dalla polizia secondo la relazione",
+    "it": "Trova il record svizzero: Violenza domestica: Reati violenti registrati dalla polizia secondo la relazione",
+    "en": "Find the Swiss record: Violenza domestica: Reati violenti registrati dalla polizia secondo la relazione"
+  },
+  "q076_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Holzernte nach Kantonen",
+    "fr": "Retrouvez l'ensemble de données suisses : récolte de bois par canton",
+    "it": "Trovate il set di dati svizzero: prelievo di legname per cantone",
+    "en": "Find the Swiss data set: timber harvest by canton"
+  },
+  "q077_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Abfrageberechtigte Stellen im kantonalen Personenregister arbo",
+    "fr": "Retrouvez l'ensemble de données suisse : Organismes agréés au registre cantonal des personnes arbo",
+    "it": "Trova il set di dati svizzero: Enti autorizzati nel registro cantonale delle persone arbo",
+    "en": "Find the Swiss data set: Authorized bodies in the cantonal register of persons arbo"
+  },
+  "q078_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Commerce international, dès 2016",
+    "fr": "Retrouvez l'ensemble de données suisse : Commerce international, dès 2016",
+    "it": "Trova il set di dati svizzero: Commerce international, dès 2016",
+    "en": "Find the Swiss data set: Commerce international, dès 2016"
+  },
+  "q079_de_direct": {
+    "de": "Finde den Schweizer Datensatz: 2026-05-30_IstDaten.csv",
+    "fr": "Retrouvez l'ensemble de données suisse : 2026-05-30_IstDaten.csv",
+    "it": "Trova il set di dati svizzero: 2026-05-30_IstDaten.csv",
+    "en": "Find the Swiss data set: 2026-05-30_IstDaten.csv"
+  },
+  "q080_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Jugendsanktionsvollzug: Strafrechtlich platzierte Jugendliche am Stichtag nach Platzierungsart [ab 2010]",
+    "fr": "Retrouvez l'ensemble de données suisse : Exécution des sanctions contre les mineurs : mineurs placés sous le régime pénal à la date de référence par type de placement [à partir de 2010]",
+    "it": "Trovate il set di dati svizzero: Applicazione delle sanzioni minorili: minorenni sottoposti al diritto penale alla data di riferimento per tipo di collocamento [dal 2010]",
+    "en": "Find the Swiss data set: Juvenile sanction enforcement: Juveniles placed under criminal law on the reference date by placement type [from 2010]"
+  },
+  "q081_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Canton de Appenzell Rh.-Ext: Vie active et formation",
+    "fr": "Retrouvez le jeu de données suisse : Canton d'Appenzell Rh.-Ext : Vie active et formation",
+    "it": "Trova il set di dati svizzero: Canton de Appenzell Rh.-Ext: Vie active et training",
+    "en": "Find the Swiss data set: Canton de Appenzell Rh.-Ext: Vie active et formation"
+  },
+  "q082_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Kanton Graubünden: Haushalte und Familien",
+    "fr": "Retrouvez le jeu de données suisse : Canton des Grisons : Ménages et familles",
+    "it": "Trovate il set di dati svizzero: Cantone dei Grigioni: economie domestiche e famiglie",
+    "en": "Find the Swiss data set: Canton of Graubünden: Households and families"
+  },
+  "q083_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Kanton Solothurn: Wohnbevölkerung nach Hauptsprache, Religion, Nationalität und weiteren Merkmalen",
+    "fr": "Retrouvez l'ensemble de données suisses : Canton de Soleure : population résidente selon la langue principale, la religion, la nationalité et d'autres caractéristiques",
+    "it": "Trova il set di dati svizzero: Canton Soletta: popolazione residente per lingua principale, religione, nazionalità e altre caratteristiche",
+    "en": "Find the Swiss data set: Canton of Solothurn: Resident population by main language, religion, nationality and other characteristics"
+  },
+  "q084_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Canton de Zurich: Population selon la langue principale, la religion, la nationalité et autres caractères",
+    "fr": "Retrouvez l'ensemble de données suisses : Canton de Zurich : Population selon la langue principale, la religion, la nationalité et d'autres caractères",
+    "it": "Trova il set di dati svizzero: Cantone di Zurigo: popolazione in base alla lingua principale, religione, nazionalità e altri caratteri",
+    "en": "Find the Swiss data set: Canton de Zurich: Population based on the main language, religion, nationality and other characters"
+  },
+  "q085_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Kantonaler Stromverbrauch",
+    "fr": "Retrouvez le jeu de données suisse : Consommation électrique cantonale",
+    "it": "Trova il set di dati svizzero: consumo elettrico cantonale",
+    "en": "Find the Swiss data set: Cantonal electricity consumption"
+  },
+  "q086_de_direct": {
+    "de": "Finde den Schweizer Datensatz: kantonsratswahl-2018-gde-steinhausen.json",
+    "fr": "Retrouvez l'ensemble de données suisses : cantonsratswahl-2018-gde-steinhausen.json",
+    "it": "Trova il set di dati svizzero: cantonsratswahl-2018-gde-steinhausen.json",
+    "en": "Find the Swiss data set: cantonsratswahl-2018-gde-steinhausen.json"
+  },
+  "q087_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Zugehörigkeit zur kantonalen Spitalliste ab 2008",
+    "fr": "Retrouvez l'ensemble de données suisses : Appartenance à la liste des hôpitaux cantonaux de 2008",
+    "it": "Trova il set di dati svizzero: appartenente all'elenco degli ospedali cantonali dal 2008",
+    "en": "Find the Swiss data set: Belonging to the cantonal hospital list from 2008"
+  },
+  "q088_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Geoparquet-Datei - Lärmempfindlichkeitsstufen",
+    "fr": "Retrouvez le jeu de données suisse : fichier Geoparquet - Niveaux de sensibilité au bruit",
+    "it": "Trova il set di dati svizzero: file Geoparquet - Livelli di sensibilità al rumore",
+    "en": "Find the Swiss dataset: Geoparquet file - Noise sensitivity levels"
+  },
+  "q089_de_direct": {
+    "de": "Finde den Schweizer Datensatz: Kosten und Finanzierung des motorisierten Verkehrs - Übersicht",
+    "fr": "Retrouvez l'ensemble de données suisses : Coûts et financement des transports motorisés - Aperçu",
+    "it": "Trovate il set di dati svizzero: Costi e finanziamento del trasporto motorizzato - Panoramica",
+    "en": "Find the Swiss data set: Costs and financing of motorized transport - Overview"
+  },
+  "q090_de_direct": {
+    "de": "Finde den Schweizer Datensatz: landratswahlen-2003-wahlkreis-binningen-parteien.csv",
+    "fr": "Retrouvez l'ensemble de données suisses : élections de circonscription-2003-circonscription-binningen-partis.csv",
+    "it": "Trova il set di dati svizzero: elezioni distrettuali-2003-circoscrizione-binningen-partiti.csv",
+    "en": "Find the Swiss data set: district elections-2003-constituency-binningen-parties.csv"
+  },
+  "q091_fr_direct": {
+    "fr": "Trouve les résultats des élections au Landrat de 2011 dans la circonscription de Gelterkinden.",
+    "de": "Ergebnisse der Landratswahlen 2011 im Wahlkreis Gelterkinden",
+    "it": "Trovate i risultati delle elezioni Landrat del 2011 nella circoscrizione elettorale di Gelterkinden.",
+    "en": "Find the results of the 2011 Landrat elections in the Gelterkinden constituency."
+  },
+  "q092_fr_direct": {
+    "fr": "Trouve les résultats par parti des élections au Landrat de 2019 dans la circonscription de Liestal.",
+    "de": "Parteiergebnisse der Landratswahlen 2019 im Wahlkreis Liestal",
+    "it": "Trovate i risultati per partito delle elezioni Landrat 2019 nella circoscrizione elettorale di Liestal.",
+    "en": "Find the results by party of the 2019 Landrat elections in the Liestal constituency."
+  },
+  "q093_fr_direct": {
+    "fr": "Trouve les données de la Landsgemeinde du 1er mai 1966.",
+    "de": "Daten der Landsgemeinde vom 1. Mai 1966",
+    "it": "Trovate i dati del Landsgemeinde del 1 maggio 1966.",
+    "en": "Find the data from the Landsgemeinde of May 1, 1966."
+  },
+  "q094_fr_direct": {
+    "fr": "Trouve la surface agricole utile sans les pâturages d’estivage.",
+    "de": "Landwirtschaftliche Nutzfläche ohne Sömmerungsweiden",
+    "it": "Trovare la superficie agricola utile priva di alpeggi.",
+    "en": "Find the useful agricultural area without summer pastures."
+  },
+  "q095_fr_direct": {
+    "fr": "Trouve les logements vacants selon leur mise sur le marché et le nombre de pièces depuis 1995.",
+    "de": "Leerwohnungen nach Marktverfügbarkeit und Zimmerzahl seit 1995",
+    "it": "Trova le case libere in base alla loro collocazione sul mercato e al numero di stanze dal 1995.",
+    "en": "Finds vacant homes according to their placement on the market and the number of rooms since 1995."
+  },
+  "q096_fr_direct": {
+    "fr": "Trouve les résultats détaillés de l’indice suisse des prix à la consommation, base décembre 2020, depuis 1982.",
+    "de": "Detailresultate des Landesindexes der Konsumentenpreise Basis Dezember 2020 seit 1982",
+    "it": "Trova i risultati dettagliati dell'indice svizzero dei prezzi al consumo, base dicembre 2020, dal 1982.",
+    "en": "Find detailed results of the Swiss Consumer Price Index, base December 2020, since 1982."
+  },
+  "q097_fr_direct": {
+    "fr": "Trouve les mesures semi-horaires de la qualité de l’air du réseau Ostluft en Thurgovie.",
+    "de": "Luftqualitätsmessungen Ostluft Thurgau Halbstundenwerte",
+    "it": "Trovate misurazioni della qualità dell'aria ogni mezz'ora dalla rete Ostluft in Turgovia.",
+    "en": "Find half-hourly air quality measurements from the Ostluft network in Thurgau."
+  },
+  "q098_fr_direct": {
+    "fr": "Trouve les mesures des capteurs LoRa de mai 2019.",
+    "de": "LoRa Sensor Messwerte Mai 2019",
+    "it": "Trova le misurazioni del sensore LoRa di maggio 2019.",
+    "en": "Finds LoRa sensor measurements from May 2019."
+  },
+  "q099_fr_direct": {
+    "fr": "Trouve la vue d’ensemble des traitements et résultats de la procréation médicalement assistée.",
+    "de": "Medizinisch unterstützte Fortpflanzung Behandlungen und Resultate Gesamtansicht",
+    "it": "Trova una panoramica dei trattamenti e dei risultati della procreazione medicalmente assistita.",
+    "en": "Find an overview of treatments and results of medically assisted procreation."
+  },
+  "q100_fr_direct": {
+    "fr": "Trouve les précipitations journalières de la station manuelle MétéoSuisse d’Eschlikon.",
+    "de": "Tägliche Niederschlagswerte der manuellen MeteoSchweiz Station Eschlikon",
+    "it": "Trovate le precipitazioni giornaliere dalla stazione manuale di MeteoSvizzera a Eschlikon.",
+    "en": "Find daily precipitation from the MeteoSwiss manual station in Eschlikon."
+  },
+  "q101_fr_direct": {
+    "fr": "Trouve le salaire brut mensuel selon la position professionnelle.",
+    "de": "Monatlicher Bruttolohn nach Stellung",
+    "it": "Trova lo stipendio mensile lordo in base alla posizione professionale.",
+    "en": "Find the gross monthly salary according to professional position."
+  },
+  "q102_fr_direct": {
+    "fr": "Trouve le taux de motorisation par canton.",
+    "de": "Motorisierungsgrad nach Kanton",
+    "it": "Trovate la tariffa di motorizzazione per cantone.",
+    "en": "Find the motorization rate by canton."
+  },
+  "q103_fr_direct": {
+    "fr": "Trouve les données de l’élection au Conseil national dans le canton de Zoug en 2019.",
+    "de": "Nationalratswahl Kanton Zug 2019",
+    "it": "Trovate i dati delle elezioni del Consiglio nazionale nel cantone di Zugo nel 2019.",
+    "en": "Find data from the National Council election in the canton of Zug in 2019."
+  },
+  "q104_fr_direct": {
+    "fr": "Trouve les interactions entre plantes indigènes et non indigènes dans les prairies australiennes.",
+    "de": "Interaktionen einheimischer und nicht einheimischer Pflanzen im australischen Grasland",
+    "it": "Trova interazioni tra piante autoctone e non autoctone nelle praterie australiane.",
+    "en": "Finds interactions between native and non-native plants in Australian grasslands."
+  },
+  "q105_fr_direct": {
+    "fr": "Trouve les logements nouvellement construits par commune depuis 2012.",
+    "de": "Neu erstellte Wohnungen nach Gemeinde seit 2012",
+    "it": "Trova alloggi di nuova costruzione per comune dal 2012.",
+    "en": "Find newly built housing by municipality since 2012."
+  },
+  "q106_fr_direct": {
+    "fr": "Trouve le plan d’affectation communal et le règlement des constructions et des zones de Zurich au format GeoJSON.",
+    "de": "Kommunale Nutzungsplanung Bau- und Zonenordnung Zürich GeoJSON",
+    "it": "Trova il piano di assegnazione comunale e il regolamento per gli edifici e le zone di Zurigo nel formato GeoJSON.",
+    "en": "Finds the municipal allocation plan and the regulations for buildings and zones of Zurich in GeoJSON format."
+  },
+  "q107_fr_direct": {
+    "fr": "Trouve le fichier GeoParquet sur l’écomorphologie des zones d’eau peu profonde.",
+    "de": "GeoParquet Ökomorphologie Flachwasserzone",
+    "it": "Trova il file GeoParquet sull'ecomorfologia delle aree di acque poco profonde.",
+    "en": "Find the GeoParquet file on the ecomorphology of shallow water areas."
+  },
+  "q108_fr_direct": {
+    "fr": "Trouve le parc de logements selon le nombre de pièces depuis 1990.",
+    "de": "Wohnungsbestand nach Zimmerzahl seit 1990",
+    "it": "Trova il patrimonio immobiliare in base al numero di stanze dal 1990.",
+    "en": "Find the housing stock according to the number of rooms since 1990."
+  },
+  "q109_fr_direct": {
+    "fr": "Trouve les voitures de tourisme selon le type de boîte de vitesses depuis 2022.",
+    "de": "Personenwagen nach Getriebeart seit 2022",
+    "it": "Trova le autovetture per tipo di cambio dal 2022.",
+    "en": "Find passenger cars by gearbox type since 2022."
+  },
+  "q110_fr_direct": {
+    "fr": "Trouve la limite cantonale généralisée sous forme de lignes, niveau GS 3, au format GeoParquet.",
+    "de": "Generalisierte Kantonsgrenze Linien GS 3 GeoParquet",
+    "it": "Trova il confine cantonale generalizzato sotto forma di linee, livello GS 3, nel formato GeoParquet.",
+    "en": "Finds the generalized cantonal boundary in the form of lines, level GS 3, in the format GeoParquet."
+  },
+  "q111_fr_direct": {
+    "fr": "Trouve les élèves du degré primaire 1-2 selon la grande région et le canton de l’école.",
+    "de": "Primarstufe 1-2 Lernende nach Grossregion und Schulkanton",
+    "it": "Trova gli studenti della scuola primaria 1-2 in base alla regione principale e al cantone della scuola.",
+    "en": "Find primary school students 1-2 based on the major region and canton of the school."
+  },
+  "q112_fr_direct": {
+    "fr": "Trouve le fichier de spécifications SQL de l’indicateur de qualité hospitalier QIP21 numéro 54.",
+    "de": "QIP21 Spezifikationen Qualitätsindikator 54 SQL",
+    "it": "Trova il file delle specifiche SQL per l'indicatore di qualità ospedaliera QIP21 numero 54.",
+    "en": "Finds the SQL specification file for hospital quality indicator QIP21 number 54."
+  },
+  "q113_fr_direct": {
+    "fr": "Trouve les données de l’élection complémentaire au Conseil d’État de 2013.",
+    "de": "Regierungsratsersatzwahl 2013",
+    "it": "Trova i dati delle elezioni complementari al Consiglio di Stato del 2013.",
+    "en": "Find data from the 2013 complementary election to the Council of State."
+  },
+  "q114_fr_direct": {
+    "fr": "Trouve le fichier GeoParquet des conférences régionales des transports.",
+    "de": "GeoParquet Regionale Verkehrskonferenzen",
+    "it": "Trova il file GeoParquet per le conferenze sui trasporti regionali.",
+    "en": "Finds the GeoParquet file for regional transportation conferences."
+  },
+  "q115_fr_direct": {
+    "fr": "Trouve les résultats du second tour de l’élection complémentaire à la présidence du gouvernement du 7 avril 2024.",
+    "de": "Resultate Ersatzwahl Regierungspräsidium 7. April 2024 zweiter Wahlgang",
+    "it": "Trovate i risultati del secondo turno delle elezioni complementari per la presidenza del governo del 7 aprile 2024.",
+    "en": "Find the results of the second round of the complementary election for the presidency of the government on April 7, 2024."
+  },
+  "q116_it_direct": {
+    "it": "Trova le nascite di bovini suddivise per tipo di utilizzazione.",
+    "de": "Rinder Geburten nach Nutzungsarten",
+    "fr": "Trouvez les naissances de bovins divisées par type d'utilisation.",
+    "en": "Find cattle births divided by type of use."
+  },
+  "q117_it_direct": {
+    "it": "Trova il file GeoParquet dei percorsi escursionistici in fase preliminare con il tipo di pavimentazione.",
+    "de": "GeoParquet Wanderrouten Vororientierung mit Belagsart",
+    "fr": "Retrouvez le fichier GeoParquet des itinéraires préliminaires de randonnée avec le type de trottoir.",
+    "en": "Find the GeoParquet file of preliminary hiking routes with the type of pavement."
+  },
+  "q118_it_direct": {
+    "it": "Trova la distribuzione delle nascite di ovini.",
+    "de": "Schafe Verteilung der Geburten",
+    "fr": "Trouvez la répartition des naissances de moutons.",
+    "en": "Find the distribution of sheep births."
+  },
+  "q119_it_direct": {
+    "it": "Trova le sedi scolastiche nei comuni di Riehen e Bettingen.",
+    "de": "Schulstandorte Riehen und Bettingen",
+    "fr": "Trouvez des emplacements scolaires dans les communes de Riehen et Bettingen.",
+    "en": "Find school locations in the municipalities of Riehen and Bettingen."
+  },
+  "q120_it_direct": {
+    "it": "Trova i beneficiari maggiorenni dell’assistenza sociale nel settore dell’asilo a Sciaffusa, per stato civile.",
+    "de": "Sozialhilfebeziehende im Asylbereich ab 18 Jahren nach Zivilstand Schaffhausen",
+    "fr": "Retrouvez les adultes bénéficiaires de l'aide sociale dans le secteur de l'asile à Schaffhouse, selon leur état civil.",
+    "en": "Find adult beneficiaries of social assistance in the asylum sector in Schaffhausen, by marital status."
+  },
+  "q121_it_synonym_typo": {
+    "it": "Cerco i dati sul rumore del trafico rilevato dal progetto Strada intelligente di Basilea.",
+    "de": "Smarte Strasse Verkehrslärm Basel",
+    "fr": "Je recherche des données sur le bruit de la circulation du projet Basel Smart Road.",
+    "en": "I'm looking for traffic noise data from the Basel Smart Road project."
+  },
+  "q122_it_synonym_typo": {
+    "it": "Cerco il personale degli ospedali svizzeri a partire dal 2010.",
+    "de": "Spitäler Personal seit 2010",
+    "fr": "Je recherche du personnel des hôpitaux suisses à partir de 2010.",
+    "en": "I am looking for staff from Swiss hospitals starting in 2010."
+  },
+  "q123_it_synonym_typo": {
+    "it": "Cerco il bilancio del consuntivo cantonale della Turgovia per il 2022.",
+    "de": "Staatsrechnung Thurgau 2022 Bilanz",
+    "fr": "Je recherche le compte financier cantonal de Thurgovie pour 2022.",
+    "en": "I am looking for the Thurgau cantonal financial statement for 2022."
+  },
+  "q124_it_synonym_typo": {
+    "it": "Cerco i risultati in JSON dell’elezione al Consiglio degli Stati nel canton Zugo nel 2015.",
+    "de": "Ständeratswahl Zug 2015 JSON",
+    "fr": "Je recherche dans JSON les résultats de l'élection au Conseil des Etats dans le canton de Zoug en 2015.",
+    "en": "I am looking for the results in JSON of the election to the Council of States in the canton of Zug in 2015."
+  },
+  "q125_it_synonym_typo": {
+    "it": "Cerco la popolazione residente permanente per età, sesso e nazionalità dal 2010 al 2024.",
+    "de": "Ständige Wohnbevölkerung nach Alter Geschlecht und Nationalitätskategorie 2010 bis 2024",
+    "fr": "Je recherche la population résidente permanente par âge, sexe et nationalité de 2010 à 2024.",
+    "en": "I search the permanent resident population by age, gender and nationality from 2010 to 2024."
+  },
+  "q126_it_synonym_typo": {
+    "it": "Cerco gli edifici dell’edilizia abitativa senza scopo di lucro per categoria nel 2018.",
+    "de": "Gebäude des gemeinnützigen Wohnungsbaus nach Gebäudekategorie 2018",
+    "fr": "Je recherche des immeubles d'habitation à but non lucratif par catégorie en 2018.",
+    "en": "I search for non-profit housing buildings by category in 2018."
+  },
+  "q127_it_synonym_typo": {
+    "it": "Cerco il tasso di assistenza sociale delle persone con statuto di protezione S per cantone.",
+    "de": "Statut S Sozialhilfequote nach Kanton",
+    "fr": "Je recherche le taux d'assistance sociale des personnes bénéficiant du statut de protection S par canton.",
+    "en": "I'm looking for the social assistance rate of people with protection status S by canton."
+  },
+  "q128_it_synonym_typo": {
+    "it": "Cerco importi e beneficiari delle borse di studio per categoria di stranieri e cantone.",
+    "de": "Stipendien Betrag Bezügerinnen und Bezüger nach Ausländerkategorie und Kanton",
+    "fr": "Je recherche les montants et les bénéficiaires des bourses par catégorie d'étrangers et par canton.",
+    "en": "I am looking for amounts and beneficiaries of scholarships by category of foreigners and canton."
+  },
+  "q129_it_synonym_typo": {
+    "it": "Cerco il consumo trimestrale di elettricità in migliaia di kWh dal 1993.",
+    "de": "Stromverbrauch pro Quartal in tausend kWh seit 1993",
+    "fr": "Je recherche la consommation électrique trimestrielle en milliers de kWh depuis 1993.",
+    "en": "I'm looking for quarterly electricity consumption in thousands of kWh since 1993."
+  },
+  "q130_it_synonym_typo": {
+    "it": "Cerco le misure meteo orarie della città di Zurigo per il 2023.",
+    "de": "Stündliche Meteodaten Stadt Zürich 2023",
+    "fr": "Je recherche des mesures météorologiques horaires pour la ville de Zurich pour 2023.",
+    "en": "I am looking for hourly weather measurements for the city of Zurich for 2023."
+  },
+  "q131_en_synonym_typo": {
+    "en": "Find the 2026 Swiss public-transport journey-ID timetable listing.",
+    "de": "Swiss Journey ID Fahrplan Listing 2026",
+    "fr": "Retrouvez la liste des horaires 2026 des transports publics suisses.",
+    "it": "Trovate l'elenco degli orari dei documenti di viaggio dei trasporti pubblici svizzeri 2026."
+  },
+  "q132_en_synonym_typo": {
+    "en": "Find average daily travel distance broken down by mode of transport.",
+    "de": "Tagesdistanz nach Verkehrsmittel",
+    "fr": "Trouvez la distance de déplacement quotidienne moyenne ventilée par mode de transport.",
+    "it": "Trova la distanza media giornaliera percorsa suddivisa per modalità di trasporto."
+  },
+  "q133_en_synonym_typo": {
+    "en": "Find Swiss federal-vote turnout rates from 1910 onward.",
+    "de": "Stimmbeteiligung bei eidgenössischen Abstimmungen seit 1910",
+    "fr": "Trouvez les taux de participation aux élections fédérales en Suisse à partir de 1910.",
+    "it": "Trova i tassi di affluenza alle urne federali svizzere dal 1910 in poi."
+  },
+  "q134_en_synonym_typo": {
+    "en": "Find the Asian tiger mosquito control zone in Basel.",
+    "de": "Tigermückenbekämpfung Bekämpfungszone Basel",
+    "fr": "Retrouvez la zone de lutte contre le moustique tigre asiatique à Bâle.",
+    "it": "Trova la zona di controllo della zanzara tigre asiatica a Basilea."
+  },
+  "q135_en_synonym_typo": {
+    "en": "Find the 2012 financial overview of school municipalities in Thurgau.",
+    "de": "Finanzlage Schulgemeinden Kanton Thurgau 2012",
+    "fr": "Retrouvez le bilan financier 2012 des communes scolaires de Thurgovie.",
+    "it": "Trovate la panoramica finanziaria 2012 dei comuni scolastici del Turgovia."
+  },
+  "q136_en_synonym_typo": {
+    "en": "Find people who moved, grouped by the floor-space size of their old and new dwelling.",
+    "de": "Umgezogene Personen nach Flächenklasse und Wohnungsflächendifferenz",
+    "fr": "Recherchez les personnes qui ont déménagé, regroupées selon la superficie au sol de leur ancien et de leur nouveau logement.",
+    "it": "Trova le persone che si sono trasferite, raggruppate in base alla superficie della loro vecchia e nuova abitazione."
+  },
+  "q137_en_synonym_typo": {
+    "en": "Find the relocation rate of permanent residents by Swiss canton.",
+    "de": "Umzugsquote der ständigen Wohnbevölkerung nach Kanton",
+    "fr": "Retrouvez le taux de relocalisation des résidents permanents par canton suisse.",
+    "it": "Trova il tasso di ricollocazione dei residenti permanenti per cantone svizzero."
+  },
+  "q138_en_synonym_typo": {
+    "en": "Find modified ballots from the 20 October 2024 cantonal parliament election.",
+    "de": "Veränderte Wahlzettel Grossratswahlen 20. Oktober 2024",
+    "fr": "Retrouvez les bulletins de vote modifiés de l'élection parlementaire cantonale du 20 octobre 2024.",
+    "it": "Trovate le schede modificate delle elezioni del Parlamento cantonale del 20 ottobre 2024."
+  },
+  "q139_en_synonym_typo": {
+    "en": "Find freight-transport result tables for Switzerland’s Transport Outlook 2040.",
+    "de": "Verkehrsperspektiven 2040 Ergebnistabellen Güterverkehr",
+    "fr": "Consultez les tableaux des résultats du transport de marchandises dans les Perspectives des transports suisses 2040.",
+    "it": "Trovate le tabelle dei risultati del trasporto merci per la Prospettiva dei trasporti svizzeri 2040."
+  },
+  "q140_en_synonym_typo": {
+    "en": "Find adult convictions for selected felonies and misdemeanours.",
+    "de": "Verurteilungen von Erwachsenen für Verbrechen oder Vergehen nach ausgewählten Straftaten",
+    "fr": "Trouvez les condamnations d'adultes pour certains crimes et délits.",
+    "it": "Trova condanne per adulti per crimini e delitti selezionati."
+  },
+  "q141_en_synonym_typo": {
+    "en": "Find JSON voting data for the initiative on socially fair financing of climate policy.",
+    "de": "Volksinitiative soziale Klimapolitik steuerlich gerecht finanziert JSON",
+    "fr": "Retrouvez les données de vote JSON pour l'initiative sur le financement socialement équitable de la politique climatique.",
+    "it": "Trova i dati di voto JSON per l'iniziativa sul finanziamento socialmente equo della politica climatica."
+  },
+  "q142_en_synonym_typo": {
+    "en": "Find JSON voting data for the Swiss face-covering ban initiative of 15 September 2017.",
+    "de": "Volksinitiative Verhüllungsverbot 15. September 2017 JSON",
+    "fr": "Retrouvez les données de vote JSON pour l'initiative suisse d'interdiction du port du masque du 15 septembre 2017.",
+    "it": "Trova i dati di voto JSON per l'iniziativa svizzera sul divieto di coprirsi il volto del 15 settembre 2017."
+  },
+  "q143_en_synonym_typo": {
+    "en": "Find CSV voting data for the initiative against fighter-jet noise in tourist areas.",
+    "de": "Volksinitiative gegen Kampfjetlärm in Tourismusgebieten CSV",
+    "fr": "Retrouvez les données de vote CSV pour l'initiative contre le bruit des avions de chasse dans les zones touristiques.",
+    "it": "Trova i dati di voto di CSV per l'iniziativa contro il rumore degli aerei da combattimento nelle zone turistiche."
+  },
+  "q144_en_synonym_typo": {
+    "en": "Find the members who submit motions in the Grand Council of Thurgau.",
+    "de": "Vorstösserinnen und Vorstösser im Grossen Rat Thurgau",
+    "fr": "Retrouvez les membres qui déposent des motions au Grand Conseil de Thurgovie.",
+    "it": "Trovate i membri che presentano mozioni al Gran Consiglio di Turgovia."
+  },
+  "q145_en_synonym_typo": {
+    "en": "Find candidates for the first round of the 2015 Zurich government election.",
+    "de": "Kandidierende erster Wahlgang Gesamterneuerungswahl Regierungsrat 2015",
+    "fr": "Trouvez des candidats pour le premier tour des élections gouvernementales zurichoises de 2015.",
+    "it": "Trova i candidati per il primo turno delle elezioni governative di Zurigo 2015."
+  },
+  "q146_en_synonym_typo": {
+    "en": "Find the JSON schema for seasonally adjusted Swiss imports by partner country.",
+    "de": "JSON Schema saisonbereinigte Schweizer Importe nach Partnerland",
+    "fr": "Retrouvez le schéma JSON pour les importations suisses désaisonnalisées par pays partenaire.",
+    "it": "Trova lo schema JSON per le importazioni svizzere destagionalizzate per paese partner."
+  },
+  "q147_en_synonym_typo": {
+    "en": "Find female first names by birth cohort in Switzerland in 2022.",
+    "de": "Weibliche Vornamen nach Jahrgang Schweiz 2022",
+    "fr": "Retrouvez les prénoms féminins par cohorte de naissance en Suisse en 2022.",
+    "it": "Trova i nomi femminili per coorte di nascita in Svizzera nel 2022."
+  },
+  "q148_en_synonym_typo": {
+    "en": "Find weekly deaths in Switzerland from 2010 to 2026.",
+    "de": "Wöchentliche Todesfälle in der Schweiz 2010 bis 2026",
+    "fr": "Retrouvez les décès hebdomadaires en Suisse de 2010 à 2026.",
+    "it": "Trova i decessi settimanali in Svizzera dal 2010 al 2026."
+  },
+  "q149_en_synonym_typo": {
+    "en": "Find dwellings by building category and Swiss canton.",
+    "de": "Wohnungen nach Gebäudekategorie und Kanton",
+    "fr": "Trouvez des logements par catégorie de bâtiment et par canton suisse.",
+    "it": "Trovate le abitazioni per categoria di edificio e cantone svizzero."
+  },
+  "q150_en_synonym_typo": {
+    "en": "Find the statistical neighbourhoods of the city of St Gallen.",
+    "de": "Wohnviertel Stadt St Gallen statistische Quartiere",
+    "fr": "Retrouvez les quartiers statistiques de la ville de Saint-Gall.",
+    "it": "Trova i quartieri statistici della città di San Gallo."
+  }
+}
