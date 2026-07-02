@@ -16,8 +16,11 @@ $previousCache = $env:UV_CACHE_DIR
 $env:UV_CACHE_DIR = $cache
 
 try {
-    & tar -xf $artifactPath -C $project
-    if ($LASTEXITCODE -ne 0) { throw "MCPB extraction failed: $LASTEXITCODE" }
+    Add-Type -AssemblyName System.IO.Compression.FileSystem
+    [System.IO.Compression.ZipFile]::ExtractToDirectory(
+        $artifactPath,
+        $project
+    )
 
     $install = [Diagnostics.Stopwatch]::StartNew()
     & uv sync --project $project --frozen --no-dev
