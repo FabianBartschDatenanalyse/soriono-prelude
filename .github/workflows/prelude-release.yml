@@ -112,7 +112,10 @@ jobs:
         shell: bash
         run: |
           gpg --batch --import security/release-signing-key.asc
-          git verify-tag "${GITHUB_REF_NAME}"
+          git fetch --force origin \
+            "refs/tags/${GITHUB_REF_NAME}:refs/tags/release-verification"
+          git verify-tag refs/tags/release-verification
+          test "$(git rev-list -n 1 refs/tags/release-verification)" = "$GITHUB_SHA"
       - name: Place exact tested MCPB
         shell: pwsh
         run: |
