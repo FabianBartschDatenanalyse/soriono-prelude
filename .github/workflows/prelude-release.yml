@@ -92,14 +92,8 @@ jobs:
     if: startsWith(github.ref, 'refs/tags/soriono-prelude-v')
     needs: mcpb-smoke
     runs-on: ubuntu-latest
-    environment: production-signing
     permissions:
       contents: write
-    env:
-      SM_HOST: ${{ secrets.DIGICERT_SM_HOST }}
-      SM_API_KEY: ${{ secrets.DIGICERT_SM_API_KEY }}
-      SM_CLIENT_CERT_PASSWORD: ${{ secrets.DIGICERT_SM_CLIENT_CERT_PASSWORD }}
-      SM_KEYPAIR_ALIAS: ${{ secrets.DIGICERT_SM_KEYPAIR_ALIAS }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -116,65 +110,29 @@ jobs:
           path: downloaded
       - name: Verify signed release tag
         shell: bash
-        env:
-          RELEASE_GPG_PUBLIC_KEY: ${{ secrets.RELEASE_GPG_PUBLIC_KEY }}
         run: |
-          test -n "$RELEASE_GPG_PUBLIC_KEY"
-          printf '%s' "$RELEASE_GPG_PUBLIC_KEY" | gpg --batch --import
+          gpg --batch --import security/release-signing-key.asc
           git verify-tag "${GITHUB_REF_NAME}"
-      - name: Configure DigiCert KeyLocker PKCS11
-        shell: bash
-        env:
-          DIGICERT_CLIENT_TOOLS_URL: ${{ secrets.DIGICERT_CLIENT_TOOLS_URL }}
-          DIGICERT_SM_CLIENT_CERT_B64: ${{ secrets.DIGICERT_SM_CLIENT_CERT_B64 }}
-          MCPB_SIGNING_CERT_PEM: ${{ secrets.MCPB_SIGNING_CERT_PEM }}
-          MCPB_CERT_CHAIN_PEM: ${{ secrets.MCPB_CERT_CHAIN_PEM }}
-        run: |
-          set -euo pipefail
-          test -n "$DIGICERT_CLIENT_TOOLS_URL"
-          sudo apt-get update
-          sudo apt-get install -y libengine-pkcs11-openssl openssl unzip
-          curl --fail --location "$DIGICERT_CLIENT_TOOLS_URL" -o "$RUNNER_TEMP/keylocker.zip"
-          unzip -q "$RUNNER_TEMP/keylocker.zip" -d "$RUNNER_TEMP/keylocker"
-          PKCS11_MODULE="$(find "$RUNNER_TEMP/keylocker" -name smpkcs11.so -print -quit)"
-          PKCS11_ENGINE="$(dpkg -L libengine-pkcs11-openssl | grep -E '/(lib)?pkcs11\.so$' | head -1)"
-          test -n "$PKCS11_MODULE"
-          test -n "$PKCS11_ENGINE"
-          printf '%s' "$DIGICERT_SM_CLIENT_CERT_B64" | base64 --decode > "$RUNNER_TEMP/sm-client.p12"
-          printf '%s' "$MCPB_SIGNING_CERT_PEM" > "$RUNNER_TEMP/signing-cert.pem"
-          printf '%s' "$MCPB_CERT_CHAIN_PEM" > "$RUNNER_TEMP/cert-chain.pem"
-          chmod 600 "$RUNNER_TEMP/sm-client.p12"
-          echo "SM_CLIENT_CERT_FILE=$RUNNER_TEMP/sm-client.p12" >> "$GITHUB_ENV"
-          echo "PKCS11_MODULE=$PKCS11_MODULE" >> "$GITHUB_ENV"
-          cat > "$RUNNER_TEMP/openssl-pkcs11.cnf" <<EOF
-          openssl_conf = openssl_init
-          [openssl_init]
-          engines = engine_section
-          [engine_section]
-          pkcs11 = pkcs11_section
-          [pkcs11_section]
-          dynamic_path = $PKCS11_ENGINE
-          MODULE_PATH = $PKCS11_MODULE
-          init = 0
-          EOF
       - name: Place exact tested MCPB
         shell: pwsh
         run: |
           New-Item -ItemType Directory -Path dist -Force | Out-Null
           $artifact = Get-ChildItem downloaded -Filter *.mcpb | Select-Object -First 1
           Copy-Item $artifact.FullName (Join-Path dist $artifact.Name) -Force
-      - name: HSM-sign, verify, checksum and create SBOM
+      - name: Create checksum and SBOM
         shell: pwsh
         run: |
-          ./scripts/release_product.ps1 `
-            -CertificatePath "$env:RUNNER_TEMP/signing-cert.pem" `
-            -CertificateChainPath "$env:RUNNER_TEMP/cert-chain.pem" `
-            -Pkcs11KeyUri "pkcs11:object=$env:SM_KEYPAIR_ALIAS;type=private" `
-            -OpenSslConfigPath "$env:RUNNER_TEMP/openssl-pkcs11.cnf" `
-            -SkipBuild
+          ./scripts/package_release.ps1 -SkipBuild
       - uses: softprops/action-gh-release@v2
         with:
           prerelease: ${{ contains(github.ref_name, '-rc.') }}
+          body: |
+            Soriono Prelude Release Candidate.
+
+            Herkunft und Integrität werden durch den GPG-signierten Git-Tag,
+            die veröffentlichte SHA-256-Prüfsumme und die CycloneDX-SBOM
+            abgesichert. Das MCPB selbst besitzt in dieser kostenlosen
+            Release-Stufe noch kein kommerzielles Code-Signing-Zertifikat.
           files: |
             dist/*.mcpb
             dist/*.sha256

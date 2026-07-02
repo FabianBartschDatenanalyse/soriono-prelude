@@ -9,22 +9,17 @@ Spatial-Zugriff zusätzlich den Download der DuckDB-Spatial-Erweiterung. Danach
 funktionieren normale Starts und bereits gecachte Quellen offline. Neue
 öffentliche Quellen können offline nicht materialisiert werden.
 
-Release-Artefakte sind nur gültig, wenn MCPB-Signaturprüfung, SHA-256,
-SBOM und signierter Git-Tag erfolgreich geprüft wurden.
+Release-Artefakte dieser kostenlosen RC-Stufe sind gültig, wenn der
+GPG-signierte Git-Tag, die SHA-256-Prüfsumme und die CycloneDX-SBOM
+erfolgreich geprüft wurden.
 
-## Signierungsumgebung
+Das MCPB selbst besitzt dabei noch kein kommerzielles
+Code-Signing-Zertifikat. Eine DigiCert- beziehungsweise HSM-Signatur kann
+später ergänzt werden, ohne das aktuelle Herkunfts- und Integritätsmodell zu
+ersetzen.
 
-Das GitHub-Environment `production-signing` benötigt:
+## Release-Schlüssel
 
-- `DIGICERT_SM_HOST`
-- `DIGICERT_SM_API_KEY`
-- `DIGICERT_SM_CLIENT_CERT_PASSWORD`
-- `DIGICERT_SM_CLIENT_CERT_B64`
-- `DIGICERT_SM_KEYPAIR_ALIAS`
-- `DIGICERT_CLIENT_TOOLS_URL`
-- `MCPB_SIGNING_CERT_PEM`
-- `MCPB_CERT_CHAIN_PEM`
-- `RELEASE_GPG_PUBLIC_KEY`
-
-Der private Code-Signing-Schlüssel bleibt im DigiCert-HSM und wird nicht als
-GitHub-Secret gespeichert.
+Der öffentliche Release-Schlüssel liegt unter
+`security/release-signing-key.asc`. Der private Schlüssel und seine
+Passphrase bleiben ausschließlich auf dem Rechner des Herausgebers.

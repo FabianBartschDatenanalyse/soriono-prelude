@@ -10,9 +10,10 @@ mit Python 3.12 und 3.13. Vollständige Release-Gates laufen bei einem Tag
 
 ## Einmalige Einrichtung
 
-Die GitHub-Umgebung `production-signing` benötigt die in
-`docs/DISTRIBUTION.md` beschriebenen DigiCert-, Zertifikats- und
-GPG-Secrets.
+Der öffentliche GPG-Schlüssel liegt versioniert unter
+`security/release-signing-key.asc`. Der private Schlüssel bleibt lokal.
+GitHub-Secrets oder kostenpflichtige Zertifikate sind für diese RC-Stufe
+nicht erforderlich.
 
 ## Release-Ablauf
 
@@ -24,6 +25,6 @@ GPG-Secrets.
    git push origin soriono-prelude-v0.3.0-rc.1
    ```
 
-3. GitHub baut das exakt getestete MCPB, prüft es auf allen Plattformen,
-   signiert es im HSM und veröffentlicht MCPB, SHA-256 und CycloneDX-SBOM als
-   Prerelease.
+3. GitHub verifiziert den signierten Tag, baut das exakt getestete MCPB,
+   prüft es auf allen Plattformen und veröffentlicht MCPB, SHA-256 und
+   CycloneDX-SBOM als Prerelease.
