@@ -96,4 +96,3 @@ Remove-Item -LiteralPath "$HOME\Soriono\Prelude-0.3.0-rc.1" -Recurse -Force
 
 Der Arbeitsordner unter `Dokumente\Soriono Prelude` wird bewusst nicht
 automatisch gelöscht.
-
