@@ -26,3 +26,8 @@ uv run --frozen soriono-prelude mcp-server
 Details: [Client-Workflow](docs/CLIENT_WORKFLOW.md),
 [Architektur](docs/ARCHITECTURE.md) und
 [Installation/Offline](docs/DISTRIBUTION.md).
+
+Installationsanleitungen:
+
+- [Soriono Prelude mit Codex verwenden](docs/CODEX_INSTALLATION.md)
+- [MCPB-Distribution und Offline-Verhalten](docs/DISTRIBUTION.md)
