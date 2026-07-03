@@ -10,15 +10,18 @@ und keine Installationsdatei.
 ## Voraussetzungen
 
 - Windows 10 oder 11
-- [Codex CLI](https://developers.openai.com/codex/cli)
+- [Codex-App](https://developers.openai.com/codex/app) oder
+  [Codex CLI](https://developers.openai.com/codex/cli)
 - [uv](https://docs.astral.sh/uv/getting-started/installation/)
 
-Prüfe in PowerShell:
+Prüfe `uv` in PowerShell:
 
 ```powershell
-codex --version
 uv --version
 ```
+
+Wenn `codex --version` nicht funktioniert, verwendet der Installationsblock
+automatisch die in der Codex-App enthaltene CLI.
 
 ## Installation
 
@@ -32,6 +35,23 @@ $installDir = Join-Path $HOME "Soriono\Prelude-$version"
 $stateDir = Join-Path ([Environment]::GetFolderPath("MyDocuments")) "Soriono Prelude"
 $zip = Join-Path $env:TEMP "Soriono-Prelude-$version.zip"
 $expectedSha256 = "821e4a8795d0ff1eb52f66b07531c0e6194af2584af781557bf7af96da7ade9c"
+
+$codexCommand = Get-Command codex -ErrorAction SilentlyContinue
+if ($codexCommand) {
+    $codexCli = $codexCommand.Source
+} else {
+    $codexConfig = Join-Path $HOME ".codex\config.toml"
+    $codexConfigText = Get-Content -LiteralPath $codexConfig -Raw
+    $codexCliMatch = [regex]::Match(
+        $codexConfigText,
+        '(?m)^CODEX_CLI_PATH\s*=\s*[''"]([^''"]+)[''"]\s*$'
+    )
+    if (-not $codexCliMatch.Success) {
+        throw "Codex CLI wurde nicht gefunden. Installiere zuerst Codex CLI."
+    }
+    $codexCli = $codexCliMatch.Groups[1].Value
+}
+$uvExe = (Get-Command uv -ErrorAction Stop).Source
 
 Invoke-WebRequest `
   -Uri "$releaseBase/Soriono-Prelude-$version.mcpb" `
@@ -47,11 +67,11 @@ Copy-Item -LiteralPath $bundle -Destination $zip -Force
 Expand-Archive -LiteralPath $zip -DestinationPath $installDir -Force
 Remove-Item -LiteralPath $zip -Force
 
-codex mcp remove soriono-prelude 2>$null
-codex mcp add soriono-prelude `
+& $codexCli mcp remove soriono-prelude 2>$null
+& $codexCli mcp add soriono-prelude `
   --env "SORIONO_PRELUDE_ROOT=$installDir" `
   --env "SORIONO_PRELUDE_STATE_DIR=$stateDir" `
-  -- uv run --frozen --no-dev --project "$installDir" "$installDir\server.py"
+  -- $uvExe run --frozen --no-dev --project "$installDir" "$installDir\server.py"
 ```
 
 Die Installation benötigt beim ersten Start Internetzugriff, damit `uv` die
@@ -61,7 +81,7 @@ Cache.
 ## Installation prüfen
 
 ```powershell
-codex mcp list
+& $codexCli mcp list
 ```
 
 In der Ausgabe muss `soriono-prelude` als aktiver STDIO-Server erscheinen.
@@ -90,7 +110,7 @@ Der Katalog und der Server liegen versionsbezogen unter:
 ## Deinstallation
 
 ```powershell
-codex mcp remove soriono-prelude
+& $codexCli mcp remove soriono-prelude
 Remove-Item -LiteralPath "$HOME\Soriono\Prelude-0.3.0-rc.1" -Recurse -Force
 ```
 
