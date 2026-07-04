@@ -21,8 +21,8 @@ nicht erforderlich.
 2. Einen signierten Tag erstellen:
 
    ```bash
-   git tag -s soriono-prelude-v0.3.0-rc.1 -m "Soriono Prelude 0.3.0-rc.1"
-   git push origin soriono-prelude-v0.3.0-rc.1
+   git tag -s soriono-prelude-v0.3.0-rc.2 -m "Soriono Prelude 0.3.0-rc.2"
+   git push origin soriono-prelude-v0.3.0-rc.2
    ```
 
 3. GitHub verifiziert den signierten Tag, baut das exakt getestete MCPB,

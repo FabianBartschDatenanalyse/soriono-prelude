@@ -32,7 +32,30 @@ def test_mcp_exposes_expected_tools_without_answer_question() -> None:
 
 
 def test_server_reports_product_version() -> None:
-    assert create_server()._mcp_server.version == "0.3.0-rc.1"
+    assert create_server()._mcp_server.version == "0.3.0-rc.2"
+
+
+def test_server_routes_between_web_and_catalog_evidence() -> None:
+    instructions = create_server().instructions
+
+    assert instructions is not None
+    assert "at most two targeted web searches" in instructions
+    assert "complete ranking" in instructions
+    assert "never replace a valid web answer with a catalog-miss answer" in instructions
+    assert "at least two suitable periods" in instructions
+
+
+def test_server_explains_pxweb_readiness_semantics() -> None:
+    server = create_server()
+    instructions = server.instructions or ""
+    tools = asyncio.run(server.list_tools())
+    materialize = next(item for item in tools if item.name == "materialize_resource")
+    description = " ".join((materialize.description or "").split())
+
+    assert "duckdb_readable=false" in instructions
+    assert "Call materialize_resource" in instructions
+    assert "duckdb_readable=false" in description
+    assert "before claiming that PXWeb is unavailable" in description
 
 
 def test_search_tools_publish_multilingual_query_parameter() -> None:

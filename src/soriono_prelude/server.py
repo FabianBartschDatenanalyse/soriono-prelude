@@ -14,13 +14,25 @@ def create_server(tools: SorionoPreludeTools | None = None) -> FastMCP:
     server = FastMCP(
         "soriono-prelude",
         instructions=(
+            "Use Soriono Prelude as a complement to web research, not as a reason to suppress it. "
+            "When the client has web access, begin with at most two targeted web searches before or in "
+            "parallel with the catalog search. If a reliable source directly answers the requested metric, "
+            "period, geography, and population, retain that evidence. Use Prelude when the web result is "
+            "incomplete or when the question needs structured data, a calculation, a complete ranking, "
+            "official open data, or reproducibility. Combine complementary web and catalog evidence, and "
+            "never replace a valid web answer with a catalog-miss answer. "
             "Local Swiss open-data tools for the complete profiled catalog. The MCP client must formulate "
-            "the question, select resources, inspect schemas, plan joins, write and review SQL, and "
-            "interpret results. "
+            "the question, select resources, inspect schemas, plan joins, write and review SQL, and interpret "
+            "results. For comparisons or change-over-time questions, verify that the selected evidence uses "
+            "the same measure, geography, population, and at least two suitable periods; continue searching "
+            "when the first hit is only a cross-section. "
             "The server performs deterministic retrieval, data access, computation, and formatting only. "
             "Before calling a search tool, create concise German, French, Italian, and English search formulations. "
             "Preserve names, places, years, identifiers, and file formats, and pass the four formulations as "
             "search_queries with keys de, fr, it, and en while keeping the original question unchanged. "
+            "For PXWeb profiles, duckdb_readable=false only means that a direct DuckDB reader is not used. "
+            "It does not mean that the source is unavailable. Call materialize_resource and use its current "
+            "result before making any availability claim; do not reuse an earlier network assumption. "
             "Scientific literature search, statistical tests, regressions, and report generation belong "
             "to Soriono Maestro and are intentionally not part of Prelude."
         ),
@@ -43,7 +55,12 @@ def create_server(tools: SorionoPreludeTools | None = None) -> FastMCP:
         source_system: str | None = None,
         ready_only: bool = True,
     ) -> dict[str, Any]:
-        """Search locally using parallel DE/FR/IT/EN formulations supplied in search_queries."""
+        """Search the catalog using parallel DE/FR/IT/EN formulations.
+
+        Use this for structured data, calculations, complete rankings, official
+        open data, reproducibility, or when a bounded web reconnaissance is
+        insufficient. A catalog miss does not invalidate reliable web evidence.
+        """
         return active.search_resources(
             question,
             search_queries=search_queries,
@@ -86,7 +103,12 @@ def create_server(tools: SorionoPreludeTools | None = None) -> FastMCP:
         scope: dict[str, list[str]] | None = None,
         force: bool = False,
     ) -> dict[str, Any]:
-        """Download a scoped PXWeb cube into the local Parquet cache."""
+        """Download a scoped PXWeb cube into the local Parquet cache.
+
+        PXWeb profiles intentionally have duckdb_readable=false because this
+        tool uses the PXWeb API. Call it before claiming that PXWeb is
+        unavailable.
+        """
         return active.materialize_resource(resource_id, scope=scope, force=force)
 
     @server.tool()

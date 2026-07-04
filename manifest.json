@@ -3,7 +3,7 @@
   "manifest_version": "0.4",
   "name": "soriono-prelude",
   "display_name": "Soriono Prelude",
-  "version": "0.3.0-rc.1",
+  "version": "0.3.0-rc.2",
   "description": "Alle Daten der Schweiz mit einem Klick.",
   "long_description": "Durchsucht 22'635 profilierte Schweizer Open-Data-Ressourcen, stellt Datenquellen bereit und führt kontrollierte lokale SQL-Analysen aus. Literaturrecherche, statistische Tests und wissenschaftliche Berichte sind bewusst Soriono Maestro vorbehalten.",
   "author": {

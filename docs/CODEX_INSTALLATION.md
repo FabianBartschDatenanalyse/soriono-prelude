@@ -28,13 +28,13 @@ automatisch die in der Codex-App enthaltene CLI.
 Öffne PowerShell und führe den gesamten Block aus:
 
 ```powershell
-$version = "0.3.0-rc.1"
+$version = "0.3.0-rc.2"
 $releaseBase = "https://github.com/FabianBartschDatenanalyse/soriono-prelude/releases/download/soriono-prelude-v$version"
 $bundle = Join-Path $HOME "Downloads\Soriono-Prelude-$version.mcpb"
+$checksumFile = "$bundle.sha256"
 $installDir = Join-Path $HOME "Soriono\Prelude-$version"
 $stateDir = Join-Path ([Environment]::GetFolderPath("MyDocuments")) "Soriono Prelude"
 $zip = Join-Path $env:TEMP "Soriono-Prelude-$version.zip"
-$expectedSha256 = "821e4a8795d0ff1eb52f66b07531c0e6194af2584af781557bf7af96da7ade9c"
 
 $codexCommand = Get-Command codex -ErrorAction SilentlyContinue
 if ($codexCommand) {
@@ -56,7 +56,11 @@ $uvExe = (Get-Command uv -ErrorAction Stop).Source
 Invoke-WebRequest `
   -Uri "$releaseBase/Soriono-Prelude-$version.mcpb" `
   -OutFile $bundle
+Invoke-WebRequest `
+  -Uri "$releaseBase/Soriono-Prelude-$version.mcpb.sha256" `
+  -OutFile $checksumFile
 
+$expectedSha256 = ((Get-Content -LiteralPath $checksumFile -Raw) -split "\s+")[0].ToLowerInvariant()
 $actualSha256 = (Get-FileHash -LiteralPath $bundle -Algorithm SHA256).Hash.ToLowerInvariant()
 if ($actualSha256 -ne $expectedSha256) {
     throw "Ungültige MCPB-Prüfsumme: $actualSha256"
@@ -104,14 +108,14 @@ Dokumente\Soriono Prelude
 Der Katalog und der Server liegen versionsbezogen unter:
 
 ```text
-%USERPROFILE%\Soriono\Prelude-0.3.0-rc.1
+%USERPROFILE%\Soriono\Prelude-0.3.0-rc.2
 ```
 
 ## Deinstallation
 
 ```powershell
 & $codexCli mcp remove soriono-prelude
-Remove-Item -LiteralPath "$HOME\Soriono\Prelude-0.3.0-rc.1" -Recurse -Force
+Remove-Item -LiteralPath "$HOME\Soriono\Prelude-0.3.0-rc.2" -Recurse -Force
 ```
 
 Der Arbeitsordner unter `Dokumente\Soriono Prelude` wird bewusst nicht
