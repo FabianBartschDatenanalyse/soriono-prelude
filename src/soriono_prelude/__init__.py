@@ -2,3 +2,5 @@
 
 __version__ = "0.3.0rc2"
 __product_version__ = "0.3.0-rc.2"
+
+USER_AGENT = f"soriono-prelude/{__product_version__}"

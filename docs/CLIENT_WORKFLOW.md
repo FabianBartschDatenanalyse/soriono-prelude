@@ -14,23 +14,32 @@
 4. Der MCP-Client erstellt knappe Suchfassungen auf Deutsch, Französisch,
    Italienisch und Englisch, erhält Eigennamen, Orte, Jahre, Kennungen und
    Dateiformate und übergibt sie als `search_queries` mit den Schlüsseln
-   `de`, `fr`, `it` und `en`. `search_resources` durchsucht sie parallel und
-   fusioniert die Treffer mit der unveränderten Originalfrage.
-5. `get_resource_profile` oder `get_context_bundle` prüft Herkunft und
+   `de`, `fr`, `it` und `en`.
+5. `search_resources` durchsucht Tabellenprofile; `search_documents`
+   durchsucht getrennt die Metadaten von PDF, DOC, DOCX, ODT, RTF und HTML
+   sowie bereits extrahierte Dokumentinhalte. Beide Suchwege fusionieren die
+   vier Sprachfassungen mit der unveränderten Originalfrage.
+6. `get_resource_profile` oder `get_context_bundle` prüft Herkunft und
    Readiness.
-6. Bei PXWeb bedeutet `duckdb_readable: false` nur, dass kein direkter
+7. `get_document_profile` prüft Dokumentmetadaten und Extraktionsstatus.
+   `materialize_document` lädt und extrahiert einen Inhalt bei Bedarf;
+   `read_document` liefert begrenzte Textabschnitte mit Seitenangaben.
+8. Bei PXWeb bedeutet `duckdb_readable: false` nur, dass kein direkter
    DuckDB-Reader verwendet wird. Vor einer Aussage zur Erreichbarkeit ruft der
    Client `materialize_resource` auf und verwendet das aktuelle Ergebnis.
-7. `materialize_resource` registriert die Quelle und liefert ihren `sql_name`.
-8. `inspect_source` prüft Schema, maximal 100 Stichprobenzeilen und maximal
+9. `materialize_resource` registriert die Quelle und liefert ihren `sql_name`.
+10. `inspect_source` prüft Schema, maximal 100 Stichprobenzeilen und maximal
    200 Distinct-Werte.
-9. `validate_sql` prüft ausschließlich aliasbasiertes, schreibgeschütztes SQL.
-10. `execute_sql` speichert das vollständige Resultat lokal und liefert maximal
+11. `validate_sql` prüft ausschließlich aliasbasiertes, schreibgeschütztes SQL.
+12. `execute_sql` speichert das vollständige Resultat lokal und liefert maximal
    200 Vorschauzeilen.
-11. `get_result_page` liefert höchstens 500 Zeilen pro Seite;
+13. `get_result_page` liefert höchstens 500 Zeilen pro Seite;
    `get_result_summary` beschreibt das vollständige Ergebnis.
-12. `format_reproduction_bundle` dokumentiert Ressourcen-IDs, `sql_name` und
-    SQL.
+14. Als letzten Prelude-Aufruf verwendet der Client bei jeder inhaltlichen
+    Antwort `format_reproduction_bundle`. Der zurückgegebene Abschnitt
+    **Vorgehen und Reproduktion** dokumentiert Schritte, Quellen-Handles,
+    Dokument-IDs, SQL und Resultat-Handle. Das gilt auch ohne SQL.
 
 Reader wie `read_csv_auto`, `read_text`, `read_blob`, `glob` oder
-`sqlite_scan` sind im Client-SQL verboten.
+`sqlite_scan` sind im Client-SQL verboten. Dokumentformate werden niemals als
+SQL-Tabellen geöffnet.

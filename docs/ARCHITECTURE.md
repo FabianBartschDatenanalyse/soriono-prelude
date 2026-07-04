@@ -16,6 +16,19 @@ MCP-Client statt.
 5. Das vollständige Ergebnis wird lokal als Parquet gespeichert; über MCP
    werden Vorschau, Seiten und Zusammenfassung ausgeliefert.
 
+## Dokumentfluss
+
+1. Ein separater SQLite-FTS5-Index enthält 15’859 Dokumentmetadaten aus
+   opendata.swiss.
+2. `search_documents` durchsucht Titel, Datensatztitel, Beschreibung,
+   Herausgeber und bereits extrahierte Textabschnitte.
+3. `materialize_document` akzeptiert nur öffentliche HTTP(S)-Ziele, begrenzt
+   Download- und Archivgrößen und extrahiert Inhalte in einen lokalen Cache.
+4. `read_document` liefert begrenzte Chunks mit PDF-Seitenzahl, Überschrift,
+   Extraktionsmethode und Inhalts-Hash.
+5. Dokumente werden nicht in DuckDB registriert und nicht als Tabellen
+   interpretiert.
+
 SQLite ersetzt Vespa vollständig im Endnutzer-Runtime. Spatial wird nur beim
 ersten GPKG-, SHP- oder KML-Zugriff geladen und anschließend lokal gecacht.
 

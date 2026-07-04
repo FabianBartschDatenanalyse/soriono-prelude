@@ -15,6 +15,7 @@ ABSOLUTE_PATH = re.compile(
 
 def main() -> None:
     catalog = ROOT / "catalog" / "resources.sqlite"
+    documents = ROOT / "catalog" / "documents.sqlite"
     manifest = json.loads(
         (ROOT / "catalog" / "manifest.json").read_text(encoding="utf-8")
     )
@@ -55,7 +56,61 @@ def main() -> None:
                 raise RuntimeError(
                     f"absolute development path in {resource_id}"
                 )
-    print(f"Catalog release gate passed: 22,635 profiles, SHA-256 {digest}")
+    document_digest = _sha256(documents)
+    if document_digest != manifest["documents_sha256"]:
+        raise RuntimeError("manifest hash does not match document catalog")
+    with sqlite3.connect(documents) as connection:
+        document_checks = {
+            "integrity": connection.execute("PRAGMA integrity_check").fetchone()[0],
+            "documents": connection.execute("SELECT COUNT(*) FROM documents").fetchone()[0],
+            "fts": connection.execute("SELECT COUNT(*) FROM documents_fts").fetchone()[0],
+            "duplicates": connection.execute(
+                "SELECT COUNT(*) FROM (SELECT resource_id FROM documents "
+                "GROUP BY resource_id HAVING COUNT(*) > 1)"
+            ).fetchone()[0],
+            "blank_publishers": connection.execute(
+                "SELECT COUNT(*) FROM documents WHERE trim(publisher) = ''"
+            ).fetchone()[0],
+            "blank_dataset_titles": connection.execute(
+                "SELECT COUNT(*) FROM documents WHERE trim(dataset_title) = ''"
+            ).fetchone()[0],
+            "materialized": connection.execute(
+                "SELECT COUNT(*) FROM documents WHERE extraction_status != 'not_materialized' "
+                "OR local_path IS NOT NULL OR content_sha256 IS NOT NULL"
+            ).fetchone()[0],
+            "chunks": connection.execute("SELECT COUNT(*) FROM document_chunks").fetchone()[0],
+        }
+        expected_documents = {
+            "integrity": "ok",
+            "documents": 15859,
+            "fts": 15859,
+            "duplicates": 0,
+            "blank_publishers": 0,
+            "blank_dataset_titles": 0,
+            "materialized": 0,
+            "chunks": 0,
+        }
+        if document_checks != expected_documents:
+            raise RuntimeError(f"document catalog gate failed: {document_checks}")
+        formats = dict(
+            connection.execute(
+                "SELECT format, COUNT(*) FROM documents GROUP BY format ORDER BY format"
+            )
+        )
+        if formats != manifest["document_formats"]:
+            raise RuntimeError(f"document format counts differ: {formats}")
+        for resource_id, raw in connection.execute(
+            "SELECT resource_id, metadata_json FROM documents"
+        ):
+            json.loads(str(raw))
+            if ABSOLUTE_PATH.search(str(raw)):
+                raise RuntimeError(
+                    f"absolute development path in document {resource_id}"
+                )
+    print(
+        "Catalog release gate passed: "
+        f"22,635 profiles ({digest}), 15,859 documents ({document_digest})"
+    )
 
 
 def _sha256(path: Path) -> str:

@@ -12,7 +12,7 @@ from typing import Any
 import duckdb
 
 from soriono_prelude.catalog import state_dir
-from soriono_prelude.duckdb_runtime import open_connection
+from soriono_prelude.duckdb_runtime import csv_reject_count, open_connection
 from soriono_prelude.sources import SourceRecord, sql_literal
 from soriono_prelude.sql import validate_sql
 
@@ -96,6 +96,7 @@ class ResultStore:
         started = perf_counter()
         removed = {column.casefold() for column in excluded_columns or []}
 
+        rejected_lines = 0
         connection = open_connection(sources)
         try:
             schema_rows = connection.execute(
@@ -117,6 +118,7 @@ class ResultStore:
                 f"TO {sql_literal(temporary_path.resolve().as_posix())} "
                 "(FORMAT PARQUET, COMPRESSION ZSTD)"
             )
+            rejected_lines = csv_reject_count(connection)
         except Exception as exc:  # noqa: BLE001
             temporary_path.unlink(missing_ok=True)
             return {
@@ -148,6 +150,14 @@ class ResultStore:
 
         preview_limit = self.inline_rows if inline_rows is None else max(0, min(int(inline_rows), self.inline_rows))
         row_count, columns, rows = _inspect_result(parquet_path, offset=0, limit=preview_limit)
+        warnings = (
+            [
+                f"{rejected_lines} CSV source line(s) could not be parsed and were "
+                "excluded from this result. Totals and rankings may be incomplete."
+            ]
+            if rejected_lines
+            else []
+        )
         created_at = dt.datetime.now(dt.UTC)
         metadata = {
             "result_handle": handle,
@@ -161,6 +171,7 @@ class ResultStore:
             "resource_ids": [source.resource_id for source in sources],
             "private": bool(private),
             "removed_columns": sorted(removed),
+            "warnings": warnings,
         }
         _write_json_atomic(metadata_path, metadata)
         returned_count = len(rows)
@@ -177,6 +188,7 @@ class ResultStore:
             "size_bytes": size_bytes,
             "expires_at": metadata["expires_at"],
             "removed_columns": metadata["removed_columns"],
+            "warnings": warnings,
         }
 
     def page(self, result_handle: str, *, offset: int = 0, limit: int = 100) -> dict[str, Any]:
@@ -211,64 +223,6 @@ class ResultStore:
             "status": "succeeded",
             **metadata,
         }
-
-    def analysis_source(self, result_handle: str) -> SourceRecord:
-        metadata, parquet_path = self._load(result_handle)
-        path = parquet_path.as_posix()
-        return SourceRecord(
-            source_handle=f"result-source:{result_handle.removeprefix(HANDLE_PREFIX)}",
-            resource_id=result_handle,
-            title=f"Stored result {result_handle}",
-            source_url=path,
-            duckdb_reader=f"read_parquet({sql_literal(path)})",
-            format="parquet",
-            access_method="stored_result",
-            columns=[str(column["name"]) for column in metadata["columns"]],
-            metadata={"private": bool(metadata.get("private")), "result_handle": result_handle},
-        )
-
-    def small_count_violations(
-        self,
-        result_handle: str,
-        *,
-        count_columns: set[str],
-        minimum: int,
-        maximum_violations: int = 20,
-    ) -> list[dict[str, Any]]:
-        metadata, parquet_path = self._load(result_handle)
-        candidates = [
-            str(column["name"])
-            for column in metadata["columns"]
-            if str(column["name"]).casefold() in count_columns
-        ]
-        violations: list[dict[str, Any]] = []
-        connection = duckdb.connect(":memory:")
-        try:
-            for column in candidates:
-                quoted = _identifier(column)
-                rows = connection.execute(
-                    f"SELECT {quoted} FROM read_parquet(?) "
-                    f"WHERE {quoted} > 0 AND {quoted} < ? LIMIT ?",
-                    [str(parquet_path), int(minimum), max(1, int(maximum_violations))],
-                ).fetchall()
-                violations.extend({"column": column, "value": _json_safe(row[0])} for row in rows)
-                if len(violations) >= maximum_violations:
-                    break
-        finally:
-            connection.close()
-        return violations[:maximum_violations]
-
-    def remove_for_resource(self, resource_id: str) -> int:
-        removed = 0
-        for metadata_path in self.root.glob("*.json"):
-            try:
-                metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
-            except (OSError, json.JSONDecodeError):
-                continue
-            if resource_id in metadata.get("resource_ids", []):
-                self.remove(str(metadata["result_handle"]))
-                removed += 1
-        return removed
 
     def remove(self, result_handle: str) -> None:
         result_id = _result_id(result_handle)

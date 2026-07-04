@@ -12,6 +12,7 @@ from typing import Any
 import duckdb
 import httpx
 
+from soriono_prelude import USER_AGENT
 from soriono_prelude.catalog import state_dir
 
 DEFAULT_CELL_LIMIT = 100_000
@@ -125,7 +126,7 @@ def _convert_csv_to_parquet(csv_path: Path, parquet_path: Path) -> None:
         csv_literal = _path_literal(csv_path)
         parquet_literal = _path_literal(parquet_path)
         connection.execute(
-            f"COPY (SELECT * FROM read_csv_auto({csv_literal}, ignore_errors=true)) "
+            f"COPY (SELECT * FROM read_csv_auto({csv_literal})) "
             f"TO {parquet_literal} (FORMAT PARQUET)"
         )
     finally:
@@ -139,9 +140,10 @@ def _path_literal(path: Path) -> str:
 def _response_text(response: httpx.Response) -> str:
     encoding = response.encoding or "utf-8"
     try:
-        return response.content.decode(encoding)
+        text = response.content.decode(encoding)
     except (LookupError, UnicodeDecodeError):
-        return response.content.decode("utf-8-sig")
+        text = response.content.decode("utf-8-sig", errors="replace")
+    return text.removeprefix("\ufeff")
 
 
 def _inspect_parquet(path: Path, *, cell_count: int, cached: bool, scoped: bool) -> MaterializedCube:
@@ -176,7 +178,7 @@ def _request_with_retry(
                 method,
                 url,
                 json=json,
-                headers={"User-Agent": "soriono-prelude/0.1"},
+                headers={"User-Agent": USER_AGENT},
             )
             if response.status_code not in RETRY_STATUS:
                 response.raise_for_status()

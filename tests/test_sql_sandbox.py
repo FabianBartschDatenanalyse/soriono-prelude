@@ -4,8 +4,9 @@ from pathlib import Path
 
 import pytest
 
+from soriono_prelude.results import ResultStore
 from soriono_prelude.sources import SourceRecord
-from soriono_prelude.sql import execute_sql, validate_sql
+from soriono_prelude.sql import validate_sql
 
 
 @pytest.fixture
@@ -22,6 +23,11 @@ def source(tmp_path: Path) -> SourceRecord:
         format="csv",
         access_method="test",
     )
+
+
+@pytest.fixture
+def store(tmp_path: Path) -> ResultStore:
+    return ResultStore(tmp_path / "results")
 
 
 @pytest.mark.parametrize(
@@ -53,7 +59,50 @@ def test_all_client_table_functions_are_rejected(
     assert any(issue["code"] == "reader_functions_forbidden" for issue in validation["issues"])
 
 
-def test_nested_ctes_unions_comments_and_case_are_allowed(source: SourceRecord) -> None:
+@pytest.mark.parametrize(
+    "sql",
+    [
+        "INSERT INTO {name} VALUES (2, 'x')",
+        "UPDATE {name} SET value = 'x'",
+        "DELETE FROM {name}",
+        "DROP TABLE {name}",
+        "CREATE TABLE copied AS SELECT * FROM {name}",
+        "ATTACH 'other.duckdb' AS other",
+        "SET home_directory = 'C:/'",
+        "PRAGMA database_list",
+        "COPY (SELECT * FROM {name}) TO 'out.csv'",
+        "SELECT * FROM {name}; SELECT * FROM {name}",
+    ],
+)
+def test_write_and_statement_level_operations_are_rejected(
+    source: SourceRecord,
+    sql: str,
+) -> None:
+    validation = validate_sql(sql.format(name=source.sql_name), [source])
+
+    assert validation["valid"] is False
+
+
+def test_string_literals_and_aliases_containing_keywords_are_allowed(
+    source: SourceRecord,
+    store: ResultStore,
+) -> None:
+    sql = (
+        f"SELECT id, value AS import_export FROM {source.sql_name} "
+        "WHERE value IN ('Import', 'Export', 'Set') OR value LIKE '%Update%'"
+    )
+
+    validation = validate_sql(sql, [source])
+    result = store.execute(sql, [source])
+
+    assert validation["valid"] is True
+    assert result["status"] == "succeeded"
+
+
+def test_nested_ctes_unions_comments_and_case_are_allowed(
+    source: SourceRecord,
+    store: ResultStore,
+) -> None:
     sql = (
         f"/* reviewed */ WITH Base AS (SELECT * FROM {source.sql_name}), "
         "Filtered AS (SELECT id, value FROM Base WHERE id = 1) "
@@ -61,7 +110,7 @@ def test_nested_ctes_unions_comments_and_case_are_allowed(source: SourceRecord) 
     )
 
     validation = validate_sql(sql, [source])
-    result = execute_sql(sql, [source])
+    result = store.execute(sql, [source])
 
     assert validation["valid"] is True
     assert result["status"] == "succeeded"
@@ -78,6 +127,7 @@ def test_unknown_alias_and_qualified_table_are_rejected(source: SourceRecord) ->
 
 def test_reader_bypass_cannot_read_unregistered_local_file(
     source: SourceRecord,
+    store: ResultStore,
     tmp_path: Path,
 ) -> None:
     secret = tmp_path / "secret.txt"
@@ -87,7 +137,7 @@ def test_reader_bypass_cannot_read_unregistered_local_file(
         f"CROSS JOIN read_text('{secret.as_posix()}') leaked"
     )
 
-    result = execute_sql(sql, [source])
+    result = store.execute(sql, [source])
 
     assert result["status"] == "failed"
     assert any(

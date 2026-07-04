@@ -7,6 +7,7 @@ from pathlib import Path
 import duckdb
 import httpx
 
+from soriono_prelude import USER_AGENT
 from soriono_prelude.catalog import state_dir
 from soriono_prelude.geodata_resolvers import (
     GeodataResolverUnavailable,
@@ -42,6 +43,26 @@ def open_connection(sources: list[SourceRecord] | None = None) -> duckdb.DuckDBP
         connection.close()
         raise
     return connection
+
+
+def csv_reject_count(connection: duckdb.DuckDBPyConnection) -> int:
+    """Count distinct rejected CSV lines recorded by store_rejects readers.
+
+    The reject tables only exist after a CSV scan ran with store_rejects; the
+    same file may be scanned more than once per connection (DESCRIBE + COPY),
+    so rejected lines are deduplicated per file.
+    """
+    try:
+        row = connection.execute(
+            "SELECT COUNT(*) FROM ("
+            "SELECT DISTINCT s.file_path, e.line "
+            "FROM reject_errors AS e "
+            "JOIN reject_scans AS s ON e.scan_id = s.scan_id AND e.file_id = s.file_id"
+            ")"
+        ).fetchone()
+    except duckdb.Error:
+        return 0
+    return int(row[0]) if row else 0
 
 
 def load_spatial(connection: duckdb.DuckDBPyConnection) -> None:
@@ -112,7 +133,7 @@ def _download_spatial_source(source: SourceRecord) -> Path:
             source_url,
             timeout=httpx.Timeout(120, connect=30),
             follow_redirects=True,
-            headers={"User-Agent": "soriono-prelude/0.3"},
+            headers={"User-Agent": USER_AGENT},
         ) as response:
             response.raise_for_status()
             content_length = int(response.headers.get("content-length") or 0)

@@ -82,6 +82,43 @@ def test_result_storage_limit_removes_oversized_file(tmp_path: Path) -> None:
     assert list((tmp_path / "results").glob("*.parquet")) == []
 
 
+def test_rejected_csv_lines_produce_a_warning(tmp_path: Path) -> None:
+    path = tmp_path / "broken.csv"
+    path.write_text(
+        "id,value\n1,ok\ntoo,many,columns,here\n2,ok\n",
+        encoding="utf-8",
+    )
+    url = path.resolve().as_posix()
+    record = SourceRecord(
+        source_handle="source:broken",
+        resource_id="broken",
+        title="Broken",
+        source_url=url,
+        duckdb_reader=f"read_csv_auto('{url}', store_rejects=true)",
+        format="csv",
+        access_method="test",
+    )
+    store = ResultStore(tmp_path / "results")
+
+    result = store.execute(f"SELECT * FROM {record.sql_name}", [record])
+
+    assert result["status"] == "succeeded"
+    assert result["row_count"] == 2
+    assert len(result["warnings"]) == 1
+    assert "could not be parsed" in result["warnings"][0]
+    assert store.summary(result["result_handle"])["warnings"] == result["warnings"]
+
+
+def test_clean_csv_produces_no_warning(tmp_path: Path) -> None:
+    record = source(tmp_path)
+    store = ResultStore(tmp_path / "results")
+
+    result = store.execute(f"SELECT * FROM {record.sql_name}", [record])
+
+    assert result["status"] == "succeeded"
+    assert result["warnings"] == []
+
+
 def test_invalid_result_handle_is_rejected(tmp_path: Path) -> None:
     store = ResultStore(tmp_path / "results")
 

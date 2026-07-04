@@ -69,9 +69,13 @@ def reader_for(profile: dict[str, Any], source_url: str) -> str:
     source = profile.get("source") or {}
     stored_reader = str(source.get("duckdb_reader") or "")
     stored_url = str(source.get("source_url") or "")
+    fmt = str(source.get("format") or "").lower()
+    if fmt in {"pdf", "doc", "docx", "odt", "rtf", "html", "htm"}:
+        raise ValueError(
+            "Document resources are not SQL tables. Use the document tools."
+        )
     if stored_reader and source_url == stored_url:
         return stored_reader
-    fmt = str(source.get("format") or "").lower()
     access_method = str(source.get("access_method") or "").lower()
     url = source_url.lower()
     literal = sql_literal(source_url)
@@ -81,11 +85,23 @@ def reader_for(profile: dict[str, Any], source_url: str) -> str:
         return f"read_parquet({literal})"
     if fmt in {"json", "geojson"} or ".json" in url or ".geojson" in url:
         return f"read_json_auto({literal})"
-    if fmt in {"xlsx", "xls"} or ".xlsx" in url or ".xls" in url:
+    if fmt == "xlsx" or ".xlsx" in url:
         return f"read_xlsx({literal})"
+    if fmt == "xls" or url.split("?", 1)[0].endswith(".xls"):
+        raise ValueError(
+            "Legacy XLS workbooks cannot be read by DuckDB. "
+            "Use the publisher's XLSX or CSV distribution instead."
+        )
     if fmt in {"gpkg", "shp", "kml"}:
         return f"ST_Read({literal})"
-    return f"read_csv_auto({literal}, ignore_errors=true)"
+    if fmt in {"csv", "tsv", "txt", "text"} or url.endswith(
+        (".csv", ".tsv", ".txt")
+    ):
+        return f"read_csv_auto({literal}, store_rejects=true)"
+    raise ValueError(
+        f"Unsupported tabular format: {fmt or 'unknown'}. "
+        "Use a format-specific materializer."
+    )
 
 
 class SourceRegistry:
@@ -127,12 +143,16 @@ class SourceRegistry:
         active_url = str(source.get("source_url") or "").strip()
         if not active_url or str(source.get("access_method")) == "pxweb_api":
             return None
+        try:
+            reader = reader_for(profile, active_url)
+        except ValueError:
+            return None
         record = SourceRecord(
             source_handle=source_handle(str(profile["resource_id"]), active_url),
             resource_id=str(profile["resource_id"]),
             title=str(profile.get("title") or profile["resource_id"]),
             source_url=active_url,
-            duckdb_reader=reader_for(profile, active_url),
+            duckdb_reader=reader,
             format=str(source.get("format") or "") or None,
             access_method=str(source.get("access_method") or "") or None,
             columns=[str(item) for item in profile.get("columns") or []],
@@ -143,9 +163,7 @@ class SourceRegistry:
                 for key, value in (source.get("resolver_config") or {}).items()
             },
         )
-        self.records[record.source_handle] = record
-        self.save()
-        return record
+        return self._store(record)
 
     def register_materialized(
         self,
@@ -167,6 +185,12 @@ class SourceRegistry:
             columns=columns,
             metadata=metadata,
         )
+        return self._store(record)
+
+    def _store(self, record: SourceRecord) -> SourceRecord:
+        existing = self.records.get(record.source_handle)
+        if existing == record:
+            return existing
         self.records[record.source_handle] = record
         self.save()
         return record

@@ -39,6 +39,7 @@ jobs:
       - run: python scripts/validate_catalog_release.py
       - run: uv run --frozen python scripts/validate_retrieval_goldset.py
       - run: uv run --frozen python scripts/benchmark_retrieval.py --enforce
+      - run: uv run --frozen python scripts/validate_document_release.py
       - run: >
           uv run --frozen python scripts/validate_geodata_release.py
           --report docs/geodata-audit-0.3.json

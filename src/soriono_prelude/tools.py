@@ -12,9 +12,11 @@ from soriono_prelude.catalog import (
     multilingual_query_values,
     search_query_variants,
 )
+from soriono_prelude.documents import DocumentStore
 from soriono_prelude.duckdb_runtime import (
     SpatialExtensionUnavailable,
     SpatialSourceUnavailable,
+    csv_reject_count,
     open_connection,
 )
 from soriono_prelude.pxweb import (
@@ -35,13 +37,95 @@ class SorionoPreludeTools:
         catalog: Catalog | None = None,
         registry: SourceRegistry | None = None,
         results: ResultStore | None = None,
+        documents: DocumentStore | None = None,
     ) -> None:
         self.catalog = catalog or Catalog()
         self.registry = registry or SourceRegistry()
         self.results = results or ResultStore()
+        self.documents = documents or DocumentStore()
 
     def catalog_status(self) -> dict[str, Any]:
-        return self.catalog.status()
+        return {**self.catalog.status(), "documents": self.documents.status()}
+
+    def sync_documents(self, *, formats: list[str] | None = None) -> dict[str, Any]:
+        return self.documents.sync_opendata_swiss(formats=formats)
+
+    def search_documents(
+        self,
+        question: str,
+        *,
+        search_queries: dict[str, str] | None = None,
+        top_k: int = 20,
+        format: str | None = None,
+        materialized_only: bool = False,
+    ) -> dict[str, Any]:
+        queries = multilingual_query_values(question, search_queries)
+        groups = [
+            self.documents.search(
+                query,
+                top_k=max(top_k, 20),
+                format=format,
+                materialized_only=materialized_only,
+            )
+            for query in queries
+        ]
+        fused: dict[str, dict[str, Any]] = {}
+        for group in groups:
+            for rank, document in enumerate(group, start=1):
+                resource_id = str(document["resource_id"])
+                item = fused.setdefault(resource_id, {**document, "score": 0.0})
+                item["score"] += 1.0 / (60.0 + rank)
+                item["matched_in"] = list(
+                    dict.fromkeys(
+                        [*item.get("matched_in", []), *document.get("matched_in", [])]
+                    )
+                )
+                if "content" in document.get("matched_in", []):
+                    item["snippet"] = document.get("snippet")
+                    item["match_page"] = document.get("match_page")
+        documents = sorted(
+            fused.values(),
+            key=lambda item: item["score"],
+            reverse=True,
+        )[: max(0, min(int(top_k), 100))]
+        return {
+            "question": question,
+            "search_queries": search_queries,
+            "document_catalog_size": self.documents.status()["resource_count"],
+            "returned_count": len(documents),
+            "documents": documents,
+        }
+
+    def get_document_profile(self, resource_id: str) -> dict[str, Any]:
+        return {"document": self.documents.get(resource_id)}
+
+    def materialize_document(
+        self,
+        resource_id: str,
+        *,
+        force: bool = False,
+        ocr: bool = True,
+    ) -> dict[str, Any]:
+        return self.documents.materialize(resource_id, force=force, ocr=ocr)
+
+    def read_document(
+        self,
+        resource_id: str,
+        *,
+        query: str | None = None,
+        page_number: int | None = None,
+        offset: int = 0,
+        limit: int = 10,
+        max_characters: int = 20_000,
+    ) -> dict[str, Any]:
+        return self.documents.read(
+            resource_id,
+            query=query,
+            page_number=page_number,
+            offset=offset,
+            limit=limit,
+            max_characters=max_characters,
+        )
 
     def search_resources(
         self,
@@ -240,6 +324,7 @@ class SorionoPreludeTools:
                     f"WHERE {quoted} IS NOT NULL ORDER BY 1 LIMIT {active_distinct_limit}"
                 ).fetchall()
                 distinct[column] = [_json_safe(row[0]) for row in values]
+            rejected_lines = csv_reject_count(connection)
         finally:
             connection.close()
         return {
@@ -250,6 +335,14 @@ class SorionoPreludeTools:
             ],
             "sample_rows": sample,
             "distinct_values": distinct,
+            "warnings": (
+                [
+                    f"{rejected_lines} CSV source line(s) could not be parsed and are "
+                    "excluded from queries against this source."
+                ]
+                if rejected_lines
+                else []
+            ),
         }
 
     def validate_sql(self, sql: str, *, source_handles: list[str]) -> dict[str, Any]:
@@ -284,14 +377,24 @@ class SorionoPreludeTools:
         self,
         *,
         question: str,
-        sql: str,
-        source_handles: list[str],
+        sql: str | None = None,
+        source_handles: list[str] | None = None,
+        steps: list[str] | None = None,
+        document_resource_ids: list[str] | None = None,
+        result_handle: str | None = None,
         rows: list[dict[str, Any]] | None = None,
     ) -> dict[str, Any]:
+        result = self.results.summary(result_handle) if result_handle else None
         return reproduction_bundle(
             question=question,
             sql=sql,
-            sources=[self.registry.get(handle) for handle in source_handles],
+            sources=[self.registry.get(handle) for handle in source_handles or []],
+            steps=steps,
+            documents=[
+                self.documents.get(resource_id)
+                for resource_id in document_resource_ids or []
+            ],
+            result=result,
             rows=rows,
         )
 

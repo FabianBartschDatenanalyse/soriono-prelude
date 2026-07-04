@@ -5,7 +5,7 @@
   "display_name": "Soriono Prelude",
   "version": "0.3.0-rc.2",
   "description": "Alle Daten der Schweiz mit einem Klick.",
-  "long_description": "Durchsucht 22'635 profilierte Schweizer Open-Data-Ressourcen, stellt Datenquellen bereit und führt kontrollierte lokale SQL-Analysen aus. Literaturrecherche, statistische Tests und wissenschaftliche Berichte sind bewusst Soriono Maestro vorbehalten.",
+  "long_description": "Durchsucht 22'635 profilierte Schweizer Open-Data-Ressourcen und 15'859 Dokumentmetadaten, stellt Datenquellen bereit, extrahiert Dokumente bei Bedarf und führt kontrollierte lokale SQL-Analysen aus. Literaturrecherche, statistische Tests und wissenschaftliche Berichte sind bewusst Soriono Maestro vorbehalten.",
   "author": {
     "name": "Soriono"
   },
@@ -41,6 +41,8 @@
   "keywords": [
     "switzerland",
     "open-data",
+    "documents",
+    "pdf",
     "duckdb",
     "pxweb"
   ],

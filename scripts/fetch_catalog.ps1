@@ -6,14 +6,26 @@ $ErrorActionPreference = "Stop"
 $repo = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
 $manifestPath = [IO.Path]::GetFullPath((Join-Path $repo $Manifest))
 $catalogManifest = Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Json
-$expectedHash = [string]$catalogManifest.sha256
-$target = Join-Path $repo "catalog/resources.sqlite"
+$artifacts = @(
+    @{
+        Name = "resources.sqlite"
+        ExpectedHash = [string]$catalogManifest.sha256
+        Target = Join-Path $repo "catalog/resources.sqlite"
+    },
+    @{
+        Name = "documents.sqlite"
+        ExpectedHash = [string]$catalogManifest.documents_sha256
+        Target = Join-Path $repo "catalog/documents.sqlite"
+    }
+)
 
 if (
-    (Test-Path -LiteralPath $target -PathType Leaf) -and
-    (Get-FileHash -LiteralPath $target -Algorithm SHA256).Hash -eq $expectedHash
+    -not ($artifacts | Where-Object {
+        -not (Test-Path -LiteralPath $_.Target -PathType Leaf) -or
+        (Get-FileHash -LiteralPath $_.Target -Algorithm SHA256).Hash -ne $_.ExpectedHash
+    })
 ) {
-    Write-Output "Catalog already present and valid: $expectedHash"
+    Write-Output "Catalog artifacts already present and valid."
     exit 0
 }
 
@@ -33,21 +45,23 @@ try {
         throw "Catalog archive hash mismatch: expected $archiveHash, got $actualArchiveHash"
     }
     Expand-Archive -LiteralPath $archive -DestinationPath $expanded
-    $database = Join-Path $expanded "resources.sqlite"
-    if (-not (Test-Path -LiteralPath $database -PathType Leaf)) {
-        throw "Catalog archive does not contain resources.sqlite."
+    foreach ($artifact in $artifacts) {
+        $database = Join-Path $expanded $artifact.Name
+        if (-not (Test-Path -LiteralPath $database -PathType Leaf)) {
+            throw "Catalog archive does not contain $($artifact.Name)."
+        }
+        $actualHash = (Get-FileHash -LiteralPath $database -Algorithm SHA256).Hash
+        if ($actualHash -ne $artifact.ExpectedHash) {
+            throw "$($artifact.Name) hash mismatch: expected $($artifact.ExpectedHash), got $actualHash"
+        }
+        $resolvedTarget = [IO.Path]::GetFullPath($artifact.Target)
+        if (-not $resolvedTarget.StartsWith($repo + [IO.Path]::DirectorySeparatorChar, [StringComparison]::OrdinalIgnoreCase)) {
+            throw "Unsafe catalog target: $resolvedTarget"
+        }
+        New-Item -ItemType Directory -Path ([IO.Path]::GetDirectoryName($resolvedTarget)) -Force | Out-Null
+        Copy-Item -LiteralPath $database -Destination $resolvedTarget -Force
+        Write-Output "$($artifact.Name) installed and verified: $actualHash"
     }
-    $actualHash = (Get-FileHash -LiteralPath $database -Algorithm SHA256).Hash
-    if ($actualHash -ne $expectedHash) {
-        throw "Catalog hash mismatch: expected $expectedHash, got $actualHash"
-    }
-    $resolvedTarget = [IO.Path]::GetFullPath($target)
-    if (-not $resolvedTarget.StartsWith($repo + [IO.Path]::DirectorySeparatorChar, [StringComparison]::OrdinalIgnoreCase)) {
-        throw "Unsafe catalog target: $resolvedTarget"
-    }
-    New-Item -ItemType Directory -Path ([IO.Path]::GetDirectoryName($resolvedTarget)) -Force | Out-Null
-    Copy-Item -LiteralPath $database -Destination $resolvedTarget -Force
-    Write-Output "Catalog installed and verified: $expectedHash"
 }
 finally {
     if (Test-Path -LiteralPath $work) {

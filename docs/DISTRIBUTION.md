@@ -9,6 +9,12 @@ Spatial-Zugriff zusätzlich den Download der DuckDB-Spatial-Erweiterung. Danach
 funktionieren normale Starts und bereits gecachte Quellen offline. Neue
 öffentliche Quellen können offline nicht materialisiert werden.
 
+Der Dokument-Metadatenindex ist im MCPB enthalten und offline durchsuchbar.
+Dokumentinhalte werden erst bei `materialize_document` heruntergeladen.
+Textbasierte PDFs werden mit pypdf extrahiert. OCR für Scans wird verwendet,
+wenn `pdftoppm` und Tesseract lokal installiert sind; Legacy-DOC benötigt
+LibreOffice. DOCX, ODT, RTF und HTML benötigen keine zusätzlichen Programme.
+
 Release-Artefakte dieser kostenlosen RC-Stufe sind gültig, wenn der
 GPG-signierte Git-Tag, die SHA-256-Prüfsumme und die CycloneDX-SBOM
 erfolgreich geprüft wurden.

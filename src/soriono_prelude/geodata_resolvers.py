@@ -12,6 +12,7 @@ from xml.etree import ElementTree
 import duckdb
 import httpx
 
+from soriono_prelude import USER_AGENT
 from soriono_prelude.catalog import state_dir
 from soriono_prelude.sources import SourceRecord, sql_literal
 
@@ -119,7 +120,7 @@ def _materialize_opendatasoft(
             geojson_url,
             timeout=httpx.Timeout(180, connect=30),
             follow_redirects=True,
-            headers={"User-Agent": "soriono-prelude/0.3"},
+            headers={"User-Agent": USER_AGENT},
         ) as response:
             response.raise_for_status()
             with geojson_tmp.open("wb") as output:
@@ -182,7 +183,7 @@ def _materialize_viageo(
         with httpx.Client(
             timeout=httpx.Timeout(180, connect=30),
             follow_redirects=True,
-            headers={"User-Agent": "soriono-prelude/0.3"},
+            headers={"User-Agent": USER_AGENT},
         ) as client:
             page = client.get(
                 "https://viageo.ch/md/" + quote(metadata_id, safe="-")
@@ -270,7 +271,7 @@ def _materialize_zurich_order(
             timeout=httpx.Timeout(120, connect=30),
             follow_redirects=True,
             headers={
-                "User-Agent": "soriono-prelude/0.3",
+                "User-Agent": USER_AGENT,
                 "Origin": "https://www.ogd.stadt-zuerich.ch",
                 "Referer": "https://www.ogd.stadt-zuerich.ch/",
             },
@@ -493,7 +494,7 @@ def _materialize_zurich_wfs(
         with httpx.Client(
             timeout=httpx.Timeout(180, connect=30),
             follow_redirects=True,
-            headers={"User-Agent": "soriono-prelude/0.3"},
+            headers={"User-Agent": USER_AGENT},
         ) as client:
             capabilities = client.get(
                 base,

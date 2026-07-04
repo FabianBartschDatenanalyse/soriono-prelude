@@ -30,23 +30,51 @@ try {
         throw "Installation exceeded $MaximumInstallSeconds seconds: $($install.Elapsed.TotalSeconds)"
     }
 
-    $request = '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"release-gate","version":"1.0"}}}'
+    $uv = (Get-Command uv -ErrorAction Stop).Source
+    $probe = Join-Path $PSScriptRoot "mcp_stdio_probe.py"
     $measurements = @()
     foreach ($phase in @("cold", "warm")) {
-        $watch = [Diagnostics.Stopwatch]::StartNew()
-        $output = $request | uv run --frozen --no-dev --project $project (Join-Path $project "server.py")
-        $exitCode = $LASTEXITCODE
-        $watch.Stop()
-        if ($exitCode -ne 0) { throw "$phase MCP start failed: $exitCode" }
-        $line = $output | Where-Object { $_ -match '"id":1' } | Select-Object -First 1
-        if (-not $line) { throw "$phase MCP start returned no initialize response" }
-        $response = $line | ConvertFrom-Json
+        $probeJson = & uv run --no-project python $probe --uv $uv --project $project
+        if ($LASTEXITCODE -ne 0) {
+            throw "$phase MCP probe failed: $LASTEXITCODE"
+        }
+        $probeResult = $probeJson | ConvertFrom-Json
+        if ($probeResult.exit_code -ne 0) {
+            throw "$phase MCP start failed: $($probeResult.exit_code)`n$($probeResult.stderr)"
+        }
+        if (-not $probeResult.initialize_response) {
+            throw (
+                "$phase MCP start returned no initialize response. " +
+                "stdout=$($probeResult.stdout) stderr=$($probeResult.stderr)"
+            )
+        }
+        $response = $probeResult.initialize_response
         if ($response.result.serverInfo.version -notmatch '^0\.3\.0') {
             throw "Unexpected MCP product version: $($response.result.serverInfo.version)"
         }
+        if (-not $probeResult.tools_response) {
+            throw (
+                "$phase MCP start returned no tools/list response. " +
+                "stdout=$($probeResult.stdout) stderr=$($probeResult.stderr)"
+            )
+        }
+        $toolNames = @($probeResult.tools_response.result.tools | ForEach-Object { $_.name })
+        $requiredTools = @(
+            "sync_documents",
+            "search_documents",
+            "get_document_profile",
+            "materialize_document",
+            "read_document",
+            "format_reproduction_bundle"
+        )
+        foreach ($requiredTool in $requiredTools) {
+            if ($requiredTool -notin $toolNames) {
+                throw "$phase MCP package is missing required tool: $requiredTool"
+            }
+        }
         $measurements += [pscustomobject]@{
             phase = $phase
-            seconds = [math]::Round($watch.Elapsed.TotalSeconds, 3)
+            seconds = $probeResult.seconds
             version = $response.result.serverInfo.version
         }
     }

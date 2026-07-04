@@ -27,6 +27,8 @@ def create_server(tools: SorionoPreludeTools | None = None) -> FastMCP:
             "the same measure, geography, population, and at least two suitable periods; continue searching "
             "when the first hit is only a cross-section. "
             "The server performs deterministic retrieval, data access, computation, and formatting only. "
+            "Document metadata for PDF, DOC, DOCX, ODT, RTF, and HTML is searched separately from tabular "
+            "resources. Document bodies are downloaded, extracted, and cached only when materialized. "
             "Before calling a search tool, create concise German, French, Italian, and English search formulations. "
             "Preserve names, places, years, identifiers, and file formats, and pass the four formulations as "
             "search_queries with keys de, fr, it, and en while keeping the original question unchanged. "
@@ -34,10 +36,20 @@ def create_server(tools: SorionoPreludeTools | None = None) -> FastMCP:
             "It does not mean that the source is unavailable. Call materialize_resource and use its current "
             "result before making any availability claim; do not reuse an earlier network assumption. "
             "Scientific literature search, statistical tests, regressions, and report generation belong "
-            "to Soriono Maestro and are intentionally not part of Prelude."
+            "to Soriono Maestro and are intentionally not part of Prelude. "
+            "For every substantive answer based on Prelude, the client MUST call format_reproduction_bundle "
+            "as its final Prelude tool call and append the returned markdown under the heading "
+            "'Vorgehen und Reproduktion'. Include concise steps, every used source_handle, every used "
+            "document_resource_id, the exact SQL when applicable, and the result_handle when available. "
+            "This also applies when no SQL was used; never omit the reproduction section."
         ),
     )
-    server._mcp_server.version = __product_version__
+    try:
+        server._mcp_server.version = __product_version__
+    except AttributeError:
+        # Private SDK attribute; a future mcp release may rename it. The
+        # server must still start even if the version cannot be advertised.
+        pass
 
     @server.tool()
     def catalog_status() -> dict[str, Any]:
@@ -76,6 +88,61 @@ def create_server(tools: SorionoPreludeTools | None = None) -> FastMCP:
     def get_resource_profile(resource_id: str) -> dict[str, Any]:
         """Return one complete local planning profile."""
         return active.get_resource_profile(resource_id)
+
+    @server.tool()
+    def sync_documents(formats: list[str] | None = None) -> dict[str, Any]:
+        """Refresh opendata.swiss document metadata in the local index."""
+        return active.sync_documents(formats=formats)
+
+    @server.tool()
+    def search_documents(
+        question: str,
+        search_queries: SearchQueries | None = None,
+        top_k: int = 20,
+        format: str | None = None,
+        materialized_only: bool = False,
+    ) -> dict[str, Any]:
+        """Search document metadata and extracted text with DE/FR/IT/EN formulations."""
+        return active.search_documents(
+            question,
+            search_queries=search_queries,
+            top_k=top_k,
+            format=format,
+            materialized_only=materialized_only,
+        )
+
+    @server.tool()
+    def get_document_profile(resource_id: str) -> dict[str, Any]:
+        """Return metadata, source URL, and extraction status for one document."""
+        return active.get_document_profile(resource_id)
+
+    @server.tool()
+    def materialize_document(
+        resource_id: str,
+        force: bool = False,
+        ocr: bool = True,
+    ) -> dict[str, Any]:
+        """Safely download and extract one document, with optional PDF OCR."""
+        return active.materialize_document(resource_id, force=force, ocr=ocr)
+
+    @server.tool()
+    def read_document(
+        resource_id: str,
+        query: str | None = None,
+        page_number: int | None = None,
+        offset: int = 0,
+        limit: int = 10,
+        max_characters: int = 20_000,
+    ) -> dict[str, Any]:
+        """Read bounded document chunks, optionally ranked or filtered by PDF page."""
+        return active.read_document(
+            resource_id,
+            query=query,
+            page_number=page_number,
+            offset=offset,
+            limit=limit,
+            max_characters=max_characters,
+        )
 
     @server.tool()
     def get_context_bundle(
@@ -157,15 +224,21 @@ def create_server(tools: SorionoPreludeTools | None = None) -> FastMCP:
     @server.tool()
     def format_reproduction_bundle(
         question: str,
-        sql: str,
-        source_handles: list[str],
+        sql: str | None = None,
+        source_handles: list[str] | None = None,
+        steps: list[str] | None = None,
+        document_resource_ids: list[str] | None = None,
+        result_handle: str | None = None,
         rows: list[dict[str, Any]] | None = None,
     ) -> dict[str, Any]:
-        """Format exact sources and SQL for reproduction."""
+        """Format the mandatory final 'Vorgehen und Reproduktion' section."""
         return active.format_reproduction_bundle(
             question=question,
             sql=sql,
             source_handles=source_handles,
+            steps=steps,
+            document_resource_ids=document_resource_ids,
+            result_handle=result_handle,
             rows=rows,
         )
 

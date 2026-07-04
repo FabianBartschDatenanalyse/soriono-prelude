@@ -12,3 +12,5 @@ state/*
 catalog/*.sqlite
 catalog/*.sqlite.previous
 catalog/*.sqlite.new
+catalog/*.sqlite-shm
+catalog/*.sqlite-wal

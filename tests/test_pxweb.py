@@ -31,3 +31,15 @@ def test_unknown_scope_dimensions_are_rejected_with_suggestions(
     assert raised.value.unknown == ["Jhar"]
     assert raised.value.available == ["Jahr", "Kanton"]
     assert raised.value.suggestions["Jhar"] == ["Jahr"]
+
+
+def test_response_text_strips_utf8_byte_order_mark() -> None:
+    request = httpx.Request("POST", "https://example.invalid/table.px")
+    response = httpx.Response(
+        200,
+        request=request,
+        content="\ufeffJahr,Wert\n2024,1\n".encode(),
+        headers={"content-type": "text/csv; charset=utf-8"},
+    )
+
+    assert pxweb._response_text(response) == "Jahr,Wert\n2024,1\n"

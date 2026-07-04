@@ -7,6 +7,7 @@ from typing import Any
 
 from soriono_prelude.catalog import Catalog, catalog_path, state_dir
 from soriono_prelude.catalog_updates import install_catalog
+from soriono_prelude.documents import DocumentStore
 from soriono_prelude.server import run_server
 
 
@@ -22,6 +23,12 @@ def parser() -> argparse.ArgumentParser:
     update = commands.add_parser("install-catalog")
     update.add_argument("source", help="Local file path or HTTPS URL")
     update.add_argument("--sha256", required=True)
+    sync_documents = commands.add_parser("sync-documents")
+    sync_documents.add_argument(
+        "--formats",
+        nargs="+",
+        help="Subset of PDF DOC DOCX ODT RTF HTML HTM",
+    )
     return root
 
 
@@ -32,6 +39,9 @@ def main(argv: list[str] | None = None) -> None:
         return
     if args.command == "install-catalog":
         _print(install_catalog(args.source, sha256=args.sha256))
+        return
+    if args.command == "sync-documents":
+        _print(DocumentStore().sync_opendata_swiss(formats=args.formats))
         return
     catalog = Catalog()
     if args.command == "doctor":

@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import sqlite3
 import time
 from datetime import UTC, datetime
@@ -257,8 +258,10 @@ def _profile(fields: dict[str, Any], ready: dict[str, Any]) -> dict[str, Any]:
 
 
 def _looks_local(value: str) -> bool:
-    lowered = value.lower()
-    return lowered.startswith(("c:/", "d:/", "/home/", "/users/", "file:"))
+    lowered = value.lower().strip()
+    if re.match(r"^[a-z]:[/\\]", lowered):
+        return True
+    return lowered.startswith(("/", "\\", "file:"))
 
 
 if __name__ == "__main__":

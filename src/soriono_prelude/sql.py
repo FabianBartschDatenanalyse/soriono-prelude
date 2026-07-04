@@ -1,30 +1,53 @@
 from __future__ import annotations
 
-import re
-import time
 from typing import Any
 
 import sqlglot
 from sqlglot import expressions as exp
 
-from soriono_prelude.duckdb_runtime import open_connection
 from soriono_prelude.sources import SourceRecord
 
-FORBIDDEN_SQL = re.compile(
-    r"\b(attach|call|copy|create|delete|detach|drop|export|import|insert|install|load|merge|pragma|"
-    r"replace|set|truncate|update|vacuum)\b",
-    re.IGNORECASE,
-)
 FORBIDDEN_FUNCTIONS = {
     "duckdb_secrets",
     "getenv",
     "glob",
     "http_get",
     "query",
+    "query_table",
     "read_blob",
     "read_text",
     "which_secret",
 }
+# Statement-level constructs that can never appear inside a read-only query.
+# The names are resolved defensively so sqlglot version differences do not
+# crash validation; unknown names are simply skipped.
+_FORBIDDEN_NODE_NAMES = (
+    "Alter",
+    "Attach",
+    "Command",
+    "Copy",
+    "Create",
+    "Delete",
+    "Detach",
+    "Drop",
+    "Export",
+    "Grant",
+    "Insert",
+    "Kill",
+    "LoadData",
+    "Merge",
+    "Pragma",
+    "Set",
+    "Transaction",
+    "TruncateTable",
+    "Update",
+    "Use",
+)
+FORBIDDEN_NODES = tuple(
+    node
+    for node in (getattr(exp, name, None) for name in _FORBIDDEN_NODE_NAMES)
+    if node is not None
+)
 
 
 def validate_sql(sql: str, sources: list[SourceRecord]) -> dict[str, Any]:
@@ -44,8 +67,6 @@ def validate_sql(sql: str, sources: list[SourceRecord]) -> dict[str, Any]:
     root = statements[0] if statements else None
     if root is None or not isinstance(root, (exp.Select, exp.Union, exp.Intersect, exp.Except)):
         issues.append({"code": "not_read_only", "message": "SQL must be a read-only SELECT or WITH query."})
-    if FORBIDDEN_SQL.search(text):
-        issues.append({"code": "forbidden_operation", "message": "SQL contains a forbidden operation."})
 
     supplied = {str(source.sql_name).casefold(): source for source in sources}
     cte_names = {
@@ -57,6 +78,21 @@ def validate_sql(sql: str, sources: list[SourceRecord]) -> dict[str, Any]:
     referenced_sources: set[str] = set()
     reader_function_found = False
     for statement in statements:
+        for node in statement.find_all(*FORBIDDEN_NODES):
+            issues.append(
+                {
+                    "code": "not_read_only",
+                    "message": f"SQL contains a forbidden operation: {node.key.upper()}",
+                }
+            )
+        for select in statement.find_all(exp.Select):
+            if select.args.get("into"):
+                issues.append(
+                    {
+                        "code": "not_read_only",
+                        "message": "SELECT INTO is not allowed in read-only SQL.",
+                    }
+                )
         for table in statement.find_all(exp.Table):
             if not isinstance(table.this, exp.Identifier):
                 reader_function_found = True
@@ -113,46 +149,6 @@ def validate_sql(sql: str, sources: list[SourceRecord]) -> dict[str, Any]:
             }
             for source in sources
         ],
-    }
-
-
-def execute_sql(
-    sql: str,
-    sources: list[SourceRecord],
-    *,
-    limit: int | None = None,
-) -> dict[str, Any]:
-    validation = validate_sql(sql, sources)
-    if not validation["valid"]:
-        return {"status": "failed", "validation": validation, "rows": [], "columns": []}
-    executable = sql.rstrip().rstrip(";")
-    if limit is not None:
-        executable = f"SELECT * FROM ({executable}) AS soriono_result LIMIT {max(0, int(limit))}"
-    started = time.perf_counter()
-    try:
-        connection = open_connection(sources)
-        try:
-            result = connection.execute(executable)
-            columns = [item[0] for item in result.description or []]
-            rows = [dict(zip(columns, row, strict=False)) for row in result.fetchall()]
-        finally:
-            connection.close()
-    except Exception as exc:  # noqa: BLE001
-        return {
-            "status": "failed",
-            "validation": validation,
-            "error": str(exc)[:2000],
-            "exception_type": exc.__class__.__name__,
-            "rows": [],
-            "columns": [],
-        }
-    return {
-        "status": "succeeded",
-        "validation": validation,
-        "execution_ms": int((time.perf_counter() - started) * 1000),
-        "row_count": len(rows),
-        "columns": columns,
-        "rows": rows,
     }
 
 

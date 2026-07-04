@@ -15,6 +15,11 @@ def test_mcp_exposes_expected_tools_without_answer_question() -> None:
         "catalog_status",
         "search_resources",
         "get_resource_profile",
+        "sync_documents",
+        "search_documents",
+        "get_document_profile",
+        "materialize_document",
+        "read_document",
         "get_context_bundle",
         "materialize_resource",
         "inspect_source",
@@ -43,6 +48,8 @@ def test_server_routes_between_web_and_catalog_evidence() -> None:
     assert "complete ranking" in instructions
     assert "never replace a valid web answer with a catalog-miss answer" in instructions
     assert "at least two suitable periods" in instructions
+    assert "MUST call format_reproduction_bundle" in instructions
+    assert "Vorgehen und Reproduktion" in instructions
 
 
 def test_server_explains_pxweb_readiness_semantics() -> None:
@@ -61,7 +68,7 @@ def test_server_explains_pxweb_readiness_semantics() -> None:
 def test_search_tools_publish_multilingual_query_parameter() -> None:
     tools = asyncio.run(create_server().list_tools())
 
-    for name in ("search_resources", "get_context_bundle"):
+    for name in ("search_resources", "search_documents", "get_context_bundle"):
         tool = next(item for item in tools if item.name == name)
         assert "search_queries" in tool.inputSchema["properties"]
         assert "DE/FR/IT/EN" in (tool.description or "")

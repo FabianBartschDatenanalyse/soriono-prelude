@@ -7,6 +7,7 @@ import sqlite3
 import sys
 import unicodedata
 from concurrent.futures import ThreadPoolExecutor
+from contextlib import closing
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, TypedDict
@@ -199,7 +200,7 @@ class Catalog:
         return connection
 
     def status(self) -> dict[str, Any]:
-        with self.connect() as connection:
+        with closing(self.connect()) as connection:
             metadata = {
                 str(row["key"]): json.loads(str(row["value"]))
                 for row in connection.execute("SELECT key, value FROM metadata")
@@ -208,7 +209,7 @@ class Catalog:
         return {"path": str(self.path), "resource_count": resource_count, **metadata}
 
     def profile(self, resource_id: str) -> dict[str, Any]:
-        with self.connect() as connection:
+        with closing(self.connect()) as connection:
             row = connection.execute(
                 "SELECT profile_json FROM profiles WHERE resource_id = ?",
                 (resource_id,),
@@ -249,7 +250,7 @@ class Catalog:
         active_limit = max(0, min(int(top_k), 200))
         candidate_limit = min(max((active_limit * 3) // 2, 30), 200)
         match_query = " OR ".join(f"{term}*" for term in terms)
-        with self.connect() as connection:
+        with closing(self.connect()) as connection:
             query = f"""
             SELECT p.rowid AS profile_rowid, profiles_fts.title, profiles_fts.publisher,
                    profiles_fts.search_text, profiles_fts.dimension_text,

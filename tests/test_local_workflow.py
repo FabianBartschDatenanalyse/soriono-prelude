@@ -2,8 +2,9 @@ from __future__ import annotations
 
 from pathlib import Path
 
+from soriono_prelude.results import ResultStore
 from soriono_prelude.sources import SourceRecord, SourceRegistry
-from soriono_prelude.sql import execute_sql, validate_sql
+from soriono_prelude.sql import validate_sql
 
 
 def local_source(tmp_path: Path) -> SourceRecord:
@@ -42,7 +43,7 @@ def test_registry_sql_and_join(tmp_path: Path) -> None:
     )
 
     assert validate_sql(sql, [record])["valid"] is True
-    result = execute_sql(sql, [record])
+    result = ResultStore(tmp_path / "results").execute(sql, [record])
     assert result["status"] == "succeeded"
     assert result["row_count"] == 5
     assert result["rows"][0] == {"municipality": "A", "year": 2020, "n": 2}
